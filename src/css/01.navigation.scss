@@ -1,21 +1,46 @@
-#navigation{
+#navigationLeft{
   position: relative;
   height: 360px;
-  // border: 2px solid goldenrod;
+  // border: 2px solid gray;
+  background-image: linear-gradient(
+     to right,
+     #32619f,
+     #4c75ab
+  );
 
   & img{
     position: absolute;
-    top: 10px;
-    left: 20px;
-    height:300px;
-    // z-index: -1;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    margin: 30px;
+    // height:300px;
+  }
+
+}
+
+#navigationRight{
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  z-index: 10;
+  
+  & .content{
+    // border: 2px solid red;
   }
 
   & .video{
     position: absolute;
-    right: -260px;
+    top: 0;
+    right: -350px;
     height: 360px;
-    transition: 2s;
+    transition: 1.5s;
   }
 
+  & ul li{
+    width: 110px;
+    margin: 20px 10px;
+    font-size: 20px;
+  }
 }

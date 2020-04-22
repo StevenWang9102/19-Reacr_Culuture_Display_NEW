@@ -1,4 +1,3 @@
-const video = document.getElementById("myVideo");
 const viewProject = document.getElementsByClassName("view-project");
 const viewHover = document.getElementsByClassName("view-project-hover");
 const next = document.getElementsByClassName("Next");
@@ -12,20 +11,7 @@ const nextOfWhatWeDo = document.getElementsByName("what-we-do-next").item(0);
 // console.log(title);
 // $(".carousel").carousel({ interval: 30000 });
 
-// ------------- View Projet Hover -------------
-video.addEventListener("mouseover", (event) => {
-  video.style.transition = "2s";
-  video.style.position = "absolute";
-  video.style.width = "100%";
-  video.style.top = "0";
-  video.style.right = "-260px";
-  // 这里不太明白呢。。。
-});
 
-video.addEventListener("mouseout", (event) => {
-  video.style.position = "absolute";
-  video.style.right = "-500px";
-});
 
 // ------------- View Projet Hover -------------
 Object.values(viewProject).map((element, index) => {

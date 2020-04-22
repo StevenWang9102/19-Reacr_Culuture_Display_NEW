@@ -8,13 +8,11 @@ export const Gallery = (props) => {
       <div className='container'>
         {database.map((n, index) => {
           return (
-            <div key={index}>
+            // <div key={index}>
               <GalleryBlock
                 index={index}
-                // title={database[index].title}
-                // paragraph={database[index].paragraph}
               />
-            </div>
+            // </div>
           );
         })}
       </div>

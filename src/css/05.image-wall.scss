@@ -1,0 +1,180 @@
+// -------------------- what we do image------------
+#image-wall {
+  position: relative;
+  width: 100%;
+  height: 1000px;
+  border: 2px solid gold;
+}
+
+#image-wall .first-column {
+  height: 1000px;
+  border: 2px solid forestgreen;
+
+  & .container-one {
+    position: relative;
+    height: 15%;
+    padding: 20px;
+    border: 2px solid forestgreen;
+
+    & h1 {
+      font-size: 45px;
+    }
+
+    & h2 {
+      position: absolute;
+      width: 300px;
+      margin-top: -50px;
+      white-space: nowrap;
+      color: rgba(220, 220, 220, 0.25);
+      font-size: 80px;
+      margin-left: 100px;
+      z-index: -1;
+    }
+  }
+
+  & .container-two {
+    position: relative;
+    width: 100%;
+    height: 85%;
+    padding: 20px;
+    border: 2px solid forestgreen;
+
+    & .hoverBox {
+      font-size: 17px;
+      font-weight: 650;
+      padding: 180px 60px;
+      top: 480px;
+      // border: 2px solid yellow;
+      background-image: linear-gradient(
+        to bottom,
+        rgba(128, 128, 128, 0.199),
+        black
+      );
+      transition: 0.11s;
+      // visibility: hidden;
+
+      & li {
+        color: white;
+        opacity: 1;
+        text-align: center;
+        letter-spacing: 5px;
+      }
+
+      & :hover {
+        & .hoverBox {
+          visibility: visible;
+          opacity: 0.9;
+        }
+      }
+    }
+
+    & .img-wrapper {
+      position: absolute;
+      right: 20px;
+      width: 340px;
+      height: 420px;
+      margin: 20px;
+      // border: 2px solid rosybrown;
+      overflow: hidden;
+    }
+
+    & .hoverBox,
+    img {
+      position: absolute;
+      right: 0px;
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+    }
+
+    & h3 {
+      position: absolute;
+      top: 520px;
+    }
+
+    & p {
+      position: absolute;
+      top: 600px;
+    }
+  }
+}
+
+#image-wall .second-column {
+  height: 1000px;
+  // border: 2px solid forestgreen;
+  display: flex;
+  flex-direction: column;
+
+
+  & .img-wrapper{
+    // position: absolute;
+    width: 400px;
+    height: 460px;
+    // background-color: saddlebrown;
+    border: 2px solid forestgreen;
+    overflow: hidden;
+  }
+
+    & .hover-on-right{
+      position: relative;
+      top: -460px;
+      // left: -420px;
+      width: 400px;
+      height: 460px;
+      padding: 300px 100px;
+      // background-color: rgba(0, 0, 0, 0.342);
+      z-index: 80;
+      transition: 1s;
+      background-image: linear-gradient(
+        to right,
+        rgba(128, 128, 128, 0.599),
+        black
+      );
+      z-index: 82;
+
+      & h2{
+        position: relative;
+        left: 199px;
+        width: 400px;
+        color: white;
+        // border: 2px solid goldenrod;
+      }
+
+      & h2 span{
+        color: black;
+      }
+    }
+
+  
+
+  & .container-one,
+  & .container-two {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    padding: 20px;
+    border: 2px solid forestgreen;
+
+    & h1 {
+      width: 300px;
+      // border: 2px solid forestgreen;
+      position: absolute;
+      top: 100px;
+      left: 80px;
+      color: white;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+
+    & p {
+      position: absolute;
+      bottom: 30px;
+      left: 60px;
+      color: white;
+      font-weight: 600;
+    }
+  }
+}

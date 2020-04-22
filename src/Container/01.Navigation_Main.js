@@ -4,8 +4,6 @@ import banner from "../img/01.navigation/navBanner.png";
 import { Navigation} from "./01.Navigation"
 
 export const Navigation_Main = (props) => {
-
-  console.log(video);
   
   return (
     <section id='navigation'>

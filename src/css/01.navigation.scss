@@ -1,0 +1,21 @@
+#navigation{
+  position: relative;
+  height: 360px;
+  // border: 2px solid goldenrod;
+
+  & img{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    height:300px;
+    // z-index: -1;
+  }
+
+  & .video{
+    position: absolute;
+    right: -260px;
+    height: 360px;
+    transition: 2s;
+  }
+
+}

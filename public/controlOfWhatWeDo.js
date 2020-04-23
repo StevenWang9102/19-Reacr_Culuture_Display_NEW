@@ -1,31 +1,11 @@
-const viewProject = document.getElementsByClassName("view-project");
-const viewHover = document.getElementsByClassName("view-project-hover");
 const next = document.getElementsByClassName("Next");
-const galleryImg = document.getElementsByClassName("gallery-img");
-const whatWeDo = document.getElementById("what-we-do");
+// const galleryImg = document.getElementsByClassName("gallery-img");
+// const whatWeDo = document.getElementById("what-we-do");
 const ball = document.getElementsByClassName("float-ball");
 const header1 = document.getElementsByName("whatwe").item(1);
 // name="what-we-do-next"
-const nextOfWhatWeDo = document.getElementsByName("what-we-do-next").item(0);
+// const nextOfWhatWeDo = document.getElementsByName("what-we-do-next").item(0);
 
-// console.log(title);
-// $(".carousel").carousel({ interval: 30000 });
-
-
-
-// ------------- View Projet Hover -------------
-Object.values(viewProject).map((element, index) => {
-  element.addEventListener("mouseover", (event) => {
-    Object.values(viewHover)[0].style.right = "-114px";
-    Object.values(viewHover)[0].style.transition = "2s";
-  });
-
-  element.addEventListener("mouseout", (event) => {
-    // 这里优化【0】
-    Object.values(viewHover)[0].style.right = "-227px";
-    Object.values(viewHover)[0].style.transition = "2s";
-  });
-});
 
 // -------------- Next Button Click ------------
 Object.values(next).map((element, index) => {
@@ -92,21 +72,3 @@ window.addEventListener("mousemove", (event) => {
 // // 
 // });
 
-
-// -------------- IMAGE WALL -----------
-const hoverBox = document.getElementsByClassName("hoverBox");
-const hoverImg = document.getElementsByName("hoverImg");
-console.log(Object.values(hoverImg)[0]);
-
-Object.values(hoverBox)[0].addEventListener("mouseover", (event) => {
-  Object.values(hoverBox)[0].style.top = "0px"
-});
-
-// 似乎需要合并。。。。
-Object.values(hoverImg)[0].addEventListener("mouseover", (event) => {
-  Object.values(hoverBox)[0].style.top = "0px"
-});
-
-Object.values(hoverBox)[0].addEventListener("mouseout", (event) => {
-  Object.values(hoverBox)[0].style.top = "480px"
-});

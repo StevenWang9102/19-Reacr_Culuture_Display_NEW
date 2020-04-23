@@ -14,10 +14,10 @@
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-jss": "^10.0.4",
+    "react-jss": "^10.1.1",
+    "react-redux": "6.0.0",
     "react-scripts": "3.4.1",
-    "sass": "^1.26.3",
-    "react-redux": "6.0.0"
+    "sass": "^1.26.3"
   },
   "devDependencies": {
     "jest": "^24.9.0",

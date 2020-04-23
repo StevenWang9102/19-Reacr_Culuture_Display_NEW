@@ -3,17 +3,17 @@ import React from "react";
 
 export const PreviewButton = (props) => {
   return (
-    <a
+    <div
       className='carousel-control-prev'
       href='#carouselExampleControls'
       role='button'
       data-slide='prev'>
-      <a
+      <span
         className='carousel-control-prev1'
         href='#carousel2ExampleControls'
         role='button'
         data-slide='prev'>
-      </a>
-    </a>
+      </span>
+    </div>
   );
 };

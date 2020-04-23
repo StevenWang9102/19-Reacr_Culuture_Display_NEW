@@ -1,0 +1,26 @@
+#view-project {
+  position: absolute;
+  top: 0px;
+  margin-left: 200px;
+  overflow: hidden;
+  height: 100px;
+  width: 230px;
+  color: white;
+  padding: 38px;
+  font-weight: 600;
+  background-color: black;
+  z-index: 20;
+
+  & .view-project-hover {
+    position: relative;
+    top: 0px;
+    right: -180px;
+    transform: rotate(-135deg);
+    width: 0;
+    height: 0;
+    transition: 0.6s;
+    border-top: 70px solid transparent;
+    border-bottom: 70px solid transparent;
+    border-right: 70px solid rgba(255, 255, 255, 0.199);
+  }
+}

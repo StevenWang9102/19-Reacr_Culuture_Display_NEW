@@ -3,16 +3,16 @@ import React from "react";
 
 export const NextButton = (props) => {
   return (
-    <a
+    <div
       className='carousel-control-next'
       href='#carouselExampleControls'
       role='button'
       data-slide='next'>
-      <a
+      <span
         className='carousel-control-next2'
         href='#carousel2ExampleControls'
         role='button'
-        data-slide='next'></a>
-    </a>
+        data-slide='next'></span>
+    </div>
   );
 };

@@ -1,0 +1,21 @@
+#galleryButtons{
+      position: absolute;
+      top: 0px;
+      right: -30px;
+      height: 100px;
+      width: 190px;
+      color: white ;
+      padding: 25px 0;
+      z-index: 20;
+
+    & div{
+      padding: 5px;
+      height: 32px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-block;
+      // border: 2px solid red;
+      margin: 7px;
+    }
+    
+}

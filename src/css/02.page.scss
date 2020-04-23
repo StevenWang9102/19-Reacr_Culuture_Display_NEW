@@ -1,0 +1,22 @@
+#page{
+    position: absolute;
+    right: 0;
+    height: 40px;
+    width: 80px;
+    text-align: center;
+    padding: 5px 10px;
+    letter-spacing: 3px;
+    color: white;
+    font-size: 16px;
+    transform:rotate(90deg);
+    background-color: rgb(214, 214, 62);
+
+    & div{
+      padding: 3px;
+      display: inline-block;
+      // transition: 1s;
+      // transition:opacity 1s linear 1s;
+      transform:rotate(-90deg);
+    }
+
+  }

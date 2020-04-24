@@ -4,11 +4,13 @@ console.log(viewHover);
 
 // ------------- View Projet Hover -------------
   viewProject.addEventListener("mouseover", (event) => {
-    viewHover.style.top = "-55px";
-    viewHover.style.right = "-134px";
+    viewHover.style.top = "5px";
+    viewHover.style.right = "-10px";
   });
 
   viewProject.addEventListener("mouseout", (event) => {
-    viewHover.style.top = "0px";
-    viewHover.style.right = "-180px";
+    viewHover.style.top = "60px";
+    viewHover.style.right = "-60px";
   });
+  // top: 60px;
+  // right: -60px;

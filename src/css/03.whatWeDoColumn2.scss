@@ -1,0 +1,172 @@
+#what-we-do .float-ball{
+    position: absolute;
+    top: 400px;
+    left: -300px;
+    height: 400px;
+    width: 400px;
+    background-color: rgba(76, 228, 177, 0.15);
+    border-radius: 320px;
+    transition: 1s;
+    visibility: hidden;
+    z-index: -11;
+}
+
+// ----------------------  ------------------------
+#what-we-do .second-column{
+    // background-color: rgba(240, 230, 140, 0.397);
+    padding: 5px;
+
+    & h1{
+        position: absolute;
+        top: 0;
+    }
+
+    & p{
+        position: absolute;
+        top: 320px;
+        margin-left: 20px;
+        z-index: 21;
+        transition-delay:1s;
+    }
+
+    & .explore-more{
+        position: absolute;
+        top: 460px;
+        margin-left: 20px; 
+        color: black;
+        border-bottom: 2px solid black;
+        text-decoration: none;
+
+        & :hover{
+            text-decoration: none;
+        }
+    }
+
+    & #page{
+        position: absolute;
+        top: 20px;
+        right: -40px;
+    }
+}
+
+
+
+// --------------- Media Query Templete --------------
+// $large-screen : 1200px;
+// $medium-screen : 992px;
+// $small-screen : 768px;
+// $extra-small-screen : 540px;
+// $super-small-screen : 375px;
+
+@media only screen and (min-width: $medium-screen) {
+}
+  
+@media only screen and (max-width: $medium-screen) {
+}
+  
+@media only screen and (max-width: $small-screen) {
+    #what-we-do .float-ball{
+        display: none;
+    }
+
+    #what-we-do .second-column{
+        position: absolute;
+        top: 530px;
+        height: 240px;
+        // background-color: rgba(240, 230, 140, 0.397);
+        padding: 5px;
+        padding-left: 80px;
+    
+        & #carousel2ExampleControls{
+            position: absolute;
+            top: 0;
+        }
+
+        & p{
+            position: absolute;
+            top: 90px;
+            // width: ;
+            // left: 80px;
+            margin-left: 20px;
+            z-index: 21;
+            transition-delay:1s;
+            // border: 2px solid gold;
+        }
+    
+        & .explore-more{
+            position: absolute;
+            top: 170px;
+            // left: 80px;
+            // margin-left: 20px; 
+            color: black;
+            border-bottom: 2px solid black;
+            text-decoration: none;
+    
+            & :hover{
+                text-decoration: none;
+            }
+        }
+    
+        & #page{
+            display: none;
+            // position: absolute;
+            // top: 20px;
+            // right: -40px;
+        }
+    }
+    
+
+}
+
+@media only screen and (max-width: $extra-small-screen) {
+    #what-we-do .float-ball{
+        display: none;
+    }
+    #what-we-do .second-column{
+        position: absolute;
+        top: 430px;
+        padding-left: 10px;
+
+        // height: 240px;
+        // background-color: rgba(240, 230, 140, 0.397);
+        // padding: 5px;
+    
+        & #carousel2ExampleControls{
+            position: absolute;
+            top: 0;
+        }
+
+        & p{
+            position: absolute;
+            top: 90px;
+            // width: ;
+            // left: 80px;
+            // margin-left: 20px;
+            z-index: 21;
+            transition-delay:1s;
+            // border: 2px solid gold;
+        }
+    
+        & .explore-more{
+            position: absolute;
+            top: 170px;
+            // left: 80px;
+            // margin-left: 20px; 
+            color: black;
+            border-bottom: 2px solid black;
+            text-decoration: none;
+    
+            & :hover{
+                text-decoration: none;
+            }
+        }
+    
+        & #page{
+            display: none;
+            // position: absolute;
+            // top: 20px;
+            // right: -40px;
+        }
+    }
+}
+  

@@ -1,0 +1,55 @@
+#view-project {
+  position: relative;
+  top: 0px;
+  margin-left: 200px;
+  overflow: hidden;
+  height: 100px;
+  width: 230px;
+  color: white;
+  padding: 38px;
+  font-weight: 600;
+  background-color: black;
+  z-index: 20;
+  // border: 2px solid gold;
+
+  & .view-project-hover {
+    position: absolute;
+    top: 60px;
+    right: -60px;
+    transform: rotate(-135deg);
+    width: 0;
+    height: 0;
+    transition: 0.6s;
+    border-top: 70px solid transparent;
+    border-bottom: 70px solid transparent;
+    border-right: 70px solid rgba(255, 255, 255, 0.199);
+  }
+}
+
+
+// --------------- Media Query -------------
+// $large-screen : 1200px;
+// $medium-screen : 992px;
+// $small-screen : 768px;
+// $extra-small-screen : 540px;
+// $super-small-screen : 375px;
+
+@media only screen and (min-width: $medium-screen) {
+}
+  
+@media only screen and (max-width: $medium-screen) {
+}
+  
+@media only screen and (max-width: $small-screen) {
+  #view-project {
+    position: absolute;
+    top: 0px;
+    margin-left: 140px;
+    height: 100px;
+    width: 230px;
+  }
+}
+
+@media only screen and (max-width: $small-screen) {
+}
+  

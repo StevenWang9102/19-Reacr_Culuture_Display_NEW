@@ -4,17 +4,22 @@
   width: 100%;
   height: 1000px;
   border: 2px solid gold;
+  background-image: linear-gradient(to bottom right, #e4f5b5b2, #0aaafa79);
+
 }
 
 #image-wall .first-column {
   height: 1000px;
-  border: 2px solid forestgreen;
+  width: 100%;
+  border: 2px solid rgb(209, 40, 96);
 
-  & .container-one {
+  // -------- 上方盒子 --------
+  & .container-up {
     position: relative;
+    width: 100%;
     height: 15%;
     padding: 20px;
-    border: 2px solid forestgreen;
+    border: 2px solid rgb(55, 37, 216);
 
     & h1 {
       font-size: 45px;
@@ -32,26 +37,36 @@
     }
   }
 
-  & .container-two {
-    position: relative;
+  // -------- 下方盒子 -------
+  & .container-low {
+    position: absolute;
+    overflow: hidden;
+    right: 0px;
     width: 100%;
     height: 85%;
     padding: 20px;
     border: 2px solid forestgreen;
+
+    & img, .hoverBox{
+      position: absolute;
+      right: 0px;
+      width: 360px;
+      height: 420px;
+      margin-right: 40px;
+      object-fit: cover;
+    }
 
     & .hoverBox {
       font-size: 17px;
       font-weight: 650;
       padding: 180px 60px;
       top: 480px;
-      // border: 2px solid yellow;
       background-image: linear-gradient(
         to bottom,
         rgba(128, 128, 128, 0.199),
         black
       );
       transition: 0.11s;
-      // visibility: hidden;
 
       & li {
         color: white;
@@ -68,96 +83,39 @@
       }
     }
 
-    & .img-wrapper {
-      position: absolute;
-      right: 20px;
-      width: 340px;
-      height: 420px;
-      margin: 20px;
-      // border: 2px solid rosybrown;
-      overflow: hidden;
-    }
-
-    & .hoverBox,
-    img {
-      position: absolute;
-      right: 0px;
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-    }
-
     & h3 {
       position: absolute;
       top: 520px;
+      width: 360px;
+      right: 35px;
     }
 
     & p {
+      width: 360px;
       position: absolute;
       top: 600px;
+      right: 35px;
     }
   }
 }
 
+// ------------------ Second Column --------------
 #image-wall .second-column {
   height: 1000px;
-  // border: 2px solid forestgreen;
   display: flex;
   flex-direction: column;
 
-
-  & .img-wrapper{
-    // position: absolute;
-    width: 400px;
-    height: 460px;
-    // background-color: saddlebrown;
-    border: 2px solid forestgreen;
-    overflow: hidden;
-  }
-
-    & .hover-on-right{
-      position: relative;
-      top: -460px;
-      // left: -420px;
-      width: 400px;
-      height: 460px;
-      padding: 300px 100px;
-      // background-color: rgba(0, 0, 0, 0.342);
-      z-index: 80;
-      transition: 1s;
-      background-image: linear-gradient(
-        to right,
-        rgba(128, 128, 128, 0.599),
-        black
-      );
-      z-index: 82;
-
-      & h2{
-        position: relative;
-        left: 199px;
-        width: 400px;
-        color: white;
-        // border: 2px solid goldenrod;
-      }
-
-      & h2 span{
-        color: black;
-      }
-    }
-
-  
-
-  & .container-one,
-  & .container-two {
+  & .container-up,
+  & .container-low {
     position: relative;
     width: 100%;
     height: 50%;
+    overflow: hidden;
     padding: 20px;
-    border: 2px solid forestgreen;
+    border: 2px solid rgb(57, 240, 57);
 
     & h1 {
       width: 300px;
-      // border: 2px solid forestgreen;
       position: absolute;
       top: 100px;
       left: 80px;
@@ -177,4 +135,127 @@
       font-weight: 600;
     }
   }
+
+  & .container-up .hover-on-right {
+    position: relative;
+    top: -460px;
+    width: 400px;
+    height: 460px;
+    padding: 300px 100px;
+    z-index: 80;
+    transition: 1s;
+    background-image: linear-gradient(
+      to right,
+      rgba(128, 128, 128, 0.599),
+      black
+    );
+    z-index: 82;
+
+    & h2 {
+      position: relative;
+      left: 199px;
+      width: 400px;
+      color: white;
+    }
+
+    & h2 span {
+      color: black;
+    }
+  }
+}
+
+// --------------- Media Query Templete --------------
+$large-screen: 1200px;
+$medium-screen: 992px;
+$small-screen: 768px;
+$extra-small-screen: 540px;
+$super-small-screen: 375px;
+
+@media only screen and (min-width: $medium-screen) {
+}
+
+@media only screen and (max-width: $medium-screen) {
+  #image-wall {
+    height: 900px;
+  }
+  
+  #image-wall .container {
+      max-width: 750px;
+  }
+
+  #image-wall .first-column {
+    height: 800px;
+  
+    & .container-up {
+      position: relative;
+      height: 120px;
+      padding: 0px;
+
+      & h1 {
+        font-size: 35px;
+      }
+  
+      & h2 {
+        display: none;
+      }
+    }
+  
+    & .container-low {  
+      & img {
+        width: 300px;
+        height: 350px;
+      }
+  
+      & h3 {
+        position: absolute;
+        font-size: 20px;
+        top: 420px;
+        width: 300px;
+        right: 35px;
+      }
+  
+      & p {
+        position: absolute;
+        top: 470px;
+        width: 300px;
+        right: 35px;
+      }
+
+    }
+  }
+
+  #image-wall .second-column {
+    & .container-up,
+    & .container-low {
+      width: 400px;
+      height: 400px;
+
+      & img {
+        width: 300px;
+        height: 350px;
+      }
+
+      & h1 {
+        width: 300px;
+        position: absolute;
+        top: 60px;
+        left: 40px;
+        color: white;
+      }
+
+      & p{      
+        position: absolute;
+        left: 40px;
+        color: white;
+        font-weight: 600;
+        bottom: 35px
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $small-screen) {
+}
+
+@media only screen and (max-width: $small-screen) {
 }

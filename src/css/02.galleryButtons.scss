@@ -16,6 +16,15 @@
       display: inline-block;
       // border: 2px solid red;
       margin: 7px;
-    }
-    
+    } 
+}
+
+@media only screen and (max-width: $small-screen) {
+  #galleryButtons{
+    position: absolute;
+    top: 0px;
+    right: 40px;
+    height: 100px;
+    // border: 2px solid gold;
+}
 }

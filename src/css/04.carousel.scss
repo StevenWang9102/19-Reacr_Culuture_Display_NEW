@@ -1,75 +1,90 @@
-
 // -------------------- what we do image------------
 #what-we-do .first-column {
-    & #carousel2ExampleControls{
-        height: 100%;
-        // border: 5px solid rgb(218, 59, 59);
-        font-size: 34px;
+  & #carousel2ExampleControls {
+    height: 100%;
+    // border: 5px solid rgb(218, 59, 59);
+    font-size: 34px;
+  }
 
-        
-        & img{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 620px;
-            height: 325px;
-            object-fit: cover;
-            transition: 2s;
-        }
-    }
+  & .carousel-inner {
+    height: 100%;
+  }
 
-    & .carousel-inner{
-        height: 100%;
-    }
+  & .carousel-control-prev1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+  }
 
-    & .carousel-control-prev1{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-    }
-
-    & .carousel-control-next2{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-    }
+  & .carousel-control-next2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+  }
 }
 
 // -------------------- what we do title------------
-#what-we-do .second-column{
-    & #carouselExampleControls{
-        width: 100%;
-        height: 66px;
-        overflow: visible;
-    }
+#what-we-do .second-column {
+  & #carouselExampleControls {
+    position: absolute;
+    top: 230px;
+    // left: -10px;
+    width: 100%;
+    height: 66px;
+    // overflow: visible;
+    // background-color: gold;
+    z-index: 99;
+  }
 
-    & .carousel-inner{
-        height: 100%;
-    }
-    
-    & .carousel-item{
-        width: 300px;
-        transition: all 1.5s;
-    }
+  & .carousel-inner {
+    height: 100%;
+  }
+
+  & .carousel-item {
+    width: 300px;
+    transition: all 1.5s;
+  }
 }
 
-    .carousel-control-prev{
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        left: 40px;
-        z-index: 100;
-        // border: 5px solid royalblue;
+.carousel-control-prev {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 40px;
+  z-index: 100;
+  // border: 5px solid royalblue;
+}
+
+.carousel-control-next {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  right: -30px;
+  left: 40px;
+  top: 80px;
+  // border: 5px solid royalblue;
+}
+
+@media only screen and (max-width: $small-screen) {
+  #what-we-do .first-column {
+    & #carousel2ExampleControls {
+      height: 400px;
     }
-    
-    .carousel-control-next{
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        right: -30px;
-        left: 40px;
-        top: 80px;
-        // border: 5px solid royalblue;
+  }
+  #what-we-do .second-column {
+    & #carouselExampleControls {
+      position: absolute;
+      top: 40px;
+      width: 100%;
+      height: 66px;
+      margin-left: 20px;
+      // margin-left: 90px;
+      
+      & h1{
+          font-size: 30px;
+      }
     }
+  }
+}

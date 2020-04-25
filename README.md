@@ -6,7 +6,8 @@
 ## Source Code
 You can see more details when you run my code. My Source code is on my Github - https://github.com/StevenWang9102, simply run "npm start" in your VS code terminal.
 
-----------------------------------------------------------------------------------------------------------------------------
+
+## Explanation
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -1,4 +1,4 @@
-// -------------- Left Hover -----------
+// ----------------- Left Hover --------------
 const hoverBox = document.getElementsByClassName("hoverBox");
 const hoverImg = document.getElementsByName("hoverImg");
 // console.log(Object.values(hoverImg)[0]);
@@ -18,16 +18,27 @@ Object.values(hoverBox)[0].addEventListener("mouseout", (event) => {
 
 // -------------- Right Hover --------------
 const hoverRight = document.getElementsByClassName("hover-on-right")[0];
-const imgBox = document.getElementsByClassName("img-wrapper")[1];
+const imgBox = document.getElementsByClassName("img-wrapper")[0];
+const titlewrapper = document.getElementsByName("titlewrapper")[1];
+
+console.log(imgBox);
+console.log(titlewrapper);
 
 imgBox.addEventListener("mouseover", (event) => {
-  console.log(event);
-  
   hoverRight.style.left = "0px";
+  // left: 380px
+  titlewrapper.style.display = "inline-block"
+  // titlewrapper.style.left = "400px"
+
 });
 
 imgBox.addEventListener("mouseout", (event) => {
-  hoverRight.style.left = "-420px";
+  hoverRight.style.left = "-440px";
+  titlewrapper.style.display = "none"
+
 });
+
+
+// -------------- Right Hover Words -------------
 
 

@@ -3,23 +3,26 @@
   position: relative;
   width: 100%;
   height: 1000px;
-  border: 2px solid gold;
+  // border: 2px solid gold;
+  padding: 30px 0;
   background-image: linear-gradient(to bottom right, #e4f5b5b2, #0aaafa79);
-
+  // left: 50%;
+  // transform: translateX(-50%);
 }
 
 #image-wall .first-column {
   height: 1000px;
   width: 100%;
-  border: 2px solid rgb(209, 40, 96);
+  // border: 2px solid rgb(209, 40, 96);
 
-  // -------- 上方盒子 --------
+  // ----------- Upper Container ----------
   & .container-up {
     position: relative;
     width: 100%;
-    height: 15%;
+    height: 160px;
     padding: 20px;
-    border: 2px solid rgb(55, 37, 216);
+    // margin: 0;
+    // border: 2px solid rgb(55, 37, 216);
 
     & h1 {
       font-size: 45px;
@@ -37,7 +40,7 @@
     }
   }
 
-  // -------- 下方盒子 -------
+  // ----------- Lower Container ----------
   & .container-low {
     position: absolute;
     overflow: hidden;
@@ -45,22 +48,34 @@
     width: 100%;
     height: 85%;
     padding: 20px;
-    border: 2px solid forestgreen;
+    // border: 2px solid forestgreen;
 
-    & img, .hoverBox{
+    & img, .hoverBox {
+      position: absolute;
+      right: 0px;
+      width: 360px;
+      height: 420px;
+      // margin-right: 40px;
+      object-fit: cover;
+    }
+
+    & .img-cover{
       position: absolute;
       right: 0px;
       width: 360px;
       height: 420px;
       margin-right: 40px;
-      object-fit: cover;
+      overflow: hidden;
+      // border: 2px solid green;
     }
 
     & .hoverBox {
       font-size: 17px;
       font-weight: 650;
       padding: 180px 60px;
-      top: 480px;
+      top: 460px;
+      width: 360px;
+      height: 420px;
       background-image: linear-gradient(
         to bottom,
         rgba(128, 128, 128, 0.199),
@@ -85,7 +100,7 @@
 
     & h3 {
       position: absolute;
-      top: 520px;
+      top: 500px;
       width: 360px;
       right: 35px;
     }
@@ -93,73 +108,8 @@
     & p {
       width: 360px;
       position: absolute;
-      top: 600px;
+      top: 570px;
       right: 35px;
-    }
-  }
-}
-
-// ------------------ Second Column --------------
-#image-wall .second-column {
-  height: 1000px;
-  display: flex;
-  flex-direction: column;
-
-  & .container-up,
-  & .container-low {
-    position: relative;
-    width: 100%;
-    height: 50%;
-    overflow: hidden;
-    padding: 20px;
-    border: 2px solid rgb(57, 240, 57);
-
-    & h1 {
-      width: 300px;
-      position: absolute;
-      top: 100px;
-      left: 80px;
-      color: white;
-    }
-
-    & img {
-      width: 100%;
-      height: 100%;
-    }
-
-    & p {
-      position: absolute;
-      bottom: 30px;
-      left: 60px;
-      color: white;
-      font-weight: 600;
-    }
-  }
-
-  & .container-up .hover-on-right {
-    position: relative;
-    top: -460px;
-    width: 400px;
-    height: 460px;
-    padding: 300px 100px;
-    z-index: 80;
-    transition: 1s;
-    background-image: linear-gradient(
-      to right,
-      rgba(128, 128, 128, 0.599),
-      black
-    );
-    z-index: 82;
-
-    & h2 {
-      position: relative;
-      left: 199px;
-      width: 400px;
-      color: white;
-    }
-
-    & h2 span {
-      color: black;
     }
   }
 }
@@ -178,14 +128,15 @@ $super-small-screen: 375px;
   #image-wall {
     height: 900px;
   }
-  
+
   #image-wall .container {
-      max-width: 750px;
+    max-width: 750px;
   }
 
   #image-wall .first-column {
     height: 800px;
-  
+    // padding-right: 200px;
+
     & .container-up {
       position: relative;
       height: 120px;
@@ -194,18 +145,41 @@ $super-small-screen: 375px;
       & h1 {
         font-size: 35px;
       }
-  
+
       & h2 {
         display: none;
       }
     }
-  
-    & .container-low {  
+
+    & .container-low {
       & img {
         width: 300px;
         height: 350px;
       }
-  
+
+
+    & .img-cover{
+      width: 300px;
+      height: 350px;
+      // position: absolute;
+      // right: 0px;
+      // width: 360px;
+      // height: 420px;
+      // margin-right: 40px;
+      // overflow: hidden;
+      // border: 2px solid green;
+    }
+
+      & .hoverBox {
+        // font-size: 17px;
+        // font-weight: 650;
+        padding: 130px 60px;
+        top: 460px;
+        width: 300px;
+        height: 440px;
+      }
+
+
       & h3 {
         position: absolute;
         font-size: 20px;
@@ -213,48 +187,74 @@ $super-small-screen: 375px;
         width: 300px;
         right: 35px;
       }
-  
+
       & p {
         position: absolute;
         top: 470px;
         width: 300px;
         right: 35px;
       }
-
-    }
-  }
-
-  #image-wall .second-column {
-    & .container-up,
-    & .container-low {
-      width: 400px;
-      height: 400px;
-
-      & img {
-        width: 300px;
-        height: 350px;
-      }
-
-      & h1 {
-        width: 300px;
-        position: absolute;
-        top: 60px;
-        left: 40px;
-        color: white;
-      }
-
-      & p{      
-        position: absolute;
-        left: 40px;
-        color: white;
-        font-weight: 600;
-        bottom: 35px
-      }
     }
   }
 }
 
 @media only screen and (max-width: $small-screen) {
+  #image-wall {
+    height: 1200px;
+  }
+
+  #image-wall .first-column {
+    & .container-up {
+      height: 50px;
+      & h1 {
+        position: absolute;
+        // left: 12%;
+        margin-left: -55px;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+      }
+    }
+  }
+  #image-wall .first-column {
+    height: 420px;
+  }
+
+  #image-wall .first-column .container-low {
+    padding: 20px;
+
+    & img,
+    .hoverBox {
+      width: 430px;
+      height: 300px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    & .img-cover{
+      width: 430px;
+      height: 300px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    & .hoverBox {
+      // font-size: 17px;
+      // font-weight: 650;
+      padding: 110px 60px;
+      // top: 440px;
+      // width: 300px;
+      // height: 20px;
+    }
+
+    & h3 {
+      display: none;
+    }
+
+    & p {
+      display: none;
+    }
+  }
 }
 
 @media only screen and (max-width: $small-screen) {

@@ -39,6 +39,8 @@
 }
 }
 
+
+// 属于第二章
 @media only screen and (max-width: $small-screen) {
   
   #titlewrapper {
@@ -81,5 +83,111 @@
       font-weight: 500;
       // border: 2px solid rgb(133, 117, 117);
   }
+  }
+}
+
+// ----- 属于 Image Wall ----
+#image-wall .second-column .container-up #titlewrapper {
+  // 这里很多可以简化
+  position: absolute;
+  top: 300px;
+  left: 380px;
+  display: none;
+  width: 300px;
+  height: 60px;
+  // border: 2px solid rgb(248, 86, 86);
+  transition: 1s;
+  // border-bottom: 4px solid black;
+  // transition-delay: 0.5s;
+  z-index: 99;
+
+  & h1:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: -184px;
+    width: 250px;
+    font-size: 30px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    // border: 2px solid gray;
+  }
+
+  & h1:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0px;
+    width: 330px;
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    // border: 2px solid rgb(177, 71, 71);
+  
+    & p {
+      position: absolute;
+      top: 0;
+      color: black;
+      left: -184px;
+      font-size: 30px;
+      font-weight: 500;
+      // border: 2px solid rgb(133, 117, 117);
+  }
+  }
+}
+
+@media only screen and (max-width: $medium-screen) {
+  #image-wall .second-column .container-up #titlewrapper {
+    // 这里很多可以简化
+    position: absolute;
+    top: 300px;
+    left: 321px;
+    display: none;
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: $small-screen) {
+  #image-wall .second-column .container-up #titlewrapper {
+    position: absolute;
+    top: 240px;
+    left: 540px;
+    display: none;
+    width: 300px;
+
+    & h1:nth-child(1) {
+      // position: absolute;
+      // top: 0;
+      // left: -184px;
+      // width: 250px;
+      font-size: 20px;
+      // font-weight: 500;
+      // white-space: nowrap;
+      // overflow: hidden;
+      // // border: 2px solid gray;
+    }
+  
+    & h1:nth-child(2) {
+      // position: absolute;
+      // top: 0;
+      // right: 0;
+      // left: 0px;
+      // width: 330px;
+      // height: 100%;
+      // white-space: nowrap;
+      // overflow: hidden;
+      // border: 2px solid rgb(177, 71, 71);
+    
+      & p {
+        // position: absolute;
+        // top: 0;
+        // color: black;
+        // left: -184px;
+        // font-size: 30px;
+        // font-weight: 500;
+        // // border: 2px solid rgb(133, 117, 117);
+    }
+    }
+  
   }
 }

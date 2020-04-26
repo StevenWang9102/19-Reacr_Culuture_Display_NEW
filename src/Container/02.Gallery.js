@@ -49,11 +49,10 @@ export const Gallery = (props) => {
       <section id='gallery'>
         <div className='container'>
           <div className='row'>
+            
             {/* ----------------  Column One -------------- */}
             <div className='column-one col-sm-6 col-md-6 col-lg-6'>
-              
               <h1>{slogans[pageNum-1]}</h1>
-
               <img src={image[pageNum - 1]} className='gallery-img' alt='' />
               <div></div>
             </div>
@@ -61,25 +60,19 @@ export const Gallery = (props) => {
             {/* ----------------  Column Two -------------- */}
             <div className='column-two  col-sm-6 col-md-6 col-lg-6'>
               <h5> FEATURED PROJECT </h5>
-
               <Page pageNum={pageNum} />
-
               <PartWord title={database[pageNum - 1].title} />
-
               <p className="paragraph">{database[pageNum - 1].paragraph}</p>
             </div>
           </div>
 
           {/* --------------- Column Three ------------- */}
           <div className='column-three row'>
-
             <ViewProjectButton/>
-            
             <GalleryButtons
               pageNum ={pageNum}
               setPageNum={setPageNum}
             />
-
           </div>
         </div>
       </section>

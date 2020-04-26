@@ -1,138 +1,112 @@
-#gallery{
+@import "./defination.scss";
+
+#gallery {
   position: relative;
   height: 800px;
-  // background-image: linear-gradient(
-  //   to top right,
-  //   #a932d8,
-  //   #110316d8
-  // );
 
-  & .row{
+  & .row {
     position: relative;
     height: 760px;
-    // border: 2px solid gray;
   }
 }
 
 // ------------------- Column One -----------------
-#gallery .column-one{
-  position: relative;
-  // border: 5px solid gray;
-
-  & h1{
+#gallery .column-one {
+  & h1 {
     position: absolute;
     top: 360px;
     width: 400px;
     right: 220px;
+    transform: rotate(-90deg);
     font-size: 100px;
     font-weight: 900;
     text-align: center;
-    color: rgba(255, 255, 255, 0.253);
-    transform: rotate(-90deg);
     letter-spacing: 10px;
-    // border: 5px solid gray;
+    color: rgba(255, 255, 255, 0.253);
   }
 
-  & .gallery-img, div{
+  & .gallery-img,
+  div {
     position: absolute;
     top: 200px;
     right: 5px;
     height: 450px;
     width: 350px;
     overflow: hidden;
-    // border: 5px solid gray;
     object-fit: cover;
   }
 
-  & div{
+  & div {
     background-color: black;
     opacity: 0.15;
   }
 }
 
 // ------------------- Column Two ------------------
-#gallery .column-two{
+#gallery .column-two {
   position: relative;
   top: 200px;
   left: 30px;
   color: white;
   height: 500px;
   max-width: 370px;
-  // border: 2px solid gray ;
 
-  & h5{
+  & h5 {
     position: absolute;
     top: 50px;
     left: -190px;
     font-size: 15px;
   }
 
-  & .paragraph{
+  & .paragraph {
     position: relative;
     top: 150px;
     word-wrap: normal;
     width: 250px;
-    // border: 2px solid gray;
   }
 }
 
-
 // --------------- Column Three ---------------
-#gallery .column-three{
+#gallery .column-three {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   height: 200px;
   width: 600px;
-  // border: 2px solid gold;
 }
 
-@keyframes img-to-right{  
+@keyframes img-to-right {
   0% {
-      transform: translate(0, 0x,);
+    transform: translate(0, 0x);
   }
   100% {
     transform: translate(32px, 0);
   }
 }
 
-
-// $large-screen : 1200px;
-// $medium-screen : 992px;
-// $small-screen : 768px;
-// $extra-small-screen : 540px;
-// $super-small-screen : 375px;
-
-@media only screen and (min-width: $medium-screen) {
-}
-  
-@media only screen and (max-width: $medium-screen) {
-}
-  
+// ----------------- Media Query ----------------
 @media only screen and (max-width: $small-screen) {
-  #gallery{
+  #gallery {
     position: relative;
     height: 800px;
   }
 
-  #page{
+  #page {
     display: none;
   }
 
-  #gallery .column-one{
+  // ------------------- Column One -----------------
+  #gallery .column-one {
     position: relative;
     margin: 0 auto;
 
-    & h1{
-      position: absolute;
-      top: 300px;
-      width: 320px;
-      right: 230px;
-      // border: 2px solid gold;
+    & h1 {
+      display: none;
     }
 
-    & .gallery-img, div{
+    & .gallery-img,
+    div {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
@@ -141,45 +115,33 @@
     }
   }
 
-  #gallery .column-two{
+  // ------------------- Column Two ------------------
+  #gallery .column-two {
     position: relative;
     top: 70px;
     margin: 0 auto;
     width: 400px;
     left: 0;
-    height: 500px;
-    // max-width: 370px;
-    // border: 2px solid gray ;
-  
-    & h5{
+
+    & h5 {
       position: absolute;
       top: -25px;
       left: 0px;
-      font-size: 15px;
     }
-  
-    & .paragraph{
+
+    & .paragraph {
       position: absolute;
       top: 283px;
-      left: -10px;
+      left: 1%;
+      margin-left: 5px;
       word-wrap: normal;
       width: 360px;
-      // border: 2px solid gray;
     }
   }
 
-  #gallery .column-three{
-    // display: none;
+  // --------------- Column Three ---------------
+  #gallery .column-three {
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 200px;
-    width: 600px;
-    // border: 2px solid gold;    
   }
 }
-
-@media only screen and (max-width: $small-screen) {
-}
-  

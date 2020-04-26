@@ -1,122 +1,84 @@
-@import './defination.scss';
+@import "./defination.scss";
 
-#navigation{
+#navigation {
   position: relative;
-  height: 360px;
+  height: 420px;
   overflow: hidden;
-  background-image: linear-gradient(
-     to bottom,
-     #5179ae,
-     #3865a2
-  );
+  background-image: linear-gradient(to bottom, #5179ae, #3865a2);
 
-  & .container{
+  & .container {
     max-width: 2000px;
   }
 
-  & .content{
-    height: 360px;
-    // border: 2px solid red;
+  & .content {
+    height: 420px;
   }
 }
 
-
-#navigationLeft{
-  // height: 100%;
-  // border: 2px solid red÷;
-  & img{
+#navigationLeft {
+  & img {
     position: absolute;
-    // top: 0px;
     left: 0px;
     width: 100%;
-    height:100%;
+    height: 100%;
     object-fit: cover;
   }
 }
 
-#navigationRight{
+#navigationRight {
   position: absolute;
   top: 0;
   right: 0;
   color: white;
   z-index: 10;
 
-  & #myVideo{
+  & #myVideo {
     position: absolute;
     top: 0;
     right: -350px;
-    height: 360px;
+    height: 420px;
     transition: 1.5s;
     z-index: -1;
   }
-  
-  & ul li{
+
+  & ul li {
     width: 110px;
     margin: 20px 10px;
     font-size: 20px;
   }
 }
 
-
-
-// ----------------------- Media Query Templete
-// $extra-large-screen: 1200px;
-// $large-screen: 992px;
-// $medium-screen: 768px;
-// $small-screen: 576px;
-// $extra-small-screen : 375px;
-
-  
-@media only screen and (min-width: $small-screen) {
-//   #navigationRight{  
-//     right: 120px;
-// }
-}
-
-// @media only screen and (min-width: $medium-screen) {
-//   #navigationRight{  
-//       right: 180px;
-// }
-// }
-  
-@media only screen and (max-width: $medium-screen) {
-}
-
+// ------------------- Media Query Templete -----------------
 
 @media only screen and (max-width: $small-screen) {
-  #navigationRight{  
-    & #myVideo{
-      right: -450px;
-    }
-}
-}
 
-@media only screen and (max-width: 576px) {
-  #navigation{
+  #navigation {
     height: 50px;
 
-    & .row{
+    & .row {
       flex-wrap: nowrap;
     }
 
-    & img{
+    & img {
       position: absolute;
       left: 0;
       height: 50px;
-      width: 50px;
-
+      width: 110px;
       left: 0;
     }
 
-    & .content{
+    & .content {
       height: 50px;
     }
-
   }
 
-  #navigationRight{
+  #navigationRight {
+    & #myVideo {
+      right: -450px;
+      display: none;
+    }
 
-    & ul{
+    & ul {
       position: absolute;
       left: -250px;
       top: 12px;
@@ -126,14 +88,10 @@
       font-weight: 600;
     }
 
-    & ul li{
+    & ul li {
       color: white;
       font-size: 15px;
       display: inline;
     }
-  }
-
-  #myVideo{
-    visibility: hidden;
   }
 }

@@ -36,6 +36,7 @@
         color: black;
         border-bottom: 2px solid black;
         text-decoration: none;
+        cursor: pointer;
 
         & :hover{
             text-decoration: none;
@@ -44,8 +45,8 @@
 
     & #page{
         position: absolute;
-        top: 20px;
-        right: -40px;
+        top: 60px;
+        left: 86%;
     }
 }
 
@@ -77,7 +78,7 @@
         padding: 5px;
         padding-left: 80px;
     
-        & #carousel2ExampleControls{
+        & #imgCarousel{
             position: absolute;
             top: 0;
         }
@@ -131,7 +132,7 @@
         // background-color: rgba(240, 230, 140, 0.397);
         // padding: 5px;
     
-        & #carousel2ExampleControls{
+        & #imgCarousel{
             position: absolute;
             top: 0;
         }

@@ -5,12 +5,12 @@ export const NextButton = (props) => {
   return (
     <div
       className='carousel-control-next'
-      href='#carouselExampleControls'
+      href='#titleCarousel'
       role='button'
       data-slide='next'>
       <span
         className='carousel-control-next2'
-        href='#carousel2ExampleControls'
+        href='#imgCarousel'
         role='button'
         data-slide='next'></span>
     </div>

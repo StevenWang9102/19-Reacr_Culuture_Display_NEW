@@ -1,5 +1,5 @@
 import React from "react";
-import video from "../img/video.mp4";
+import video from "../img/video2.mp4";
 
 export const NavigationRight = (props) => {
   return (

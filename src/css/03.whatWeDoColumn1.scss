@@ -1,188 +1,154 @@
-#what-we-do{
-    position: relative;
-    height: 800px;
-    max-width: 1100px;
-    margin: 0 auto;
+#what-we-do {
+  position: relative;
+  height: 800px;
+  max-width: 1100px;
+  margin: 0 auto;
+  // background-image: linear-gradient(
+  //   to bottom right, #e3f0c1c4, #d9eaf379);
 
-    & .container{
-        width: 100%;
-        height: 100%;
-        // border: 2px solid salmon;
-    }
 
-    & .row{
-        margin: 0;
-        width: 100%;
-        height: 100%;
-    }
-}
-
-#what-we-do .first-column{
+  & .container {
+    width: 100%;
     height: 100%;
-    // background-color: rgba(232, 220, 241, 0.37);
-    padding: 5px;
+  }
 
-    & h1:nth-child(1){
-        position: relative;
-        top: 80px;
-        font-size: 50px;
-    }
-
-    & h1:nth-child(2){
-        position: relative;
-        top: 20px;
-        left: 150px;
-        color: rgba(128, 128, 128, 0.196);
-        font-size: 80px;
-        // overflow: hidden;
-        // border: 2px solid gold;
-        white-space: nowrap;  
-        transition: 1s;
-        z-index: 200;
-       }
-    
-
-    & #carousel2ExampleControls{
-        position: absolute;
-        left: 0;
-        top: 180px;
-        width: 100%;
-        z-index: 10;
-        
-        & .carousel-item {
-            height: 400px;
-            }
-        
-
-        & img{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            // height: 460px;
-            object-fit: cover;
-            transition: 2s;
-            z-index: 10;
-        }
-    }
-
-
-    & .control-buttons{
-        position: absolute;
-        top: 475px;
-        // bottom: ;
-        left: -40px;
-        z-index: 11;
-
-        & li{
-            color: white;
-            width: 80px;
-            height: 80px;
-            font-weight: 500;
-            padding: 30px 0;
-            text-align: center;
-        }
-
-        & li:nth-child(1){
-            background-color: rgba(0, 0, 0, 0.938);
-            border-right: 2px solid white;
-        }
-    
-        & li:nth-child(2){
-            margin-top: 2px;
-            background-color: rgb(108, 110, 109);
-            border-right: 2px solid white;
-        }
-    }
+  & .row {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
+// ------------ First Column ------------
+#what-we-do .first-column {
+  height: 100%;
+  padding: 5px;
+  // background-color: rgba(232, 220, 241, 0.37);
 
-@media (min-width: 768px){
+  & h1:nth-child(1) {
+    position: relative;
+    top: 80px;
+    font-size: 50px;
+
+  & h1:nth-child(2) {
+    position: relative;
+    top: 20px;
+    left: 150px;
+    font-size: 80px;
+    white-space: nowrap;
+    transition: 1s;
+    color: rgba(128, 128, 128, 0.196);
+    z-index: 200;
+  }
+
+  & #imgCarousel {
+    position: absolute;
+    top: 180px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    & .carousel-item {
+      height: 400px;
+    }
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+      transition: 2s;
+      z-index: 10;
+    }
+  }
+
+  & .control-buttons {
+    position: absolute;
+    top: 475px;
+    left: -40px;
+    z-index: 11;
+
+    & li {
+      color: white;
+      width: 80px;
+      height: 80px;
+      font-weight: 500;
+      padding: 30px 0;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    & li:nth-child(1) {
+      background-color: rgba(0, 0, 0, 0.938);
+      border-right: 2px solid white;
+    }
+
+    & li:nth-child(2) {
+      margin-top: 2px;
+      background-color: rgb(108, 110, 109);
+      border-right: 2px solid white;
+    }
+  }
 }
-
 
 // --------------- Media Query Templete --------------
-// $large-screen : 1200px;
-// $medium-screen : 992px;
-// $small-screen : 768px;
-// $extra-small-screen : 540px;
-// $super-small-screen : 375px;
 
-@media only screen and (min-width: $medium-screen) {
-}
-  
 @media only screen and (max-width: $medium-screen) {
-    #what-we-do{
-        & .container{
-            max-width: 835px;
-        }
+  #what-we-do {
+    & .container {
+      max-width: 835px;
     }
+  }
 }
-  
-@media only screen and (max-width: $small-screen) {
-    #what-we-do .first-column{
-        height: 570px;
-        // background-color: rgba(232, 220, 241, 0.37);
-        
-        & #carousel2ExampleControls{
-            padding: 0 100px;
-            height: 340px;
-            // border: 2px solid gold
-    
-            & img{
-                top: 40px;
-                height: 320px;
-            }
-        }
 
-        & .control-buttons{
-            position: absolute;
-            top: 380px;
-            // // bottom: ;
-            // left: -40px;
-            // z-index: 11;
-        }
+@media only screen and (max-width: $small-screen) {
+  #what-we-do .first-column {
+    height: 570px;
+
+    & #imgCarousel {
+      padding: 0 100px;
+      height: 340px;
+
+      & img {
+        top: 40px;
+        height: 320px;
+      }
     }
+
+    & .control-buttons {
+      position: absolute;
+      top: 380px;
+    }
+  }
 }
 
 @media only screen and (max-width: $extra-small-screen) {
+  #what-we-do .first-column {
+    height: 570px;
 
-    #what-we-do .first-column{
-        height: 570px;
-        // background-color: rgba(232, 220, 241, 0.37);
-        
-        & h1:nth-child(1){
-            position: relative;
-            top: 30px;
-            font-size: 35px;
-        }
-
-        & #carousel2ExampleControls{
-            position: absolute;
-            top: 70px;
-            padding: 0px;
-            // height: 20px;
-            // border: 2px solid gold
-        }
-
-        & .control-buttons{
-            position: absolute;
-            top: 340px;
-            // height: 40px;
-            // border: 2px solid gold;
-
-
-        & li{
-            color: white;
-            height: 30px;
-            // width: 80px;
-            // font-weight: 500;
-            padding: 5px 0;
-            // text-align: center;
-            // border: 2px solid gold;
-        }
-        }
+    & h1:nth-child(1) {
+      position: relative;
+      top: 30px;
+      font-size: 35px;
     }
+
+    & #imgCarousel {
+      position: absolute;
+      top: 70px;
+      padding: 0px;
+    }
+
+    & .control-buttons {
+      position: absolute;
+      top: 340px;
+
+      & li {
+        color: white;
+        height: 30px;
+        padding: 5px 0;
+      }
+    }
+  }
 }
-  

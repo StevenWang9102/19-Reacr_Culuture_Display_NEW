@@ -1,0 +1,24 @@
+
+@keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes MoveDown {
+  
+    0% {
+      top: 100px;
+      opacity: 1;
+    }
+  
+    100% {
+      top: 130px;
+      opacity: 0;
+    }
+  }
+  

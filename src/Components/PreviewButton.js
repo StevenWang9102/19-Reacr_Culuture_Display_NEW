@@ -5,12 +5,12 @@ export const PreviewButton = (props) => {
   return (
     <div
       className='carousel-control-prev'
-      href='#carouselExampleControls'
+      href='#titleCarousel'
       role='button'
       data-slide='prev'>
       <span
         className='carousel-control-prev1'
-        href='#carousel2ExampleControls'
+        href='#imgCarousel'
         role='button'
         data-slide='prev'>
       </span>

@@ -1,8 +1,6 @@
 import React from "react";
-import logo from "../img/01.navigation/logo0.png";
 import { NavigationLeft } from "../Components/01.NavigationLeft";
 import { NavigationRight } from "../Components/01.NavigationRight";
-import video from "../img/video.mp4";
 
 export const Navigation = (props) => {
   return (

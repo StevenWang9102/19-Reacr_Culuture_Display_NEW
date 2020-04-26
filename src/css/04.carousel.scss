@@ -1,6 +1,6 @@
 // -------------------- what we do image------------
 #what-we-do .first-column {
-  & #carousel2ExampleControls {
+  & #imgCarousel {
     height: 100%;
     // border: 5px solid rgb(218, 59, 59);
     font-size: 34px;
@@ -27,7 +27,7 @@
 
 // -------------------- what we do title------------
 #what-we-do .second-column {
-  & #carouselExampleControls {
+  & #titleCarousel {
     position: absolute;
     top: 230px;
     // left: -10px;
@@ -69,12 +69,12 @@
 
 @media only screen and (max-width: $small-screen) {
   #what-we-do .first-column {
-    & #carousel2ExampleControls {
+    & #imgCarousel {
       height: 400px;
     }
   }
   #what-we-do .second-column {
-    & #carouselExampleControls {
+    & #titleCarousel {
       position: absolute;
       top: 40px;
       width: 100%;

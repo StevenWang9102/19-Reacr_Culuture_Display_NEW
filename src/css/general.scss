@@ -12,32 +12,18 @@ li{
   list-style-type: none;
 }
 
-.pointer{
-  cursor: pointer;
+img{
+  border-radius: 2px;
 }
 
-.article_underline{
-  content: "";
-  display: block;
-  margin: 5px 0;
-}
-
-@mixin public_underline($width, $margin) {
-  &::after {
-    content: "";
-    display: block;
-    width: $width;
-    margin: $margin 0;
-    border: .7px solid $light-black;
-    transition: 1.7s;
-  }
-  &:hover {
-    &::after {
-      content: "";
-      display: block;
-      width: $width;
-      margin: $margin 0;
-      border: .5px solid rgb(0, 0, 0);
-    }
-  }
+#followImg {
+  position: absolute;
+  // display: none;
+  // visibility: hidden;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgba(0, 255, 255, 0.189);
+  mix-blend-mode: difference;
+  z-index: 991;
 }

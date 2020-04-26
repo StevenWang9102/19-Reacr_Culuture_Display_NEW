@@ -12,11 +12,64 @@
     background-color: rgb(214, 214, 62);
 
     & div{
-      padding: 3px;
+    //  border: 2px solid rgb(73, 66, 49);
+      overflow: hidden;
+    }
+    & ul{
+      padding: 0;
+      margin: 0;
       display: inline-block;
-      // transition: 1s;
-      // transition:opacity 1s linear 1s;
       transform:rotate(-90deg);
     }
 
+    & li{
+      padding: 1px 6px ;
+      margin: 0;
+      display: inline-block;
+    }
   }
+
+#page ul {
+  position: relative;
+  animation-duration: 0.5s;
+  animation-delay: .6s;
+}
+
+// ----------------------- What We Do Page --------------------
+// #what-we-do .second-column #page{
+//   position: absolute;
+//   right: 111px;
+//   top: 100px;
+//   // height: 40px;
+//   // width: 80px;
+//   // text-align: center;
+//   // padding: 5px 10px;
+//   // letter-spacing: 3px;
+//   // color: white;
+//   // font-size: 16px;
+//   // transform:rotate(90deg);
+// //   // background-color: rgb(214, 214, 62);
+
+// //   & div{
+// //   //  border: 2px solid rgb(73, 66, 49);
+// //     overflow: hidden;
+// //   }
+// //   & ul{
+// //     padding: 0;
+// //     margin: 0;
+// //     display: inline-block;
+// //     transform:rotate(-90deg);
+// //   }
+
+// //   & li{
+// //     padding: 1px 6px ;
+// //     margin: 0;
+// //     display: inline-block;
+// //   }
+// // }
+
+// // #page ul {
+// // position: relative;
+// // animation-duration: 0.5s;
+// // animation-delay: .6s;
+// }

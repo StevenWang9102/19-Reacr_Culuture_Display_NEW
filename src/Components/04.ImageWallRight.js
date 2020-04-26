@@ -1,6 +1,5 @@
 import React from "react";
-// import { createUseStyles } from "react-jss";
-import sci01 from "../img/03.whatwedo/sci01.jpg";
+import sci03 from "../img/03.whatwedo/sci03.jpg";
 import sci02 from "../img/03.whatwedo/sci02.jpg";
 import { PartWord } from "../Components/PartWord";
 
@@ -12,7 +11,7 @@ export const ImageWallRight = (props) => {
         <p>APR 07, 2020</p>
 
         <div className='img-wrapper'>
-          <img src={sci01} alt='' />
+          <img src={sci03} alt='' />
           <div className='hover-on-right'></div>
         </div>
 

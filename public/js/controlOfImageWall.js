@@ -26,10 +26,9 @@ console.log(titlewrapper);
 
 imgBox.addEventListener("mouseover", (event) => {
   hoverRight.style.left = "0px";
-  // left: 380px
-  titlewrapper.style.display = "inline-block"
-  // titlewrapper.style.left = "400px"
-
+  setTimeout(function(){
+    titlewrapper.style.display = "inline-block"
+  },600)
 });
 
 imgBox.addEventListener("mouseout", (event) => {

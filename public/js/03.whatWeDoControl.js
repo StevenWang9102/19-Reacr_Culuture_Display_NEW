@@ -1,12 +1,30 @@
+// ------------------ Visibility ----------------
+const whatwedo = document.getElementById("what-we-do");
+const galleryContainer2 = document.getElementsByClassName("gallery-row")[0];
+const gallery1 = document.getElementById("gallery");
+// const whatwedoContainer = document.getElementsByClassName("whatwedo-container")[0];
 
+window.addEventListener("scroll", function (e) {
+  var whatwedoTop = getElementViewPosition3(whatwedo).y
+  console.log(whatwedoTop);
+
+    if(whatwedoTop < 750){
+      whatwedo.style.visibility = "visible"
+      whatwedo.style.opacity = 1;
+      gallery1.style.opacity = 0;
+
+    } else{
+      whatwedo.style.visibility = "hidden"
+      gallery1.style.opacity = 1;
+      whatwedo.style.opacity = 0;
+    }
+});
+
+
+// --------------- Float Ball & Header Position--------------
 const ball = document.getElementsByClassName("float-ball")[0];
 const header = document.getElementsByName("whatwe").item(1);
 
-
-// const whatwedo = document.getElementById("what-we-do");
-// console.log(whatwedo.clientTop);
-
-// --------------- Float Ball & Header Position--------------
 window.addEventListener("mousemove", (event) => {
 
   const scrollTop = document.documentElement.scrollTop;
@@ -101,3 +119,37 @@ secondColumn.addEventListener("mouseout", (event) => {
 // whatWeDoNext.addEventListener("mouseout", (event) => {
 //   followingBall2.style.visibility = "hidden"
 // })
+
+
+
+const getElementViewPosition3 = (element) =>{
+  var actualLeft = element.offsetLeft;
+  var current = element.offsetParent;
+  while (current !== null) {
+    actualLeft += current.offsetLeft + current.clientLeft;
+    current = current.offsetParent;
+  }
+  var elementScrollLeft = 0;
+  if (document.compatMode === "BackCompat") {
+    elementScrollLeft = document.body.scrollLeft;
+  } else {
+    elementScrollLeft = document.documentElement.scrollLeft;
+  }
+  var left = actualLeft - elementScrollLeft;
+
+  var actualTop = element.offsetTop;
+
+  current = element.offsetParent;
+  while (current !== null) {
+    actualTop += current.offsetTop + current.clientTop;
+    current = current.offsetParent;
+  }
+  var elementScrollTop = 0;
+  if (document.compatMode === "BackCompat") {
+    elementScrollTop = document.body.scrollTop;
+  } else {
+    elementScrollTop = document.documentElement.scrollTop;
+  }
+  var right = actualTop - elementScrollTop;
+  return { x: left, y: right };
+}

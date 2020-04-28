@@ -30,7 +30,7 @@ const useStyles = createUseStyles({
 const GalleryLayout = ({ children , ...props }) => {
   const classes = useStyles(props);
   return (
-    <div className={`${classes.backgrounds}`}>{children}</div>
+    <div id='gallery' className={ `${classes.backgrounds}`}>{children}</div>
   );
 };
 
@@ -45,10 +45,11 @@ export const Gallery = (props) => {
   const image = [slide1, slide2, slide3, slide4];
 
   return (
+    <section >
+
     <GalleryLayout backgrounds={backgroundImage[pageNum-1]}>
-      <section id='gallery'>
-        <div className='container'>
-          <div className='row'>
+        <div className='container '>
+          <div className='row gallery-row'>
             
             {/* ----------------  Column One -------------- */}
             <div className='column-one col-sm-6 col-md-6 col-lg-6'>
@@ -75,7 +76,7 @@ export const Gallery = (props) => {
             />
           </div>
         </div>
-      </section>
     </GalleryLayout>
+    </section>
   );
 };

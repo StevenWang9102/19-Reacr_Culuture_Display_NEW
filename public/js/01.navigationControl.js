@@ -8,7 +8,7 @@ video.addEventListener("mouseover", (event) => {
 });
 
 video.addEventListener("mouseout", (event) => {
-  video.style.right = "-350px";
+  video.style.right = "-800px";
 });
 
 

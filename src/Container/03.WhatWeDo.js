@@ -12,7 +12,7 @@ export const WhatWeDo = (props) => {
   return (
     <section id='what-we-do'>
       <div className='container'>
-        <div className='row'>
+        <div className='row whatwedo-container'>
 
           <div className='first-column col-sm-12 col-md-7 col-lg-8'>
             <WhatWeDoLeft 

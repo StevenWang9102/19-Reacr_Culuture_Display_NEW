@@ -2,7 +2,7 @@
 
 #navigation {
   position: relative;
-  height: 420px;
+  height: 540px;
   overflow: hidden;
   background-image: linear-gradient(to bottom, #5179ae, #3865a2);
 
@@ -11,7 +11,7 @@
   }
 
   & .content {
-    height: 420px;
+    height: 540px;
   }
 }
 
@@ -35,8 +35,8 @@
   & #myVideo {
     position: absolute;
     top: 0;
-    right: -350px;
-    height: 420px;
+    right: -800px;
+    height: 540px;
     transition: 1.5s;
     z-index: -1;
   }
@@ -45,6 +45,7 @@
     width: 110px;
     margin: 20px 10px;
     font-size: 20px;
+    cursor: pointer;
   }
 }
 

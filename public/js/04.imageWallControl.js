@@ -105,7 +105,7 @@ const titleH2 = document.getElementById("movingTitle");
 
 window.addEventListener("scroll", function (e) {
   var imageWallTop = getElementViewPosition(imageWall).y
-  console.log(imageWallTop);
+  // console.log(imageWallTop);
 
     if(imageWallTop >0 && imageWallTop < 400)
     titleH2.style.marginLeft = imageWallTop + 50 + "px"

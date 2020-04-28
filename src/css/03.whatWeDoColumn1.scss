@@ -23,12 +23,12 @@
 #what-we-do .first-column {
   height: 100%;
   padding: 5px;
-  // background-color: rgba(232, 220, 241, 0.37);
-
+  
   & h1:nth-child(1) {
     position: relative;
     top: 80px;
     font-size: 50px;
+    text-shadow: 0.05em 0.05em rgba(153, 153, 153, 0.555);
   }
 
   & h1:nth-child(2) {
@@ -38,6 +38,7 @@
     font-size: 80px;
     white-space: nowrap;
     transition: 1s;
+    // text-shadow: 0.05em 0.05em rgba(153, 153, 153, 0.155);
     color: rgba(128, 128, 128, 0.196);
     z-index: 200;
   }

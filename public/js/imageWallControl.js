@@ -18,20 +18,52 @@ hoverBox.addEventListener("mouseout", (event) => {
 
 // ------------------- Image Right Hover ----------------
 const hoverRight = document.getElementsByClassName("img-hover")[0];
-const imgBox = document.getElementsByClassName("img-wrapper")[0];
+const imgBox = document.getElementsByClassName("img1")[0];
+console.log(imgBox);
+
+const hoverh1 = document.getElementById("hoverh1");
 const titlewrapper = document.getElementsByName("titlewrapper")[1];
 
+// 函数可以合并@@@@
 imgBox.addEventListener("mouseover", (event) => {
   hoverRight.style.left = "0px";
   setTimeout(function () {
     titlewrapper.style.display = "inline-block";
-  }, 600);
+  }, 400);
 });
 
-imgBox.addEventListener("mouseout", (event) => {
+hoverh1.addEventListener("mouseover", (event) => {
+  hoverRight.style.left = "0px";
+  setTimeout(function () {
+    titlewrapper.style.display = "inline-block";
+  }, 400);
+});
+
+hoverRight.addEventListener("mouseover", (event) => {
+  hoverRight.style.left = "0px";
+  setTimeout(function () {
+    titlewrapper.style.display = "inline-block";
+  }, 400);
+});
+
+hoverRight.addEventListener("mouseout", (event) => {
   hoverRight.style.left = "-440px";
   titlewrapper.style.display = "none";
 });
+
+hoverh1.addEventListener("mouseout", (event) => {
+  hoverRight.style.left = "-440px";
+  titlewrapper.style.display = "none";
+});
+
+// 这地方逻辑需要完全重新设计@@@@@@@@@@
+
+// 等于是什么东西又让他重新 显示了
+// 加入一句，一旦自己hover，显示为none
+// 闪烁原因可能是因为imgBox现在只是一个边框，每次都是hover到边框上了
+// titlewrapper.addEventListener("mouseover", (event) => {
+//   titlewrapper.style.display = "none";
+// });
 
 // ------------------- Title Movement ----------------
 const getElementViewPosition = (element) =>{
@@ -80,6 +112,22 @@ window.addEventListener("scroll", function (e) {
   
 });
 
+// --------------- Column Moving -------------
+const columnLeft = document.getElementsByClassName("container-up")[0];
+const columnRight = document.getElementsByClassName("container-up")[1];
+console.log(columnRight);
+
+window.addEventListener("scroll", function (e) {
+  var imageWallTop = getElementViewPosition(imageWall).y
+
+    if(imageWallTop >300 && imageWallTop < 600){
+      columnLeft.style.marginTop = "-20px"
+      columnRight.style.marginTop = "-60px"
+    } else{
+      columnLeft.style.marginTop = "0px"
+      columnRight.style.marginTop = "0px"
+    }
+});
 
 
 

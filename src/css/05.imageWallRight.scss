@@ -11,6 +11,8 @@
     height: 50%;
     overflow: hidden;
     padding: 20px;
+    transition: 3s;
+
 
     & img {
       object-fit: cover;
@@ -24,7 +26,8 @@
       top: 80px;
       left: 60px;
       color: white;
-      z-index: 10;
+      text-shadow: 0.05em 0.05em #333;
+      z-index: 90;
     }
 
     & p {
@@ -135,7 +138,7 @@
     }
 
     & .container-up {
-
+      
       & .img-wrapper {
         width: 430px;
         height: 300px;

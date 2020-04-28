@@ -34,13 +34,14 @@
     border-bottom: 0.6px solid white;
     width: 90%;
   }
+
   & ul {
     position: absolute;
     bottom: 20px;
     color: white;
 
     & li{
-        margin: 0 30px;
+        margin: 0 40px;
         display: inline;
     }
   }
@@ -64,5 +65,26 @@
   }
   50% {
     border-color: rgb(195, 247, 99);
+  }
+}
+
+
+// ------------- Media Query -----------
+@media only screen and (max-width: $small-screen) {
+  #footer {
+    height: 300px;
+    padding: 100px 50px;
+    & .typewriter h1 {
+      font-size: 40px;
+    }
+
+    & hr{
+      display: none;
+    }
+    & ul {
+      & li{
+          display: none;
+      }
+    }
   }
 }

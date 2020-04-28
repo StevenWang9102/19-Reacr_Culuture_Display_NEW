@@ -1,6 +1,6 @@
 import React from "react";
-import sci03 from "../img/03.whatwedo/sci03.jpg";
-import sci02 from "../img/03.whatwedo/sci02.jpg";
+import sci01 from "../img/04.imagewall/img6.png";
+import sci02 from "../img/04.imagewall/img3.png";
 import { PartWord } from "../Components/PartWord";
 
 export const ImageWallRight = (props) => {
@@ -11,8 +11,8 @@ export const ImageWallRight = (props) => {
         <p>APR 07, 2020</p>
 
         <div className='img-wrapper'>
-          <img src={sci03} alt='' />
-          <div className='hover-on-right'></div>
+          <img src={sci01} alt='' />
+          <div className='img-hover'></div>
         </div>
 
         <PartWord title='Read More Articles' />

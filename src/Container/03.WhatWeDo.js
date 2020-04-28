@@ -2,7 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import { WhatWeDoLeft } from "../Components/03.WhatWeDoLeft";
-import { WhatWeDoRight } from "../Components/03.WhatWeDoRight";
+import { WhatWeDoRight } from "03.WhatWeDoRight";
 
 
 export const WhatWeDo = (props) => {

@@ -4,6 +4,7 @@ import { Navigation } from "./Container/01.Navigation";
 import { Gallery } from "./Container/02.Gallery";
 import { WhatWeDo } from "./Container/03.WhatWeDo";
 import { ImageWall } from "./Container/04.ImageWall";
+import { Footer } from "./Container/05.Footer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Gallery />
       <WhatWeDo />
       <ImageWall />
+      <Footer/>
     </div>
   );
 }

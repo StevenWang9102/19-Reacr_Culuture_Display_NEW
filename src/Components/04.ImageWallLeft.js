@@ -1,12 +1,12 @@
 import React from "react";
-import img1 from "../img/04.imagewall/img1.png";
+import img1 from "../img/04.imagewall/img7.png";
 
 export const ImageWallLeft = (props) => {
   return (
     <section>
       <div className='container-up'>
-        <h1>Latest from Bowen.</h1>
-        <h2>Latest from Bowen.</h2>
+        <h1>Latest Story from us.</h1>
+        <h2 id="movingTitle">Latest Story from us.</h2>
       </div>
 
       <div className='container-low'>

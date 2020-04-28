@@ -1,0 +1,68 @@
+#footer {
+  display: flex;
+  justify-content: center;
+  padding: 200px 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  height: 600px;
+  transition: 1s;
+
+  & .typewriter h1 {
+    padding: 20px;
+    color: #fff;
+    font-family: monospace;
+    font-size: 80px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: typing 4s steps(30, end), blink-caret 0.5s step-end infinite;
+  }
+
+  & h2 {
+    font-size: 20px;
+    // float: right;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+  }
+
+  & hr {
+    position: absolute;
+    bottom: 50px;
+    border-bottom: 0.6px solid white;
+    width: 90%;
+  }
+  & ul {
+    position: absolute;
+    bottom: 20px;
+    color: white;
+
+    & li{
+        margin: 0 30px;
+        display: inline;
+    }
+  }
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(195, 247, 99);
+  }
+}

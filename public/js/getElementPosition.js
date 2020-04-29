@@ -30,3 +30,5 @@
 //     return { x: left, y: right };
 //   }
   
+
+// window.getElementViewPosition = getElementViewPosition;

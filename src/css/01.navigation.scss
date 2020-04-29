@@ -5,7 +5,8 @@
   height: 540px;
   overflow: hidden;
   background-image: linear-gradient(to bottom, #5179ae, #3865a2);
-
+  z-index: 99;
+  
   & .container {
     max-width: 2000px;
   }
@@ -51,6 +52,11 @@
 
 // ------------------- Media Query Templete -----------------
 
+@media only screen and (max-width: $medium-screen) {
+  // #navigation {
+  //   height: 300px;
+  // }
+}
 @media only screen and (max-width: $small-screen) {
 
   #navigation {

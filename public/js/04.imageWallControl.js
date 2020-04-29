@@ -109,25 +109,37 @@ window.addEventListener("scroll", function (e) {
 
     if(imageWallTop >0 && imageWallTop < 400)
     titleH2.style.marginLeft = imageWallTop + 50 + "px"
-  
-});
-
-// --------------- Column Moving -------------
-const columnLeft = document.getElementsByClassName("container-up")[0];
-const columnRight = document.getElementsByClassName("container-up")[1];
-console.log(columnRight);
-
-window.addEventListener("scroll", function (e) {
-  var imageWallTop = getElementViewPosition(imageWall).y
-
-    if(imageWallTop >300 && imageWallTop < 600){
-      columnLeft.style.marginTop = "-20px"
-      columnRight.style.marginTop = "-60px"
-    } else{
-      columnLeft.style.marginTop = "0px"
-      columnRight.style.marginTop = "0px"
-    }
 });
 
 
+const getElementViewPosition4 = (element) =>{
+  var actualLeft = element.offsetLeft;
+  var current = element.offsetParent;
+  while (current !== null) {
+    actualLeft += current.offsetLeft + current.clientLeft;
+    current = current.offsetParent;
+  }
+  var elementScrollLeft = 0;
+  if (document.compatMode === "BackCompat") {
+    elementScrollLeft = document.body.scrollLeft;
+  } else {
+    elementScrollLeft = document.documentElement.scrollLeft;
+  }
+  var left = actualLeft - elementScrollLeft;
 
+  var actualTop = element.offsetTop;
+
+  current = element.offsetParent;
+  while (current !== null) {
+    actualTop += current.offsetTop + current.clientTop;
+    current = current.offsetParent;
+  }
+  var elementScrollTop = 0;
+  if (document.compatMode === "BackCompat") {
+    elementScrollTop = document.body.scrollTop;
+  } else {
+    elementScrollTop = document.documentElement.scrollTop;
+  }
+  var right = actualTop - elementScrollTop;
+  return { x: left, y: right };
+}

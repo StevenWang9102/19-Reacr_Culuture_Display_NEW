@@ -13,7 +13,7 @@ function App() {
       <Gallery />
       <WhatWeDo />
       <ImageWall />
-      <Footer/>
+      <Footer/> 
     </div>
   );
 }

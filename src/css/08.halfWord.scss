@@ -1,12 +1,26 @@
-#titlewrapper {
-  position: relative;
+// 应该抽象出来公用的@@@@@@@@@@
+
+// ----------- Belong to Gallery Page --------------
+#gallery  #titleContainer{
+  position: absolute;
   top: 100px;
-  left: -50px;
-  width: 300px;
+  left: -200px;
+  width: 400px;
   height: 60px;
+  // border: 3px solid rgb(218, 208, 208);
+  overflow: hidden;
 }
 
-#titlewrapper h1:nth-child(1) {
+#gallery  #titlewrapper {
+  position: absolute;
+  top: 0;
+  left: 165px;
+  width: 300px;
+  height: 60px;
+  // border: 1px solid gold;
+}
+
+#gallery #titlewrapper h1:nth-child(1) {
   position: absolute;
   top: 0;
   left: -113px;
@@ -14,14 +28,17 @@
   font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
-  border-bottom: 4px solid black;
+  color: white;
+  text-shadow: 2px 2px #f5cb40c7;
+  // border-bottom: 4px solid black;
 }
 
-#titlewrapper h1:nth-child(2) {
+#gallery #titlewrapper h1:nth-child(2) {
   position: absolute;
   top: 0;
   right: 0;
-  color: black;
+  color: white;
+  text-shadow: 3px 3px #ff0000b6;
   left: 0px;
   width: 330px;
   height: 100%;
@@ -34,20 +51,38 @@
     top: 0;
     left: -113px;
     font-weight: 500;
-    border-bottom: 4px solid black;
+    // border-bottom: 4px solid black;
+  }
+}
+
+// ----------------- 上下翻页效果 ----------------
+
+@keyframes FirstLine {
+  0% {
+    top: 0;
+    // opacity: 1;
+  }
+  
+  100% {
+    top: -40px;
+    // opacity: 0;
+  }
+}
+
+@keyframes SecondLine {
+  0% {
+    top: 40px;
+    opacity: 0;
+  }
+  
+  100% {
+    top: 0;
+    opacity: 1;
   }
 }
 
 
-// .underHeaderRedStrip {
-//   content: "";
-//   display: block;
-//   width: 55px;
-//   border: 3px solid red;
-//   margin: 15px 0;
-// }
-
-// 属于第二章
+// ----------- Belong to Gallery Page --------------
 @media only screen and (max-width: $small-screen) {
   #titlewrapper {
     position: relative;
@@ -55,7 +90,6 @@
     left: 100px;
     width: 300px;
     height: 60px;
-    // border: 2px solid gray;
   }
 
   #titlewrapper h1:nth-child(1) {
@@ -92,7 +126,7 @@
   }
 }
 
-// ----- 属于 Image Wall ----
+// ------------- Belong to  Image Wall Page ---------
 #image-wall .second-column .container-up #titlewrapper {
   // 这里很多可以简化
   position: absolute;

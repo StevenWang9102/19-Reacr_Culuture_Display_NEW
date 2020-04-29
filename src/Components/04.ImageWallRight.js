@@ -1,7 +1,7 @@
 import React from "react";
 import sci01 from "../img/04.imagewall/img6.png";
 import sci02 from "../img/04.imagewall/img3.png";
-import { PartWord } from "../Components/PartWord";
+import { HalfWord } from "../Components/HalfWord";
 
 export const ImageWallRight = (props) => {
   return (
@@ -15,7 +15,7 @@ export const ImageWallRight = (props) => {
           <div className='img-hover'></div>
         </div>
 
-        <PartWord title='Read More Articles' />
+        <HalfWord title='Read More Articles' />
       </div>
 
       <div className='container-low'>

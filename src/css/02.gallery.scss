@@ -1,19 +1,41 @@
 @import "./defination.scss";
 
+
+@keyframes toRightWave1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(30px);
+  }
+}
+
+@keyframes toRightWave2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(30px);
+  }
+}
+
 #gallery {
-  position: relative;
-  height: 2000px;
+  position: absolute;
+  top: 0;
+  height: 4000px;
+  width: 100%;
   transition: 1s;
 
   & .row {
     position: relative;
     height: 760px;
-    transition: 1s;
+    padding-top: 530px;
   }
 }
 
 // ------------------- Column One -----------------
 #gallery .column-one {
+  // transition: ;
   & h1 {
     position: absolute;
     top: 360px;
@@ -63,7 +85,7 @@
 
   & .paragraph {
     position: relative;
-    top: 150px;
+    top: 200px;
     word-wrap: normal;
     width: 250px;
   }
@@ -89,19 +111,29 @@
 }
 
 // ----------------- Media Query ----------------
+@media only screen and (max-width: $medium-screen) {
+  #gallery {
+    height: 800px;
+    top: 540px;
+
+    & .row {
+      padding-top: 0px;
+    }
+  }
+}
 @media only screen and (max-width: $small-screen) {
   #gallery {
-    position: relative;
-    height: 800px;
+    position: absolute;
+    top: 50px;
   }
-
+  
   #page {
     display: none;
   }
 
   // ------------------- Column One -----------------
   #gallery .column-one {
-    position: relative;
+    // position: relative;
     margin: 0 auto;
 
     & h1 {

@@ -1,6 +1,6 @@
 #galleryButtons{
       position: absolute;
-      top: 0px;
+      top: 530px;
       right: -30px;
       height: 100px;
       width: 190px;
@@ -9,14 +9,20 @@
       z-index: 20;
 
     & div{
-      padding: 5px;
+      padding: 8px;
       height: 32px;
       font-weight: 600;
       cursor: pointer;
       display: inline-block;
       // border: 2px solid red;
-      margin: 7px;
+      margin: 5px;
     } 
+}
+
+@media only screen and (max-width: $medium-screen) {
+  #galleryButtons{
+    top: 0;
+  }
 }
 
 @media only screen and (max-width: $small-screen) {

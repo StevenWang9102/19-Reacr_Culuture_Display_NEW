@@ -5,7 +5,7 @@ export const Footer = (props) => {
     <section id='footer'>
       
       <div className='typewriter'>
-        <h1>Let's Do This.</h1>
+        <h1 id = "letdothis">Let's Do This.</h1>
         <h2>Start a partnership today</h2>
       </div>
       

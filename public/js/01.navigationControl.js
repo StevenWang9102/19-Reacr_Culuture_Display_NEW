@@ -1,5 +1,4 @@
 
-
 // ------------- Video Hover -------------
 const video = document.getElementById("myVideo");
 
@@ -18,11 +17,11 @@ function displayWindowSize(){
   return width
 }
 
+var currentSize = displayWindowSize()
 const logo = document.getElementById("logo");
 
 window.addEventListener("resize", (event) => {
-  var currentSize = displayWindowSize()
-  console.log(currentSize);
+  currentSize = displayWindowSize()
   
   if(currentSize < "576"){
     logo.src = "/img/logo-small-3.png";
@@ -54,42 +53,3 @@ window.addEventListener("resize", (event) => {
 //   }
   
 // })
-
-
-// #navigation {
-
-//   & .row {
-//     flex-wrap: nowrap;
-//   }
-
-//   & img {
-//     position: absolute;
-//     left: 0;
-//     height: 50px;
-//     width: 110px;
-//     left: 0;
-//   }
-
-//   & .content {
-//     height: 50px;
-//   }
-// }
-
-
-//   & ul {
-//     position: absolute;
-//     left: -250px;
-//     top: 12px;
-//     margin-left: -100px;
-//     padding: 0;
-//     width: 350px;
-//     font-weight: 600;
-//   }
-
-//   & ul li {
-//     color: white;
-//     font-size: 15px;
-//     display: inline;
-//   }
-// }
-// }

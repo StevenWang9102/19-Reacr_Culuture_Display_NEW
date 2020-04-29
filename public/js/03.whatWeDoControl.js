@@ -1,24 +1,3 @@
-// ------------------ Visibility ----------------
-const whatwedo = document.getElementById("what-we-do");
-const galleryContainer2 = document.getElementsByClassName("gallery-row")[0];
-const gallery1 = document.getElementById("gallery");
-// const whatwedoContainer = document.getElementsByClassName("whatwedo-container")[0];
-
-window.addEventListener("scroll", function (e) {
-  var whatwedoTop = getElementViewPosition3(whatwedo).y
-  console.log(whatwedoTop);
-
-    if(whatwedoTop < 750){
-      whatwedo.style.visibility = "visible"
-      whatwedo.style.opacity = 1;
-      gallery1.style.opacity = 0;
-
-    } else{
-      whatwedo.style.visibility = "hidden"
-      gallery1.style.opacity = 1;
-      whatwedo.style.opacity = 0;
-    }
-});
 
 
 // --------------- Float Ball & Header Position--------------

@@ -2,7 +2,7 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 import { useState } from "react";
 import { database } from "../database";
-import { PartWord } from "../Components/PartWord";
+import { HalfWord } from "../Components/HalfWord";
 import { Page } from "../Components/Page";
 import { ViewProjectButton } from "../Components/ViewProjectButton";
 import { GalleryButtons } from "../Components/GalleryButtons";
@@ -62,7 +62,7 @@ export const Gallery = (props) => {
             <div className='column-two  col-sm-6 col-md-6 col-lg-6'>
               <h5> FEATURED PROJECT </h5>
               <Page pageNum={pageNum} />
-              <PartWord title={database[pageNum - 1].title} />
+              <HalfWord title={database[pageNum - 1].title} />
               <p className="paragraph">{database[pageNum - 1].paragraph}</p>
             </div>
           </div>

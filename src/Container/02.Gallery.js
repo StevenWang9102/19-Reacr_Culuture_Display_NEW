@@ -50,10 +50,11 @@ export const Gallery = (props) => {
     <GalleryLayout backgrounds={backgroundImage[pageNum-1]}>
         <div className='container '>
           <div className='row gallery-row'>
-            
+          {/* <div id='floatBall'/> */}
+
             {/* ----------------  Column One -------------- */}
             <div className='column-one col-sm-6 col-md-6 col-lg-6'>
-              <h1>{slogans[pageNum-1]}</h1>
+              <h1 name="slogan">{slogans[pageNum-1]}</h1>
               <img src={image[pageNum - 1]} className='gallery-img' alt='' />
               <div></div>
             </div>

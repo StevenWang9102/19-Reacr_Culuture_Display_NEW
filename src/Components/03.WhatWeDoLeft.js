@@ -23,7 +23,7 @@ export const WhatWeDoLeft = (props) => {
               props.setPageNum(props.pageNum - 1);
             }
           }}>
-          PREVIEW
+          <p>PREVIEW</p>
           <PreviewButton />
         </li>
         <li
@@ -35,7 +35,7 @@ export const WhatWeDoLeft = (props) => {
               props.setPageNum(props.pageNum + 1);
             }
           }}>
-          NEXT
+          <p>NEXT</p>
           <NextButton />
         </li>
       </ul>

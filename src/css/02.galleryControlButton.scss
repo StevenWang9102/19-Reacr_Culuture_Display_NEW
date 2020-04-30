@@ -1,23 +1,87 @@
 #galleryButtons{
       position: absolute;
       top: 530px;
-      right: -30px;
+      right: -80px;
       height: 100px;
-      width: 190px;
+      width: 220px;
       color: white ;
       padding: 25px 0;
       z-index: 20;
+      // border: 1px solid rgb(189, 34, 34);
 
     & div{
-      padding: 8px;
+      padding: 12px 18px;
       height: 32px;
+      transition: 2s;
       font-weight: 600;
-      cursor: pointer;
       display: inline-block;
-      // border: 2px solid red;
-      margin: 5px;
+      // border: 1px solid gold;
     } 
-}
+  }
+
+  .PreviewButton{
+    cursor: pointer;
+    // border: 1px solid gold;
+
+    &::after  {
+      content: "";
+      display: block;
+      width: 25px;
+      border: 4px solid rgb(93, 3, 153);
+      border-radius: 2px;
+      margin: 3px 0;
+      opacity: .4;
+    }
+  }
+
+  .NextButton{
+    cursor: pointer;
+
+    &::after  {
+      content: "";
+      display: block;
+      width: 25px;
+      border: 4px solid rgb(93, 3, 153);
+      border-radius: 2px;
+      margin: 3px 0;
+      opacity: .4;
+    }
+  }
+
+  .myNewClass{
+    &::after  {
+      content: "";
+      display: block;
+      width: 40px;
+      border: 4px solid rgb(93, 3, 153);
+      border-radius: 2px;
+      margin: 3px 0;
+      opacity: .7;
+      transition: 1s;
+    }
+  }
+
+  .myNewClass2{
+    &::after  {
+      content: "";
+      display: block;
+      width: 45px;
+      border: 4px solid rgb(93, 3, 153);
+      border-radius: 2px;
+      margin: 3px 0;
+      opacity: .7;
+      transition: 1s;
+    }
+  }
+  // .underHeaderRedStrip {
+  //   content: "";
+  //   display: block;
+  //   width: 25px;
+  //   border: 4px solid rgb(93, 3, 153);
+  //   border-radius: 2px;
+  //   margin: 3px 0;
+  //   opacity: .6;
+  // }
 
 @media only screen and (max-width: $medium-screen) {
   #galleryButtons{

@@ -5,6 +5,7 @@ export const GalleryButtons = ({ pageNum, setPageNum }) => {
     <div id='galleryButtons' className='preview-next'>
       <div
         id='galleryButtonsPreview'
+        className="PreviewButton"
         onClick={() => {
           setTimeout(function () {
             if (pageNum === 1) {
@@ -21,7 +22,7 @@ export const GalleryButtons = ({ pageNum, setPageNum }) => {
 
       <div
         id='galleryButtonsNext'
-        className='Next'
+        className='NextButton'
         onClick={() => {
           if (pageNum === 4) {
             setPageNum(1);
@@ -31,6 +32,8 @@ export const GalleryButtons = ({ pageNum, setPageNum }) => {
         }}>
         NEXT
       </div>
+
+      {/* <span id='floatBall'/> */}
     </div>
   );
 };

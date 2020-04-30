@@ -1,24 +1,72 @@
-
 @keyframes fadeOut {
-    0% {
-      opacity: 1;
-    }
-  
-    100% {
-      opacity: 0;
-    }
+  0% {
+    opacity: 1;
   }
-  
-  @keyframes MoveDown {
-  
-    0% {
-      top: 100px;
-      opacity: 1;
-    }
-  
-    100% {
-      top: 130px;
-      opacity: 0;
-    }
+
+  100% {
+    opacity: 0;
   }
-  
+}
+
+@keyframes fadeOut2 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes MoveDown {
+  0% {
+    top: 100px;
+    opacity: 1;
+  }
+
+  100% {
+    top: 130px;
+    opacity: 0;
+  }
+}
+
+@keyframes flashOnce {
+  0% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes toRightWave1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(30px);
+  }
+}
+
+@keyframes toRightWave2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(30px);
+  }
+}
+
+@keyframes arrowToRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+  // 100% {
+  //   transform: translateX(0px);
+  // }
+}

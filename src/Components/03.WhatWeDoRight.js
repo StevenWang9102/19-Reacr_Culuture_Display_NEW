@@ -1,14 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { useState } from "react";
 import { Page } from "./Page";
 import { database2 } from "../database";
+import arrow from "../img/03.whatwedo/arrow.svg";
 import { CarouselTitle } from "./CarouselTitle";
 
 export const WhatWeDoRight = (props) => {
-  // const [pageNum, setPageNum] = useState(1);
-
-  console.log(props.pageNum);
   
   return (
     <div>
@@ -18,9 +15,13 @@ export const WhatWeDoRight = (props) => {
 
       <p className="paragraph">{database2[props.pageNum - 1] && database2[props.pageNum - 1].paragraph}</p>
 
-      <a className='explore-more'>Explore more</a>
+      <a className='explore-more'>Explore more  
+      </a>
+      
+      <img name='arrowImage' src={arrow} alt=''/>
 
-      <div className='float-ball'> </div>
+      <div id= 'bigFloatBall'/>
+    
     </div>
   );
 };

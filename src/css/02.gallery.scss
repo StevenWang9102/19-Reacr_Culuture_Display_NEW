@@ -1,30 +1,13 @@
 @import "./defination.scss";
 
-
-@keyframes toRightWave1 {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(30px);
-  }
-}
-
-@keyframes toRightWave2 {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(30px);
-  }
-}
-
 #gallery {
   position: absolute;
   top: 0;
   height: 4000px;
   width: 100%;
   transition: 1s;
+  // background-color: black;
+  // opacity: 0.2;
 
   & .row {
     position: relative;
@@ -35,7 +18,7 @@
 
 // ------------------- Column One -----------------
 #gallery .column-one {
-  // transition: ;
+  transition: 1s;
   & h1 {
     position: absolute;
     top: 360px;
@@ -45,6 +28,7 @@
     font-size: 100px;
     font-weight: 900;
     text-align: center;
+    opacity: 0.5;
     letter-spacing: 10px;
     text-shadow: 0.05em 0.05em rgba(153, 153, 153, 0.555);
     color: rgba(255, 255, 255, 0.925);
@@ -75,6 +59,8 @@
   color: white;
   height: 500px;
   max-width: 370px;
+  transition: 1s;
+
 
   & h5 {
     position: absolute;

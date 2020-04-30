@@ -1,107 +1,11 @@
+// // --------- 函数 ----------- 
+// function displayWindowSize8() {
+//   var width = document.documentElement.clientWidth;
+//   return width;
+// }
 
-
-// --------------- Float Ball & Header Position--------------
-const ball = document.getElementsByClassName("float-ball")[0];
-const header = document.getElementsByName("whatwe").item(1);
-
-window.addEventListener("mousemove", (event) => {
-
-  const scrollTop = document.documentElement.scrollTop;
-
-  if (scrollTop <= 800) {
-    changePosition("520px", "-240px", "hiden", "700px");
-  }
-  else if (scrollTop > 800 && scrollTop <= 850) {
-    changePosition("20px", "-240px", "visible", "650px");
-  }
-  else if (scrollTop > 850 && scrollTop <= 900) {
-    changePosition("40px", "-240px", "visible", "600px");
-  }
-  else if (scrollTop > 900 && scrollTop <= 950) {
-    changePosition("60px", "-240px", "visible", "550px");
-  }
-  else if (scrollTop > 950 && scrollTop <= 1000) {
-    changePosition("80px", "-240px", "visible", "500px");
-  }
-  else if (scrollTop > 1000 && scrollTop <= 1050) {
-    changePosition("90px", "-240px", "visible", "450px");
-  }
-  else if (scrollTop > 1050 && scrollTop <= 1100) {
-    changePosition("100px", "-240px", "visible", "400px");
-  }
-  else {
-    changePosition("40px", "-240px", "visible", "200px");
-  }
-});
-
-function changePosition(top, left, visibility, headerLeft) {
-  ball.style.transition = "2s";
-  ball.style.position = "absolute";
-  ball.style.top = top;
-  ball.style.left = left;
-  ball.style.visibility = visibility;
-  header.style.left = headerLeft;
-}
-
-// --------------------- Control Buttons --------------
-const whatWeDoPreview = document.getElementsByName("whatWeDoPreview")[0];
-const whatWeDoNext = document.getElementsByName("whatWeDoNext")[0];
-const pageButtonWhat = document.getElementsByClassName("pageAnimation")[1];
-const paragraphWhat = document.getElementsByClassName("paragraph")[1];
-// const title = document.getElementById("titlewrapper");
-
-whatWeDoPreview.addEventListener("click", (event) => {
-  
-  pageButtonWhat.style.animation = "fadeOut 1s";
-  paragraphWhat.style.animation = "fadeOut 1s";
-  // title.style.animation = "MoveDown 1s";
-
-  setTimeout(function () {
-    pageButtonWhat.style.animation = "";
-    paragraphWhat.style.animation = "";
-    // title.style.animation = "";
-  }, 600);
-});
-
-whatWeDoNext.addEventListener("click", (event) => {
-  
-  pageButtonWhat.style.animation = "fadeOut 1s";
-  paragraphWhat.style.animation = "fadeOut 1s";
-  // title.style.animation = "MoveDown 1s";
-
-  setTimeout(function () {
-    pageButtonWhat.style.animation = "";
-    paragraphWhat.style.animation = "";
-    // title.style.animation = "";
-  }, 600);
-});
-
-// -------------------- Button Hover Ball ----------
-
-// second-column
-var followingBall2 = document.getElementById("followImg");
-var secondColumn = document.getElementsByClassName("second-column")[0];
-console.log(secondColumn);
-
-secondColumn.addEventListener("mouseover", (event) => {
-  followingBall2.style.visibility = "visible"
-})
-
-secondColumn.addEventListener("mouseout", (event) => {
-  followingBall2.style.visibility = "hidden"
-})
-
-// whatWeDoNext.addEventListener("mouseover", (event) => {
-//   followingBall2.style.visibility = "visible"
-// })
-
-// whatWeDoNext.addEventListener("mouseout", (event) => {
-//   followingBall2.style.visibility = "hidden"
-// })
-
-
-
-const getElementViewPosition3 = (element) =>{
+// ------------------- Title Movement ----------------
+const getElementViewPosition9 = (element) => {
   var actualLeft = element.offsetLeft;
   var current = element.offsetParent;
   while (current !== null) {
@@ -131,4 +35,82 @@ const getElementViewPosition3 = (element) =>{
   }
   var right = actualTop - elementScrollTop;
   return { x: left, y: right };
-}
+};
+
+// --------------- Big Float Ball & Header Effects--------------
+const whatwedo2 = document.getElementById("what-we-do");
+const bigFloatBall = document.getElementById("bigFloatBall");
+const titleWhatWeDo = document.getElementsByName("whatwe")[1];
+
+window.addEventListener("scroll", function (e) {
+  // 此时测试一下屏幕尺寸
+  let currentSize = document.documentElement.clientWidth;;
+  let whatWeDoTop = getElementViewPosition9(whatwedo2).y;
+
+  if (currentSize >= 992) {
+
+    if (whatWeDoTop > -1350 && whatWeDoTop < -1050) {
+      titleWhatWeDo.style.left = whatWeDoTop + 1250 + 140 + "px";
+    }
+  
+    if (whatWeDoTop > -1400 && whatWeDoTop < -1050) {
+      bigFloatBall.style.top = whatWeDoTop + 1300 + "px";
+    }
+  }
+});
+
+// --------------------- Preview Effects--------------
+const whatWeDoPreview = document.getElementsByName("whatWeDoPreview")[0];
+const whatWeDoNext = document.getElementsByName("whatWeDoNext")[0];
+const pageButtonWhat = document.getElementsByClassName("pageAnimation")[1];
+const paragraphWhat = document.getElementsByClassName("paragraph")[1];
+
+whatWeDoPreview.addEventListener("click", (event) => {
+  pageButtonWhat.style.animation = "fadeOut 1s";
+  paragraphWhat.style.animation = "fadeOut 1s";
+
+  setTimeout(function () {
+    pageButtonWhat.style.animation = "";
+    paragraphWhat.style.animation = "";
+  }, 600);
+});
+
+whatWeDoPreview.addEventListener("mouseover", (event) => {
+  whatWeDoPreview.style.borderRight = "4px solid rgb(185, 18, 12)";
+})
+
+whatWeDoPreview.addEventListener("mouseout", (event) => {
+  whatWeDoPreview.style.borderRight = "3px solid white";
+})
+
+// --------------------- Next Effects--------------
+whatWeDoNext.addEventListener("click", (event) => {
+  pageButtonWhat.style.animation = "fadeOut 1s";
+  paragraphWhat.style.animation = "fadeOut 1s";
+
+  setTimeout(function () {
+    pageButtonWhat.style.animation = "";
+    paragraphWhat.style.animation = "";
+  }, 600);
+});
+
+whatWeDoNext.addEventListener("mouseover", (event) => {
+  whatWeDoNext.style.borderRight = "4px solid rgb(185, 18, 12)";
+})
+
+whatWeDoNext.addEventListener("mouseout", (event) => {
+  whatWeDoNext.style.borderRight = "3px solid white";
+})
+
+// ---------------- Arrow Hover Effects ----------
+const arrowImage = document.getElementsByName("arrowImage")[0];
+const exploreMore = document.getElementsByClassName("explore-more")[0];
+
+exploreMore.addEventListener("mouseover", (event) => {
+  console.log(arrowImage);
+
+  arrowImage.style.animation = "arrowToRight .7s";
+  setTimeout(function () {
+    arrowImage.style.animation = "";
+  }, 700);
+});

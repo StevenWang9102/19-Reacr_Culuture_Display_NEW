@@ -1,3 +1,29 @@
+// ----------------- 上下翻页效果 ----------------
+
+@keyframes FirstLine {
+  0% {
+    top: 0;
+    // opacity: 1;
+  }
+  
+  100% {
+    top: -40px;
+    // opacity: 0;
+  }
+}
+
+@keyframes SecondLine {
+  0% {
+    top: 40px;
+    opacity: 0;
+  }
+  
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -69,4 +95,26 @@
   // 100% {
   //   transform: translateX(0px);
   // }
+}
+
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(195, 247, 99);
+  }
 }

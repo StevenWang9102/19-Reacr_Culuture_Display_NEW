@@ -1,0 +1,71 @@
+
+#gallery  #titleContainer{
+  position: absolute;
+  top: 100px;
+  left: -200px;
+  width: 400px;
+  height: 60px;
+  overflow: hidden;
+}
+
+#gallery  #titlewrapper {
+  position: absolute;
+  top: 0;
+  left: 165px;
+  width: 300px;
+  height: 60px;
+}
+
+#gallery #titlewrapper h1:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: -113px;
+  width: 120px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  color: white;
+  text-shadow: 2px 2px #f5cb40c7;
+}
+
+#gallery #titlewrapper h1:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  text-shadow: 3px 3px #ff0000b6;
+  left: 0px;
+  width: 330px;
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+
+  & p {
+    position: absolute;
+    top: 0;
+    left: -113px;
+    font-weight: 500;
+  }
+}
+
+// ------------- Media Query --------------
+@media only screen and (max-width: $small-screen) {
+  #gallery #titlewrapper {
+    position: relative;
+    top: 100px;
+    left: 100px;
+  }
+
+  #gallery #titlewrapper h1:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: -113px;
+  }
+
+  #gallery #titlewrapper h1:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0px;
+  }
+}

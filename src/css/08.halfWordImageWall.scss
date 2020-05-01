@@ -1,0 +1,66 @@
+#image-wall .second-column  #titlewrapper {
+  position: absolute;
+  top: 300px;
+  left: 380px;
+  display: none;
+  width: 400px;
+  height: 60px;
+  transition: 1s;
+  z-index: 99;
+
+  & h1:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: -184px;
+    width: 250px;
+    font-size: 30px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-shadow: 1px 1px rgba(230, 255, 2, 0.527);
+    border-bottom: 3px solid black;
+  }
+
+  & h1:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0px;
+    width: 330px;
+    height: 100%;
+    white-space: nowrap;
+    text-shadow: 1px 1px rgb(42, 112, 243);
+    overflow: hidden;
+
+    & p {
+      position: absolute;
+      top: 0;
+      color: black;
+      left: -184px;
+      font-size: 30px;
+      font-weight: 500;
+      border: none;
+    }
+  }
+}
+
+// ------------------ Media Query -----------------
+@media only screen and (max-width: $medium-screen) {
+  #image-wall #titlewrapper {
+    position: absolute;
+    top: 300px;
+    left: 321px;
+  }
+}
+
+@media only screen and (max-width: $small-screen) {
+  #image-wall #titlewrapper {
+    position: absolute;
+    top: 240px;
+    left: 540px;
+
+    & h1:nth-child(1) {
+      font-size: 20px;
+    }
+  }
+}

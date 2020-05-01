@@ -1,78 +1,13 @@
-
-// ----------------- Image Left Hover --------------
-const hoverBox = document.getElementsByClassName("hoverBox")[0];
-const hoverImg = document.getElementsByName("hoverImg")[0];
-
-hoverBox.addEventListener("mouseover", (event) => {
-  hoverBox.style.top = "0px";
-});
-
-// ？这个调试一下？
-hoverImg.addEventListener("mouseover", (event) => {
-  hoverBox.style.top = "0px";
-});
-
-hoverBox.addEventListener("mouseout", (event) => {
-  hoverBox.style.top = "480px";
-});
-
-// ------------------- Image Right Hover ----------------
-const hoverRight = document.getElementsByClassName("img-hover")[0];
-const imgBox = document.getElementsByClassName("img1")[0];
-console.log(imgBox);
-
-const hoverh1 = document.getElementById("hoverh1");
-const titlewrapper = document.getElementsByName("titlewrapper")[1];
-
-// 函数可以合并@@@@
-imgBox.addEventListener("mouseover", (event) => {
-  hoverRight.style.left = "0px";
-  setTimeout(function () {
-    titlewrapper.style.display = "inline-block";
-  }, 400);
-});
-
-hoverh1.addEventListener("mouseover", (event) => {
-  hoverRight.style.left = "0px";
-  setTimeout(function () {
-    titlewrapper.style.display = "inline-block";
-  }, 400);
-});
-
-hoverRight.addEventListener("mouseover", (event) => {
-  hoverRight.style.left = "0px";
-  setTimeout(function () {
-    titlewrapper.style.display = "inline-block";
-  }, 400);
-});
-
-hoverRight.addEventListener("mouseout", (event) => {
-  hoverRight.style.left = "-440px";
-  titlewrapper.style.display = "none";
-});
-
-hoverh1.addEventListener("mouseout", (event) => {
-  hoverRight.style.left = "-440px";
-  titlewrapper.style.display = "none";
-});
-
-// 这地方逻辑需要完全重新设计@@@@@@@@@@
-
-// 等于是什么东西又让他重新 显示了
-// 加入一句，一旦自己hover，显示为none
-// 闪烁原因可能是因为imgBox现在只是一个边框，每次都是hover到边框上了
-// titlewrapper.addEventListener("mouseover", (event) => {
-//   titlewrapper.style.display = "none";
-// });
-
-// ------------------- Title Movement ----------------
-const getElementViewPosition = (element) =>{
+// ------------------- Functions ----------------
+const getElementViewPosition = (element) => {
   var actualLeft = element.offsetLeft;
   var current = element.offsetParent;
+
   while (current !== null) {
     actualLeft += current.offsetLeft + current.clientLeft;
     current = current.offsetParent;
   }
+
   var elementScrollLeft = 0;
   if (document.compatMode === "BackCompat") {
     elementScrollLeft = document.body.scrollLeft;
@@ -96,17 +31,74 @@ const getElementViewPosition = (element) =>{
   }
   var right = actualTop - elementScrollTop;
   return { x: left, y: right };
-}
+};
 
-
-// --------------- Title Moving -------------
+// ------------------- Left Title Effect ----------------
 const imageWall = document.getElementById("image-wall");
 const titleH2 = document.getElementById("movingTitle");
 
 window.addEventListener("scroll", function (e) {
-  var imageWallTop = getElementViewPosition(imageWall).y
-  // console.log(imageWallTop);
+  let currentSize = document.documentElement.clientWidth;
+  var imageWallTop = getElementViewPosition(imageWall).y;
+  if (currentSize >= 992) {
+    if (imageWallTop > -2100 && imageWallTop < -1800) {
+      titleH2.style.marginLeft = imageWallTop + 1900 + 300 + "px";
+    } else {
+      titleH2.style.marginLeft = 80 + "px";
+    }
+  }
+});
 
-    if(imageWallTop >0 && imageWallTop < 400)
-    titleH2.style.marginLeft = imageWallTop + 50 + "px"
+// --------------------  Left Image Effect ----------------
+const myHover = document.getElementsByClassName("hoverBox")[0];
+const hoverTarget = document.getElementsByName("hoverImg")[0];
+
+hoverTarget.addEventListener("mouseover", (event) => {
+  myHover.style.top = "0px";
+});
+
+myHover.addEventListener("mouseover", (event) => {
+  myHover.style.top = "0px";
+});
+
+myHover.addEventListener("mouseout", (event) => {
+  myHover.style.top = "480px";
+});
+
+const mySetTimer = (target, value, delay) => {
+  setTimeout(function () {
+    target.style.display = value;
+  }, delay);
+};
+// ------------------- Right Image Effect ----------------
+// 这个地方逻辑需要重新设计@@@@@@@@@@
+// 现在hover到右侧标题上，反复闪烁
+const hoverOnRight = document.getElementsByClassName("img-hover")[0];
+const imgBox = document.getElementsByClassName("img1")[0];
+const hoverH1 = document.getElementById("hoverh1");
+const titlewrapper = document.getElementsByName("titlewrapper")[1];
+
+imgBox.addEventListener("mouseover", (event) => {
+  hoverOnRight.style.left = "0px";
+  mySetTimer(titlewrapper, "inline-block", 400);
+});
+
+hoverOnRight.addEventListener("mouseover", (event) => {
+  hoverOnRight.style.left = "0px";
+  mySetTimer(titlewrapper, "inline-block", 400);
+});
+
+hoverOnRight.addEventListener("mouseout", (event) => {
+  hoverOnRight.style.left = "-440px";
+  mySetTimer(titlewrapper, "none", 0);
+});
+
+hoverH1.addEventListener("mouseover", (event) => {
+  hoverOnRight.style.left = "0px";
+  mySetTimer(titlewrapper, "inline-block", 400);
+});
+
+hoverH1.addEventListener("mouseout", (event) => {
+  hoverOnRight.style.left = "-440px";
+  mySetTimer(titlewrapper, "none", 0);
 });

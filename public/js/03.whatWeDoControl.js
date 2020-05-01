@@ -50,7 +50,7 @@ window.addEventListener("scroll", function (e) {
   if (currentSize >= 992) {
 
     if (whatWeDoTop > -1350 && whatWeDoTop < -1050) {
-      titleWhatWeDo.style.left = whatWeDoTop + 1250 + 140 + "px";
+      titleWhatWeDo.style.left = whatWeDoTop + 1500 + "px";
     }
   
     if (whatWeDoTop > -1400 && whatWeDoTop < -1050) {

@@ -1,4 +1,6 @@
 import React from "react";
+import arrow from "../img/03.whatwedo/arrow.svg";
+console.log(arrow);
 
 export const HalfWord = (props) => {
   return (
@@ -7,7 +9,8 @@ export const HalfWord = (props) => {
         <h1>{props.title}</h1>
         <h1>
           <p>{props.title}</p>
-        </h1>
+          {/* <img src={arrow} alt=''/> */}
+        </h1> 
       </div>
  </section>
   );

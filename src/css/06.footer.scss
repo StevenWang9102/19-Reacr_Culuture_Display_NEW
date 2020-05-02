@@ -3,12 +3,12 @@
   bottom: 0;
   display: flex;
   justify-content: center;
-  padding: 200px 100px;
+  padding: 100px 100px;
   font-family: Arial, Helvetica, sans-serif;
   background-color: black;
   height: 600px;
   width: 100%;
-  transition: 2s;
+  transition: 4s;
 
   & .typewriter h1 {
     padding: 20px;
@@ -17,20 +17,26 @@
     overflow: hidden;
     border-right: 0.15em solid orange;
     white-space: nowrap;
-    margin: 0 auto;
+    margin: 40px auto;
     letter-spacing: 8px;
-    transition: 2s;
+    transition: 1s;
     animation: blink-caret 0.5s step-end infinite;
+    // border: 2px solid red;
   }
 
   & h2 {
     font-size: 20px;
     position: absolute;
+    height: 40px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
     font-weight: 700;
     letter-spacing: 1px;
+    padding: 5px 0;
+    cursor: pointer;
+    z-index: 30;
+        // border: 2px solid red;
   }
 
   & img{
@@ -40,7 +46,7 @@
     width: 16px;
     height: 14px;
     color: white;
-    margin-top: 7px;
+    margin-top: 12px;
     background-color: #fff;
   }
 
@@ -70,7 +76,8 @@
   #footer {
     position: absolute;
     bottom: 0;
-    padding: 200px 100px;
+    height: 440px;
+    padding: 60px 100px;
   }
 }
 

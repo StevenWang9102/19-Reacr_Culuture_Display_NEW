@@ -1,33 +1,25 @@
-
 // ------------- Video Hover -------------
 const video = document.getElementById("myVideo");
 
-video.addEventListener("mouseover", (event) => {
-  video.style.right = "0px";
-});
+  video.addEventListener("mouseover", (event) => {
+    video.style.right = "0px";
+  });
 
-video.addEventListener("mouseout", (event) => {
-  video.style.right = "-800px";
-});
+  video.addEventListener("mouseout", (event) => {
+    video.style.right = "-800px";
+  });
 
-
-// ------------- Logo Resize -------------
-function displayWindowSize(){
-  var width = document.documentElement.clientWidth;
-  return width
-}
-
-var currentSize = displayWindowSize()
+// ----------------- Change Logo ----------------
 const logo = document.getElementById("logo");
 
 window.addEventListener("resize", (event) => {
-  currentSize = displayWindowSize()
-  
-  if(currentSize < "576"){
-    logo.src = "/img/logo-small-3.png";
-  } else if(currentSize < "768"){
-    logo.src = "/img/logo-small-3.png";
-  } else{
+  let currentSize = document.documentElement.clientWidth;
+
+  if (currentSize < "576") {
+    logo.src = "";
+  } else if (currentSize < "768") {
+    logo.src = "";
+  } else {
     logo.src = "/img/logo-full.png";
   }
 });
@@ -40,7 +32,7 @@ window.addEventListener("resize", (event) => {
 
 // window.addEventListener("scroll", (event) => {
 //   console.log("卷轴动了");
-//   // navigationBar.offset();  
+//   // navigationBar.offset();
 //   // console.log(window.pageYOffset);
 //   if(window.pageYOffset > 420){
 //     navigationBar.style.position = "fixed"
@@ -51,5 +43,5 @@ window.addEventListener("resize", (event) => {
 //     navigationBar.style.zIndex = "134"
 //     myVideo.style.display = "none"
 //   }
-  
+
 // })

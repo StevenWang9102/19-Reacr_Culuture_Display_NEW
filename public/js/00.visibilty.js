@@ -31,15 +31,12 @@ const getElementViewPosition2 = (element) => {
   return { x: left, y: right };
 };
 
-function displayWindowSize() {
-  var width = document.documentElement.clientWidth;
-  return width;
-}
 
 // ---------- Reset Visibility on Medium Screen Size ------------
 window.addEventListener("resize", (event) => {
-  let currentSize1 = displayWindowSize();
-  if (currentSize1 < 992) {
+  let currentSize = document.documentElement.clientWidth;
+  
+  if (currentSize < 992) {
     navbar.style.opacity = 1;
     navbar.style.visibility = "visible";
     
@@ -53,10 +50,6 @@ window.addEventListener("resize", (event) => {
     imageWallLocal.style.opacity = 1;
     imageWallLocal.style.visibility = "visible";
 
-    // imageWallLocal.style.visibility = "hidden";
-    // imageWallLocal.style.transition = "1s";
-    // imageWallLocal.style.opacity = 0;
-    // imageWallLocal.style.backgroundImage = "linear-gradient(to bottom right, #e4f5b5b2, #0aaafa79)";
   }
 });
 
@@ -67,7 +60,7 @@ const gallery = document.getElementById("gallery");
 const navbar = document.getElementById("navigation");
 
 window.addEventListener("scroll", function (e) {
-  let currentSize = displayWindowSize();
+  let currentSize = document.documentElement.clientWidth;
   let galleryTop = getElementViewPosition2(gallery).y;
 
   if (currentSize >= 992) {
@@ -93,7 +86,7 @@ const whatwedocontainer = document.getElementsByClassName(
 
 window.addEventListener("scroll", function (e) {
   let whatwedoTop = getElementViewPosition2(whatwedo).y;
-  let currentSize = displayWindowSize();
+  let currentSize = document.documentElement.clientWidth;
   if (currentSize >= 992) {
     if (whatwedoTop < -800) {
       whatwedo.style.transition = "1s";
@@ -115,7 +108,7 @@ const imageWallLocal = document.getElementById("image-wall");
 
 window.addEventListener("scroll", function (e) {
   let imageWallLocalTop = getElementViewPosition2(imageWallLocal).y;
-  let currentSize = displayWindowSize();
+  let currentSize = document.documentElement.clientWidth;
 
   if (currentSize >= 992) {
     if (imageWallLocalTop < -1800) {

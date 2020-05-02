@@ -12,7 +12,7 @@ function App() {
       <Navigation />
       <Gallery />
       <WhatWeDo />
-      <ImageWall />
+      {/* <ImageWall /> */}
       <Footer/> 
     </div>
   );

@@ -10,14 +10,14 @@
   // background-image: linear-gradient(to bottom right, #e4f5b5b2, #0aaafa79);
 }
 
-// -------------------- Left Column ------------------
 #image-wall .first-column {
   height: 1000px;
   width: 100%;
   margin-top: 1000px;
+  z-index: 20;
 
 
-  // ----- Upper Container -----
+  // ----------------- Upper Container ---------
   & .container-up {
     position: relative;
     width: 100%;
@@ -28,6 +28,7 @@
 
     & h1 {
       font-size: 45px;
+      white-space: nowrap;
     }
 
     & h2 {
@@ -38,11 +39,11 @@
       color: rgba(198, 219, 148, 0.932);
       font-size: 80px;
       transition: 1s;
-      z-index: -1;
+      z-index: -10;
     }
   }
 
-  // ----- Lower Container ----
+  // --------------- Lower Container ----------
   & .container-low {
     position: absolute;
     overflow: hidden;
@@ -58,17 +59,7 @@
       height: 420px;
       margin-right: 40px;
       overflow: hidden;
-      border-bottom: 3px solid black;
-
-      // & :after{
-      //   content: "";
-      //   display: block;
-      //   width: 25px;
-      //   border: 4px solid rgb(93, 3, 153);
-      //   border-radius: 2px;
-      //   margin: 3px 0;
-      //   // opacity: .6;
-      // }
+      // border-bottom: 3px solid black;
   }
 
     & img,
@@ -130,10 +121,10 @@
   #image-wall {
     position: absolute;
     top: 0px;
-    margin-top: 1300px;
     width: 100%;
     height: 4000px;
     padding: 30px 0;
+    padding-top: 1100px;
  }
 
   #image-wall .container {
@@ -149,7 +140,14 @@
       padding: 0px;
 
       & h1 {
-        font-size: 35px;
+        font-size: 45px;
+      }
+
+      & h2 {
+        position: absolute;
+        margin-top: -30px;
+        margin-left: 60px;
+        font-size: 45px;
       }
     }
 

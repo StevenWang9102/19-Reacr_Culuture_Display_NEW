@@ -5,7 +5,7 @@
   height: 540px;
   overflow: hidden;
   background-image: linear-gradient(to bottom, #5179ae, #3865a2);
-  z-index: 99;
+  z-index: 20;
   
   & .container {
     max-width: 2000px;
@@ -31,7 +31,7 @@
   top: 0;
   right: 0;
   color: white;
-  z-index: 10;
+  z-index: 20;
 
   & #myVideo {
     position: absolute;
@@ -39,7 +39,7 @@
     right: -800px;
     height: 540px;
     transition: 1.5s;
-    z-index: -1;
+    z-index: -10;
   }
 
   & ul li {
@@ -53,11 +53,19 @@
 // ------------------- Media Query Templete -----------------
 
 @media only screen and (max-width: $medium-screen) {
-  // #navigation {
-  //   height: 300px;
-  // }
+  #navigation {
+    height: 440px;
+    
+    & .content {
+      height: 440px;
+    }
+  }
 }
 @media only screen and (max-width: $small-screen) {
+  #navigation {
+    // height: 10px;
+    background-image: linear-gradient(to bottom right, #386fb8, rgb(3, 28, 65));
+  }
 
   #navigation {
     height: 50px;

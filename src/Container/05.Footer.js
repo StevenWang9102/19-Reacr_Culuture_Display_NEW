@@ -7,8 +7,8 @@ export const Footer = (props) => {
       
       <div className='typewriter'>
         <h1 id = "letdothis" >Let's Do This.</h1>
-        <h2>Start a partnership today</h2>
-        <img src={arrow} alt=''/>
+        <h2 name="startPartnership">Start a partnership today</h2>
+        <img name="arrow-right2"src={arrow} alt=''/>
 
       </div>
       

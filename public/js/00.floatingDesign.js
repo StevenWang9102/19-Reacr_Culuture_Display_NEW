@@ -33,12 +33,6 @@ const getElementViewPosition8 = (element) => {
   };
   
   
-  function displayWindowSize() {
-    var width = document.documentElement.clientWidth;
-    return width;
-  }
-  
-  
   // --------------------- Gallery Floating ------------------
   // 似乎函数可以合并
   const columnL = document.getElementsByClassName("column-one")[0];

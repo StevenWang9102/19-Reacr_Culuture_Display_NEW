@@ -1,10 +1,3 @@
-// // --------- 函数 ----------- 
-// function displayWindowSize8() {
-//   var width = document.documentElement.clientWidth;
-//   return width;
-// }
-
-// ------------------- Title Movement ----------------
 const getElementViewPosition9 = (element) => {
   var actualLeft = element.offsetLeft;
   var current = element.offsetParent;
@@ -66,6 +59,7 @@ const pageButtonWhat = document.getElementsByClassName("pageAnimation")[1];
 const paragraphWhat = document.getElementsByClassName("paragraph")[1];
 
 whatWeDoPreview.addEventListener("click", (event) => {
+
   pageButtonWhat.style.animation = "fadeOut 1s";
   paragraphWhat.style.animation = "fadeOut 1s";
 
@@ -107,8 +101,6 @@ const arrowImage = document.getElementsByName("arrowImage")[0];
 const exploreMore = document.getElementsByClassName("explore-more")[0];
 
 exploreMore.addEventListener("mouseover", (event) => {
-  console.log(arrowImage);
-
   arrowImage.style.animation = "arrowToRight .7s";
   setTimeout(function () {
     arrowImage.style.animation = "";

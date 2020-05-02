@@ -1,4 +1,4 @@
-#image-wall .second-column  #titlewrapper {
+#image-wall #titlewrapper {
   position: absolute;
   top: 300px;
   left: 380px;
@@ -6,7 +6,8 @@
   width: 400px;
   height: 60px;
   transition: 1s;
-  z-index: 99;
+  z-index: 30;
+  // border: 2px solid red;
 
   & h1:nth-child(1) {
     position: absolute;
@@ -19,6 +20,7 @@
     overflow: hidden;
     text-shadow: 1px 1px rgba(230, 255, 2, 0.527);
     border-bottom: 3px solid black;
+    // border: 2px solid red;
   }
 
   & h1:nth-child(2) {
@@ -47,9 +49,10 @@
 // ------------------ Media Query -----------------
 @media only screen and (max-width: $medium-screen) {
   #image-wall #titlewrapper {
-    position: absolute;
-    top: 300px;
-    left: 321px;
+    & h1:nth-child(1),
+    & h1:nth-child(2) p {
+      display: none;
+    }
   }
 }
 

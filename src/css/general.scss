@@ -29,12 +29,13 @@ img{
   border-radius: 50%;
   background-color: rgba(0, 255, 255, 0.189);
   mix-blend-mode: difference;
-  z-index: 991;
+  // z-index: 991;
 }
 
 @media only screen and (max-width: $medium-screen) {
   .App{
-    height: 3900px;}
+    height: 3600px;
+  }
 }
   
 

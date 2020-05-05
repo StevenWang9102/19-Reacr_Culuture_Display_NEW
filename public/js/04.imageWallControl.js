@@ -54,11 +54,11 @@ const myHover = document.getElementsByClassName("hoverBox")[0];
 const hoverTarget = document.getElementsByName("hoverImg")[0];
 
 hoverTarget.addEventListener("mouseover", (event) => {
-  myHover.style.top = "0px";
+  myHover.style.top = "0";
 });
 
 myHover.addEventListener("mouseover", (event) => {
-  myHover.style.top = "0px";
+  myHover.style.top = "0";
 });
 
 myHover.addEventListener("mouseout", (event) => {
@@ -76,15 +76,15 @@ const mySetTimer = (target, value, delay) => {
 const hoverOnRight = document.getElementsByClassName("img-hover")[0];
 const imgBox = document.getElementsByClassName("img1")[0];
 const hoverH1 = document.getElementById("hoverh1");
-const titlewrapper = document.getElementsByName("titlewrapper")[1];
+const titlewrapper = document.getElementById("titlewrapper");
 
 imgBox.addEventListener("mouseover", (event) => {
-  hoverOnRight.style.left = "0px";
+  hoverOnRight.style.left = "0";
   mySetTimer(titlewrapper, "inline-block", 400);
 });
 
 hoverOnRight.addEventListener("mouseover", (event) => {
-  hoverOnRight.style.left = "0px";
+  hoverOnRight.style.left = "0";
   mySetTimer(titlewrapper, "inline-block", 400);
 });
 
@@ -94,7 +94,7 @@ hoverOnRight.addEventListener("mouseout", (event) => {
 });
 
 hoverH1.addEventListener("mouseover", (event) => {
-  hoverOnRight.style.left = "0px";
+  hoverOnRight.style.left = "0";
   mySetTimer(titlewrapper, "inline-block", 400);
 });
 

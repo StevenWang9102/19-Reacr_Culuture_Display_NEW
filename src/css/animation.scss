@@ -1,14 +1,10 @@
-// ----------------- 上下翻页效果 ----------------
-
 @keyframes FirstLine {
   0% {
     top: 0;
-    // opacity: 1;
   }
   
   100% {
     top: -40px;
-    // opacity: 0;
   }
 }
 
@@ -92,13 +88,10 @@
   100% {
     transform: translateX(20px);
   }
-  // 100% {
-  //   transform: translateX(0px);
-  // }
 }
 
 
-/* The typing effect */
+//  The typing effect
 @keyframes typing {
   from {
     width: 0;
@@ -108,7 +101,7 @@
   }
 }
 
-/* The typewriter cursor effect */
+// The typewriter cursor
 @keyframes blink-caret {
   from,
   to {
@@ -116,5 +109,14 @@
   }
   50% {
     border-color: rgb(195, 247, 99);
+  }
+}
+
+@keyframes img-to-right {
+  0% {
+    transform: translate(0, 0x);
+  }
+  100% {
+    transform: translate(32px, 0);
   }
 }

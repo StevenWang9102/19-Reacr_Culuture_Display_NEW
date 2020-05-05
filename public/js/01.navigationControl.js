@@ -2,7 +2,7 @@
 const video = document.getElementById("myVideo");
 
   video.addEventListener("mouseover", (event) => {
-    video.style.right = "0px";
+    video.style.right = "0";
   });
 
   video.addEventListener("mouseout", (event) => {
@@ -11,6 +11,7 @@ const video = document.getElementById("myVideo");
 
 // ----------------- Change Logo ----------------
 const logo = document.getElementById("logo");
+// let currentSize = '';
 
 window.addEventListener("resize", (event) => {
   let currentSize = document.documentElement.clientWidth;
@@ -20,7 +21,7 @@ window.addEventListener("resize", (event) => {
   } else if (currentSize < "768") {
     logo.src = "";
   } else {
-    logo.src = "/img/logo-full.png";
+    logo.src = "/img/01.navigation/logo-full.png";
   }
 });
 

@@ -6,8 +6,6 @@
   padding: 30px 0;
   padding-top: 1400px;
   transition: 2s;
-  // border: 10px solid black;
-  // background-image: linear-gradient(to bottom right, #e4f5b5b2, #0aaafa79);
 }
 
 #image-wall .first-column {
@@ -16,15 +14,13 @@
   margin-top: 1000px;
   z-index: 20;
 
-
-  // ----------------- Upper Container ---------
+  // ----------------- Upper Container -----------
   & .container-up {
     position: relative;
     width: 100%;
     height: 160px;
     padding: 20px;
     transition: 1.8s;
-    // border: 2px solid green;
 
     & h1 {
       font-size: 45px;
@@ -43,29 +39,28 @@
     }
   }
 
-  // --------------- Lower Container ----------
+  // --------------- Lower Container ------------
   & .container-low {
     position: absolute;
     overflow: hidden;
-    right: 0px;
+    right: 0;
     width: 100%;
     height: 85%;
     padding: 20px;
 
     & .img-cover {
       position: absolute;
-      right: 0px;
+      right: 0;
       width: 360px;
       height: 420px;
       margin-right: 40px;
       overflow: hidden;
-      // border-bottom: 3px solid black;
-  }
+    }
 
     & img,
     .hoverBox {
       position: absolute;
-      right: 0px;
+      right: 0;
       width: 360px;
       height: 420px;
       object-fit: cover;
@@ -120,12 +115,12 @@
 @media only screen and (max-width: $medium-screen) {
   #image-wall {
     position: absolute;
-    top: 0px;
+    top: 0;
     width: 100%;
     height: 4000px;
     padding: 30px 0;
     padding-top: 1100px;
- }
+  }
 
   #image-wall .container {
     max-width: 750px;
@@ -137,7 +132,7 @@
     & .container-up {
       position: relative;
       height: 120px;
-      padding: 0px;
+      padding: 0;
 
       & h1 {
         font-size: 45px;
@@ -190,7 +185,7 @@
 @media only screen and (max-width: $small-screen) {
   #image-wall {
     height: 1300px;
-    padding-top: 500px;
+    padding-top: 600px;
   }
 
   #image-wall .first-column {
@@ -198,6 +193,7 @@
 
     & .container-up {
       height: 50px;
+      
       & h1 {
         position: absolute;
         margin-left: -55px;
@@ -205,7 +201,7 @@
         transform: translateX(-50%);
         white-space: nowrap;
       }
-      & h2{
+      & h2 {
         font-size: 35px;
         margin-top: 20px;
       }
@@ -238,6 +234,24 @@
       }
 
       & p {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $extra-small-screen) {
+  #image-wall .first-column {
+
+    & .container-up {
+
+      & h1 {
+        margin-left: 10px;
+        font-size: 35px;
+        left: 0;
+        transform: translateX(0);
+      }
+      & h2 {
         display: none;
       }
     }

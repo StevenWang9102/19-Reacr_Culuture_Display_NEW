@@ -18,7 +18,7 @@
 
 // -------------------------- 原有的图片跟随技术 --------------------
 
-// var followingBall = document.getElementById("followImg");
+// var followingBall = document.getElementById("followImage");
 
 // document.onmousemove = function (e) {
 //   setTimeout(function () {

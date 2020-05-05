@@ -25,9 +25,11 @@ export const WhatWeDo = (props) => {
               pageNum = {pageNum}
             />
           </div>
+
           </div>
       </div>
-      <div id='followImg' alt=''></div>
+
+      <div id='followImage' alt=''></div>
     </section>
   );
 };

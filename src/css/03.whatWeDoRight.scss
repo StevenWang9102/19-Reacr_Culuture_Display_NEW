@@ -1,10 +1,7 @@
 #what-we-do .second-column {
-  // position: absolute;
-
   padding: 5px;
   transition: 2s;
-  background-color: rgba(255, 255, 0, 0.384);
-  border: 5px solid red;
+  min-width: 300px;
   z-index: 90;
 
   & h1 {
@@ -78,12 +75,15 @@
 @media only screen and (max-width: $small-screen) {
   #what-we-do .second-column {
     position: absolute;
-    margin-top: 500px;
+    top: 1300px;
     height: 240px;
-    padding: 5px;
     margin-left: 80px;
     width: 50%;
-
+    
+    & h1 {
+      position: absolute;
+      top: 0;
+    }
   
     & #imgCarousel {
       position: absolute;
@@ -102,7 +102,13 @@
 
     & .explore-more {
       position: absolute;
-      top: 170px;
+      top: 190px;
+    }
+
+    & img {
+      position: absolute;
+      top: 190px;
+      left: 119px;
     }
 
     & #page {
@@ -114,8 +120,10 @@
 @media only screen and (max-width: $extra-small-screen) {
   #what-we-do .second-column {
     position: absolute;
-    top: 430px;
+    top: 1250px;
+    width: 90%;
     padding-left: 10px;
+    margin-left: 0;
 
     & #imgCarousel {
       position: absolute;

@@ -44,8 +44,8 @@ const getElementViewPosition8 = (element) => {
     let currentSize = document.documentElement.clientWidth;
     if(currentSize >= 992){
       if(galleryTop< -100){
-        columnL.style.marginTop = "0px"
-        columnR.style.marginTop = "0px"
+        columnL.style.marginTop = "0"
+        columnR.style.marginTop = "0"
       }else{
         columnL.style.marginTop = "40px"
         columnR.style.marginTop = "40px"
@@ -64,8 +64,8 @@ window.addEventListener("scroll", function (e) {
   let currentSize = document.documentElement.clientWidth;
   if(currentSize >= 992){
     if(whatwedoLocalTop < -960){
-      whatwedoColumnOne.style.marginTop = "0px"
-      whatwedoColumnTwo.style.marginTop = "0px"
+      whatwedoColumnOne.style.marginTop = "0"
+      whatwedoColumnTwo.style.marginTop = "0"
     } else{
       whatwedoColumnOne.style.marginTop = "40px"
       whatwedoColumnTwo.style.marginTop = "40px"
@@ -85,8 +85,8 @@ window.addEventListener("scroll", function (e) {
   let currentSize = document.documentElement.clientWidth;
   if(currentSize >= 992){
     if(imageWallTop < -1810){
-      columnLeft.style.marginTop = "0px"
-      columnRight.style.marginTop = "0px"
+      columnLeft.style.marginTop = "0"
+      columnRight.style.marginTop = "0"
     } else{
       columnLeft.style.marginTop = "40px"
       columnRight.style.marginTop = "40px"

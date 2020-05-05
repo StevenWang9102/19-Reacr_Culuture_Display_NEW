@@ -34,7 +34,7 @@
   right: 0;
   color: white;
   text-shadow: 3px 3px #ff0000b6;
-  left: 0px;
+  left: 0;
   width: 330px;
   height: 100%;
   white-space: nowrap;
@@ -59,34 +59,4 @@
     top: 10px;
     left: 340px;
   }
-}
-
-@media only screen and (max-width: $extra-small-screen) {
-  // #gallery #titlewrapper {
-  //   position: relative;
-  //   top: 0px;
-  //   left: 320px;
-  // }
-  
-  // #gallery  #titleContainer{
-  //   position: absolute;
-  //   top: 100px;
-  //   left: -200px;
-  //   width: 400px;
-  //   height: 60px;
-  //   overflow: visible;
-  // }
-
-  // #gallery #titlewrapper h1:nth-child(1) {
-  //   position: absolute;
-  //   top: 0;
-  //   left: -113px;
-  // }
-
-  // #gallery #titlewrapper h1:nth-child(2) {
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
-  //   left: 0px;
-  // }
 }

@@ -26,7 +26,7 @@
   height: 100%;
   padding: 5px;
   transition: 2s;
-  
+
   & h1:nth-child(1) {
     position: relative;
     top: 80px;
@@ -82,22 +82,19 @@
       font-weight: 500;
       text-align: center;
       cursor: pointer;
-      // border: 2px solid green;
     }
 
     & li:nth-child(1) {
-      transition: .5s;
+      transition: 0.5s;
       background-color: black;
       border-right: 3px solid white;
-      // border-right: 3px solid rgb(185, 18, 12);
     }
 
     & li:nth-child(2) {
       margin-top: 2px;
-      transition: .5s;
+      transition: 0.5s;
       background-color: rgb(108, 110, 109);
       border-right: 3px solid white;
-      // border-right: 3px solid rgb(112, 27, 24);
     }
   }
 }
@@ -105,33 +102,32 @@
 // --------------- Media Query Templete --------------
 @media only screen and (max-width: $medium-screen) {
   #what-we-do {
-      padding-top: 1300px;
+    padding-top: 1300px;
   }
-  
-  #what-we-do .container {
-      max-width: 835px;
 
-      & h1:nth-child(2) {
-        position: relative;
-        top: 30px;
-        left: 100px;
-        font-size: 60px;
-      }
-  
-      & .control-buttons li {
-        width: 90px;
-        height: 55px;
-        padding: 20px 10px;
-      }
+  #what-we-do .container {
+    max-width: 835px;
+
+    & h1:nth-child(2) {
+      position: relative;
+      top: 30px;
+      left: 100px;
+      font-size: 60px;
     }
+
+    & .control-buttons li {
+      width: 90px;
+      height: 55px;
+      padding: 20px 10px;
+    }
+  }
 }
 
 @media only screen and (max-width: $small-screen) {
-  
-  #what-we-do{
+  #what-we-do {
     padding-top: 800px;
   }
-  
+
   #what-we-do .first-column {
     height: 570px;
 
@@ -156,16 +152,20 @@
   #what-we-do .first-column {
     height: 570px;
 
-    & h1:nth-child(1) {
+    & h1:nth-of-type(1) {
       position: relative;
       top: 30px;
-      font-size: 35px;
+      font-size: 40px;
+    }
+
+    & h1:nth-of-type(2) {
+      display: none;
     }
 
     & #imgCarousel {
       position: absolute;
       top: 70px;
-      padding: 0px;
+      padding: 0;
     }
 
     & .control-buttons {

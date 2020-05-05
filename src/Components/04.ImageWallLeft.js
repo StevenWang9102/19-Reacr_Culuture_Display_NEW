@@ -1,24 +1,22 @@
 import React from "react";
-import img1 from "../img/04.imagewall/img7.png";
 
 export const ImageWallLeft = (props) => {
   return (
-    <section>
-      <div className='container-up'>
+    <div id="ImageWallLeft">
+      <section className='container-up'>
         <h1>Latest Story from us.</h1>
-        <h2 id="movingTitle">Latest Story from us.</h2>
-      </div>
+        <h2 id='movingTitle'>Latest Story from us.</h2>
+      </section>
 
-      <div className='container-low'>
-
-      <div className="img-cover">
-        <img src={img1} alt='' name='hoverImg' />
+      <section className='container-low'>
+        <div className='img-cover'>
+          <img src='../img/04.imagewall/img7.png' alt='' name='hoverImg' />
           <ul className='hoverBox'>
             <li>#BROWNS</li>
             <li>#ENJOY</li>
             <li>#INTERACTION</li>
           </ul>
-      </div>
+        </div>
 
         <h3>A Glimpse of Q2 2020</h3>
         <p>
@@ -28,7 +26,7 @@ export const ImageWallLeft = (props) => {
           advanced API integrations to elevate a leading Long Island residential
           real estate firm.
         </p>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };

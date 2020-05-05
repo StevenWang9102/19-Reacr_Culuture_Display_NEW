@@ -1,5 +1,4 @@
 import React from "react";
-import video from "../img/video2.mp4";
 
 export const NavigationRight = (props) => {
   return (
@@ -12,7 +11,7 @@ export const NavigationRight = (props) => {
       </ul>
 
       <video id='myVideo' className='video' autoPlay muted loop>
-        <source src={video} type='video/mp4' />
+        <source src='../img/01.navigation/video2.mp4' type='video/mp4' />
         Your browser does not support HTML5 video.
       </video>
     </section>

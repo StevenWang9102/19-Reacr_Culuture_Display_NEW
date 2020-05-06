@@ -1,3 +1,4 @@
+// ----------- Title Move ----------
 @keyframes FirstLine {
   0% {
     top: 0;
@@ -19,6 +20,28 @@
     opacity: 1;
   }
 }
+
+// ----------- Image Move ----------
+@keyframes FirstLineRight {
+  0% {
+    transform: translateX(0);
+  }
+  
+  100% {
+    transform: translateX(350px);
+  }
+}
+
+@keyframes SecondLineRight {
+  0% {
+    transform: translateX(-350px);
+  }
+  
+  100% {
+    transform: translateX(0);
+  }
+}
+
 
 @keyframes fadeOut {
   0% {

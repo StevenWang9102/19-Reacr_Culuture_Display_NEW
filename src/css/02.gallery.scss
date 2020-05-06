@@ -33,20 +33,27 @@
     color: rgba(255, 255, 255, 0.925);
   }
 
-  & .gallery-img,
-  div {
+  & .gallery-img-container {
     position: absolute;
     top: 200px;
     right: 5px;
     height: 450px;
     width: 350px;
+    background-color: rgba(0, 0, 0, 0.101);
     overflow: hidden;
+  }
+
+  & .gallery-img{
+    height: 100%;
+    width: 100%;
     object-fit: cover;
   }
 
-  & div {
-    background-color: black;
-    opacity: 0.15;
+  & .gallery-img2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
   }
 }
 

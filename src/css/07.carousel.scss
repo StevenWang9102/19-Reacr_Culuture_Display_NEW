@@ -1,4 +1,4 @@
-// -------------------- what we do image------------
+// ------------------ Image Carousel -------------
 #what-we-do .first-column {
   & #imgCarousel {
     height: 100%;
@@ -8,23 +8,9 @@
   & .carousel-inner {
     height: 100%;
   }
-
-  & .carousel-control-prev1 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-  }
-
-  & .carousel-control-next2 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-  }
 }
 
-// -------------------- what we do title------------
+// -------------------- Title Carousel ------------
 #what-we-do .second-column {
   & #titleCarousel {
     position: absolute;
@@ -34,9 +20,9 @@
     z-index: 20;
 
     & h1{
-      width: 300px;
+      width: 320px;
       text-shadow: 2px 2px rgba(255, 217, 0, 0.63);
-      white-space: nowrap;
+      z-index: 10;
     }
   }
 
@@ -50,29 +36,13 @@
   }
 }
 
-.carousel-control-prev {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  left: 40px;
-  z-index: 50;
-}
-
-.carousel-control-next {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  right: -30px;
-  left: 40px;
-  top: 80px;
-}
-
 @media only screen and (max-width: $small-screen) {
   #what-we-do .first-column {
     & #imgCarousel {
       height: 400px;
     }
   }
+
   #what-we-do .second-column {
     & #titleCarousel {
       position: absolute;

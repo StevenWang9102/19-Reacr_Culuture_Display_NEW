@@ -2,13 +2,14 @@
 import React from "react";
 import { Page } from "./02.Page";
 import { database2 } from "../database";
-import { CarouselForTitle } from "./CarouselForTitle";
+import { HalfWord } from "../Components/02.HalfWord";
 
 export const WhatWeDoRight = (props) => {
   return (
     <section>
-      <CarouselForTitle content={database2} />
 
+      <HalfWord title={database2[props.pageNum - 1].title} />
+        
       <p className='paragraph'>
         {database2[props.pageNum - 1] && database2[props.pageNum - 1].paragraph}
       </p>

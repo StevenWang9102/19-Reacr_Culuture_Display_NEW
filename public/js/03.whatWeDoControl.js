@@ -31,6 +31,15 @@ const getElementViewPosition4 = (element) => {
   return { x: left, y: right };
 };
 
+// --------------- Set Animation ---------------
+const setAnimation2 = (element, animation, delay, animation2) => {
+  element.style.animation = animation;
+
+  setTimeout(function () {
+    element.style.animation = animation2;
+  }, delay);
+};
+
 // --------------- Big Float Ball & Header Effects--------------
 const whatwedo2 = document.getElementById("what-we-do");
 const bigFloatBall = document.getElementById("bigFloatBall");
@@ -58,13 +67,17 @@ const whatWeDoPreview = document.getElementsByName("whatWeDoPreview")[0];
 const whatWeDoNext = document.getElementsByName("whatWeDoNext")[0];
 const pageButtonOfWhatWeDo = document.getElementsByClassName("pageAnimation")[1];
 const paragraphWhat = document.getElementsByClassName("paragraph")[1];
+const title2 = document.getElementsByClassName("titlewrapper")[1];
 
 whatWeDoPreview.addEventListener("click", (event) => {
-  
+
+  whatWeDoPreview.style.fontSize = "12px";
   pageButtonOfWhatWeDo.style.animation = "fadeOut .5s";
   paragraphWhat.style.animation = "fadeOut .5s";
+  setAnimation2(title2, "FirstLine .3s ease, SecondLine .3s .2s ease", 500, "");
 
   setTimeout(function () {
+    whatWeDoPreview.style.fontSize = "16px";
     pageButtonOfWhatWeDo.style.animation = "";
     paragraphWhat.style.animation = "";
   }, 500);
@@ -81,10 +94,13 @@ whatWeDoPreview.addEventListener("mouseout", (event) => {
 
 // --------------------- Next Button Effects--------------
 whatWeDoNext.addEventListener("click", (event) => {
+  whatWeDoNext.style.fontSize = "12px";
   pageButtonOfWhatWeDo.style.animation = "fadeOut .5s";
   paragraphWhat.style.animation = "fadeOut .5s";
+  setAnimation2(title2, "FirstLine .3s ease, SecondLine .3s .2s ease", 500, "");
 
   setTimeout(function () {
+    whatWeDoNext.style.fontSize = "16px";
     pageButtonOfWhatWeDo.style.animation = "";
     paragraphWhat.style.animation = "";
   }, 500);

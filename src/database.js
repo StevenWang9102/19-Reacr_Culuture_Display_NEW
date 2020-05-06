@@ -30,18 +30,18 @@ export const database2 = [
   },
   {
     id: 1,
-    title: "Enjoy and adapt",
-    paragraph: "We make sure our team feels appreciated and valued. Launch Lunches and quarterly show-and-tells are some of the ways we celebrate our people. We take the time to stop and acknowledge where we came from so that we don’t miss how impressive the climb is.",
+    title: "Enjoy and Adapt",
+    paragraph: "We make sure our team feels appreciated and valued. Launch Lunches and quarterly show-and-tells are some of the ways we celebrate our people. ",
   },
   {
     id: 2,
-    title: "Corporate culture",
-    paragraph: "The culture of your business matters. The values and attitudes your company is known for can resonate strongly with customers and employees, and this can be rewarded by loyalty, increased market share and a more sustainable business.",
+    title: "Corporate Culture",
+    paragraph: "The culture of your business matters. The values and attitudes your company is known for can resonate strongly with customers and employees, and a more sustainable business.",
   },
   {
     id: 3,
-    title: "Outstanding results",
-    paragraph: "by establishing a culture of exceptional execution and rewarding those who create great outcomes.",
+    title: "Outstanding Results",
+    paragraph: "By establishing a culture of exceptional execution and rewarding those who create great outcomes.",
   },
   
 ];

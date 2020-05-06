@@ -16,14 +16,20 @@ const setAnimation = (element, animation, delay, animation2) => {
 const previewButton = document.getElementById("galleryButtonsPreview");
 const pageButton = document.getElementsByClassName("pageAnimation")[0];
 const paragraph = document.getElementsByClassName("paragraph")[0];
-const title = document.getElementById("titlewrapper");
+const image1 = document.getElementsByClassName("gallery-img")[0];
+const image2 = document.getElementsByClassName("gallery-img")[1];
+console.log(image2);
+
+const title = document.getElementsByClassName("titlewrapper")[0];
 const gallery2 = document.getElementById("gallery");
 
 previewButton.addEventListener("click", (event) => {
-  setAnimation(slogan, "fadeOut2 .5s ease", 500, "");
+  setAnimation(slogan, "fadeOut2 1s ease", 1000, "");
   setAnimation(pageButton, "fadeOut .5s ease", 500, "");
   setAnimation(paragraph, "fadeOut .5s ease", 500, "");
-  setAnimation(title, "FirstLine .5s ease, SecondLine .5s .3s ease", 800, "");
+  setAnimation(title, "FirstLine .3s ease, SecondLine .3s .2s ease", 500, "");
+  setAnimation(image1, "FirstLineRight 1s ease", 1000, "");
+  setAnimation(image2, "SecondLineRight 1s ease", 1000, "");
 
   // BackGround Flash
   gallery2.style.animation = "flashOnce 8s";
@@ -47,10 +53,12 @@ const NextButton = document.getElementById("galleryButtonsNext");
 const slogan = document.getElementsByName("slogan")[0];
 
 NextButton.addEventListener("click", (event) => {
-  setAnimation(slogan, "fadeOut2 .5s ease", 500, "");
+  setAnimation(slogan, "fadeOut2 1s ease", 1000, "");
   setAnimation(pageButton, "fadeOut .5s ease", 500, "");
   setAnimation(paragraph, "fadeOut .5s ease", 500, "");
-  setAnimation(title, "FirstLine .5s ease, SecondLine .5s .3s ease", 800, "");
+  setAnimation(title, "FirstLine .3s ease, SecondLine .3s .2s ease", 500, "");
+  setAnimation(image1, "FirstLineRight 1s ease", 1000, "");
+  setAnimation(image2, "SecondLineRight 1s ease", 1000, "");
 
   // BackGround Flash
   gallery2.style.animation = "flashOnce 3s";

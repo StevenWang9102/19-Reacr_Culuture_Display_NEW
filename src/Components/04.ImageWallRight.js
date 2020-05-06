@@ -13,7 +13,7 @@ export const ImageWallRight = (props) => {
           <div className='img-hover'></div>
         </div>
 
-        <HalfWord title='Read More Articles' />
+        {/* <HalfWord title='Read More Articles' /> */}
       </section>
 
       <section className='container-low'>

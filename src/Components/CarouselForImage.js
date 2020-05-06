@@ -22,6 +22,10 @@ export const CarouselForImage = (props) => {
           <img src='../img/03.whatwedo/sci04.jpg' alt='' />
         </div>
 
+        <div className='carousel-item'>
+          <img src='../img/03.whatwedo/sci01.jpg' alt='' />
+        </div>
+
       </div>
     </section>
   );

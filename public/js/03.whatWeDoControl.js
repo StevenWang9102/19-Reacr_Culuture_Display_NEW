@@ -1,4 +1,5 @@
-const getElementViewPosition9 = (element) => {
+// --------------- Test the position --------------
+const getElementViewPosition4 = (element) => {
   var actualLeft = element.offsetLeft;
   var current = element.offsetParent;
   while (current !== null) {
@@ -36,9 +37,9 @@ const bigFloatBall = document.getElementById("bigFloatBall");
 const titleWhatWeDo = document.getElementsByName("whatwe")[1];
 
 window.addEventListener("scroll", function (e) {
-  // 此时测试一下屏幕尺寸
+
   let currentSize = document.documentElement.clientWidth;;
-  let whatWeDoTop = getElementViewPosition9(whatwedo2).y;
+  let whatWeDoTop = getElementViewPosition4(whatwedo2).y;
 
   if (currentSize >= 992) {
 
@@ -52,23 +53,24 @@ window.addEventListener("scroll", function (e) {
   }
 });
 
-// --------------------- Preview Effects--------------
+// --------------------- Preview Button Effects--------------
 const whatWeDoPreview = document.getElementsByName("whatWeDoPreview")[0];
 const whatWeDoNext = document.getElementsByName("whatWeDoNext")[0];
-const pageButtonWhat = document.getElementsByClassName("pageAnimation")[1];
+const pageButtonOfWhatWeDo = document.getElementsByClassName("pageAnimation")[1];
 const paragraphWhat = document.getElementsByClassName("paragraph")[1];
 
 whatWeDoPreview.addEventListener("click", (event) => {
-
-  pageButtonWhat.style.animation = "fadeOut 1s";
-  paragraphWhat.style.animation = "fadeOut 1s";
+  
+  pageButtonOfWhatWeDo.style.animation = "fadeOut .5s";
+  paragraphWhat.style.animation = "fadeOut .5s";
 
   setTimeout(function () {
-    pageButtonWhat.style.animation = "";
+    pageButtonOfWhatWeDo.style.animation = "";
     paragraphWhat.style.animation = "";
-  }, 600);
+  }, 500);
 });
 
+// --------------------- Preview Hover--------------
 whatWeDoPreview.addEventListener("mouseover", (event) => {
   whatWeDoPreview.style.borderRight = "4px solid rgb(185, 18, 12)";
 })
@@ -77,17 +79,18 @@ whatWeDoPreview.addEventListener("mouseout", (event) => {
   whatWeDoPreview.style.borderRight = "3px solid white";
 })
 
-// --------------------- Next Effects--------------
+// --------------------- Next Button Effects--------------
 whatWeDoNext.addEventListener("click", (event) => {
-  pageButtonWhat.style.animation = "fadeOut 1s";
-  paragraphWhat.style.animation = "fadeOut 1s";
+  pageButtonOfWhatWeDo.style.animation = "fadeOut .5s";
+  paragraphWhat.style.animation = "fadeOut .5s";
 
   setTimeout(function () {
-    pageButtonWhat.style.animation = "";
+    pageButtonOfWhatWeDo.style.animation = "";
     paragraphWhat.style.animation = "";
-  }, 600);
+  }, 500);
 });
 
+// --------------------- Next Hover--------------
 whatWeDoNext.addEventListener("mouseover", (event) => {
   whatWeDoNext.style.borderRight = "4px solid rgb(185, 18, 12)";
 })

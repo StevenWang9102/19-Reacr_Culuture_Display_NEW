@@ -1,4 +1,24 @@
 // ------------------- Functions ----------------
+const mySetTimer = (target, value, delay) => {
+  setTimeout(function () {
+    target.style.display = value;
+  }, delay);
+};
+
+const mouseOverEffects = (element) => {
+  element.addEventListener("mouseover", (event) => {
+    hoverOnRight.style.left = "0";
+    mySetTimer(titlewrapper, "inline-block", 400);
+  });
+};
+
+const mouseOutEffects = (element) => {
+  element.addEventListener("mouseout", (event) => {
+    hoverOnRight.style.left = "-440px";
+    mySetTimer(titlewrapper, "none", 0);
+  });
+};
+
 const getElementViewPosition = (element) => {
   var actualLeft = element.offsetLeft;
   var current = element.offsetParent;
@@ -65,40 +85,15 @@ myHover.addEventListener("mouseout", (event) => {
   myHover.style.top = "480px";
 });
 
-const mySetTimer = (target, value, delay) => {
-  setTimeout(function () {
-    target.style.display = value;
-  }, delay);
-};
 // ------------------- Right Image Effect ----------------
-// 这个地方逻辑需要重新设计@@@@@@@@@@
-// 现在hover到右侧标题上，反复闪烁
 const hoverOnRight = document.getElementsByClassName("img-hover")[0];
 const imgBox = document.getElementsByClassName("img1")[0];
 const hoverH1 = document.getElementById("hoverh1");
 const titlewrapper = document.getElementById("titlewrapper");
 
-imgBox.addEventListener("mouseover", (event) => {
-  hoverOnRight.style.left = "0";
-  mySetTimer(titlewrapper, "inline-block", 400);
-});
+mouseOverEffects(imgBox);
+mouseOverEffects(hoverOnRight);
+mouseOverEffects(hoverH1);
 
-hoverOnRight.addEventListener("mouseover", (event) => {
-  hoverOnRight.style.left = "0";
-  mySetTimer(titlewrapper, "inline-block", 400);
-});
-
-hoverOnRight.addEventListener("mouseout", (event) => {
-  hoverOnRight.style.left = "-440px";
-  mySetTimer(titlewrapper, "none", 0);
-});
-
-hoverH1.addEventListener("mouseover", (event) => {
-  hoverOnRight.style.left = "0";
-  mySetTimer(titlewrapper, "inline-block", 400);
-});
-
-hoverH1.addEventListener("mouseout", (event) => {
-  hoverOnRight.style.left = "-440px";
-  mySetTimer(titlewrapper, "none", 0);
-});
+mouseOutEffects(hoverOnRight);
+mouseOutEffects(hoverH1);

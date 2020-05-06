@@ -1,33 +1,39 @@
+// ------------------ Functions ----------------
+const setMyTimer = (element, min, animation) =>
+  setTimeout(function () {
+    element.style.animation = animation;
+  }, min);
+
+const setAnimation = (element, animation, delay, animation2) => {
+  element.style.animation = animation;
+
+  setTimeout(function () {
+    element.style.animation = animation2;
+  }, delay);
+};
+
 // ----------- Preview Button Effects ------------
 const previewButton = document.getElementById("galleryButtonsPreview");
 const pageButton = document.getElementsByClassName("pageAnimation")[0];
 const paragraph = document.getElementsByClassName("paragraph")[0];
 const title = document.getElementById("titlewrapper");
+const gallery2 = document.getElementById("gallery");
 
 previewButton.addEventListener("click", (event) => {
-  let currentSize = document.documentElement.clientWidth;
-  // if(currentSize>=992){
-    slogan.style.animation = "fadeOut2 .5s";
-    pageButton.style.animation = "fadeOut .5s";
-    paragraph.style.animation = "fadeOut 1s";
-    title.style.animation = "FirstLine .5s, SecondLine .5s .3s";
-  
-    // reset
-    setMyTimer(slogan, 500, "");
-    setMyTimer(pageButton, 500, "");
-    setMyTimer(paragraph, 500, "");
-    setMyTimer(title, 800, "");
-  
-    // BackGround Flash
-    gallery22.style.animation = "flashOnce 5s";
-    if (gallery22.style.animation !== "") {
-      gallery22.style.animation = "";
-      setMyTimer(gallery22, 100, "flashOnce 5s");
-    }
-  // }
+  setAnimation(slogan, "fadeOut2 .5s ease", 500, "");
+  setAnimation(pageButton, "fadeOut .5s ease", 500, "");
+  setAnimation(paragraph, "fadeOut .5s ease", 500, "");
+  setAnimation(title, "FirstLine .5s ease, SecondLine .5s .3s ease", 800, "");
+
+  // BackGround Flash
+  gallery2.style.animation = "flashOnce 8s";
+  if (gallery2.style.animation !== "") {
+    gallery2.style.animation = "";
+    setMyTimer(gallery2, 100, "flashOnce 5s");
+  }
 });
 
-// ---------------- Preview Button 下划线造型 -------------
+// ---------------- Preview Button Underline -------------
 previewButton.addEventListener("mouseover", (event) => {
   previewButton.className = "PreviewButton myNewClass2";
 });
@@ -38,38 +44,23 @@ previewButton.addEventListener("mouseout", (event) => {
 
 // ----------- Next Button Effects ------------
 const NextButton = document.getElementById("galleryButtonsNext");
-const gallery22 = document.getElementById("gallery");
 const slogan = document.getElementsByName("slogan")[0];
 
-const setMyTimer = (element, min, animation) =>
-  setTimeout(function () {
-    element.style.animation = animation;
-  }, min);
-
 NextButton.addEventListener("click", (event) => {
-  let currentSize = document.documentElement.clientWidth;
-  // if(currentSize>=992){
-    slogan.style.animation = "fadeOut2 .5s";
-    pageButton.style.animation = "fadeOut .5s";
-    paragraph.style.animation = "fadeOut .5s";
-    title.style.animation = "FirstLine .5s, SecondLine .5s .3s";
-  
-    // reset
-    setMyTimer(slogan, 500, "");
-    setMyTimer(pageButton, 500, "");
-    setMyTimer(paragraph, 500, "");
-    setMyTimer(title, 800, "");
-  
-    // BackGround Flash
-    gallery22.style.animation = "flashOnce 3s";
-    if (gallery22.style.animation !== "") {
-      gallery22.style.animation = "";
-      setMyTimer(gallery22, 100, "flashOnce 3s");
-    }
-  // }
+  setAnimation(slogan, "fadeOut2 .5s ease", 500, "");
+  setAnimation(pageButton, "fadeOut .5s ease", 500, "");
+  setAnimation(paragraph, "fadeOut .5s ease", 500, "");
+  setAnimation(title, "FirstLine .5s ease, SecondLine .5s .3s ease", 800, "");
+
+  // BackGround Flash
+  gallery2.style.animation = "flashOnce 3s";
+  if (gallery2.style.animation !== "") {
+    gallery2.style.animation = "";
+    setMyTimer(gallery2, 100, "flashOnce 3s");
+  }
 });
 
-// ---------------- Next Button 下划线造型 -------------
+// ---------------- Next Button UnderLine -------------
 NextButton.addEventListener("mouseover", (event) => {
   NextButton.className = "NextButton myNewClass";
 });

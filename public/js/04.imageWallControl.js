@@ -40,6 +40,10 @@ const getElementViewPosition = (element) => {
 };
 
 // ------------------- Left Title Effect ----------------
+const hoverOnRight = document.getElementsByClassName("img-hover")[0];
+const imgBox = document.getElementsByClassName("img1")[0];
+const hoverH1 = document.getElementById("hoverh1");
+// const titlewrapper = document.getElementsByClassName("titlewrapper")[2];
 const imageWall = document.getElementById("image-wall");
 const titleH2 = document.getElementById("movingTitle");
 
@@ -78,21 +82,17 @@ myHover.addEventListener("mouseout", (event) => {
 const mouseOverEffects = (element) => {
   element.addEventListener("mouseover", (event) => {
     hoverOnRight.style.left = "0";
-    mySetTimer(titlewrapper, "inline-block", 400);
+    // mySetTimer(titlewrapper, "inline-block", 400);
   });
 };
 
 const mouseOutEffects = (element) => {
   element.addEventListener("mouseout", (event) => {
     hoverOnRight.style.left = "-440px";
-    mySetTimer(titlewrapper, "none", 0);
+    // mySetTimer(titlewrapper, "none", 0);
   });
 };
 
-const hoverOnRight = document.getElementsByClassName("img-hover")[0];
-const imgBox = document.getElementsByClassName("img1")[0];
-const hoverH1 = document.getElementById("hoverh1");
-const titlewrapper = document.getElementsByClassName("titlewrapper")[2];
 
 mouseOverEffects(imgBox);
 mouseOverEffects(hoverOnRight);

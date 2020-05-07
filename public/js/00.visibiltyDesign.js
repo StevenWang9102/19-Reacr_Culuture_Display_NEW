@@ -61,7 +61,7 @@ window.addEventListener("resize", (event) => {
     Reset(whatwedo);
     Reset(whatwedocontainer);
     Reset(imageWallLocal);
-    imageWallLocal.style.zIndex = "1"
+    // imageWallLocal.style.zIndex = "1"
     imageWallLocal.style.backgroundImage = "none"
   } 
 });

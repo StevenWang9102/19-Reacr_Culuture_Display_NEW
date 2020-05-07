@@ -18,8 +18,6 @@ const pageButton = document.getElementsByClassName("pageAnimation")[0];
 const paragraph = document.getElementsByClassName("paragraph")[0];
 const image1 = document.getElementsByClassName("gallery-img")[0];
 const image2 = document.getElementsByClassName("gallery-img")[1];
-console.log(image2);
-
 const title = document.getElementsByClassName("titlewrapper")[0];
 const gallery2 = document.getElementById("gallery");
 

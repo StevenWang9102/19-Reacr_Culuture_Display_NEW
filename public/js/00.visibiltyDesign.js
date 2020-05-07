@@ -61,7 +61,6 @@ window.addEventListener("resize", (event) => {
     Reset(whatwedo);
     Reset(whatwedocontainer);
     Reset(imageWallLocal);
-    // imageWallLocal.style.zIndex = "1"
     imageWallLocal.style.backgroundImage = "none"
   } 
 });
@@ -104,12 +103,9 @@ window.addEventListener("scroll", function (e) {
 window.addEventListener("scroll", function (e) {
   let imageWallLocalTop = getElementViewPosition2(imageWallLocal).y;
   let currentSize = document.documentElement.clientWidth;
-  // console.log(currentSize);
 
   if (currentSize >= 992) {
     if (imageWallLocalTop < -1880) {
-      // 应该是这里
-      // SetAttributes(gallery, 0, "hidden", "1s");
       SetAttributes(whatwedo, 0, "hidden", "1s");
       SetAttributes(imageWallLocal, 1, "visible", "2s");
       imageWallLocal.style.backgroundImage =

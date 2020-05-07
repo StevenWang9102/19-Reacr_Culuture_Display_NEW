@@ -46,7 +46,6 @@ const titleH2 = document.getElementById("movingTitle");
 window.addEventListener("scroll", function (e) {
   let currentSize = document.documentElement.clientWidth;
   let imageWallTop = getElementViewPosition(imageWall).y;
-// console.log(imageWallTop);
 
   if (currentSize >= 992) {
     if (imageWallTop > -2200 && imageWallTop < -1800) {

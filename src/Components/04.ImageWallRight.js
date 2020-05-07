@@ -1,5 +1,4 @@
 import React from "react";
-import { HalfWord } from "./02.HalfWord";
 
 export const ImageWallRight = (props) => {
   return (
@@ -13,7 +12,6 @@ export const ImageWallRight = (props) => {
           <div className='img-hover'></div>
         </div>
 
-        {/* <HalfWord title='Read More Articles' /> */}
       </section>
 
       <section className='container-low'>

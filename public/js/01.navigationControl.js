@@ -14,7 +14,6 @@ const logo = document.getElementById("logo");
 
 const ChangeLogo = () => {
   let currentSize = document.documentElement.clientWidth;
-  console.log(currentSize);
   
   if (currentSize < "768") {
     logo.src = "";

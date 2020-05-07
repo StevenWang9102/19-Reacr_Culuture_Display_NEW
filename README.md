@@ -1,8 +1,9 @@
 ## Introduction
-This is a website that I mainly practice react and css(including media query sass and so on). It displays the main page of Uber official website. The whole website is fully responsive that bases on different screen sizes.
+This is a website that I mainly practice CSS 2D and 3D effects, Js DOM control as well. I design some floating body effects and make different sections visible or hidden according to their position. Also, I produce a lot of hover effects of buttons and use "setTimeout" function. 
 
 ## How does it work
-You can see my video which give a brief operation video or play with it on my hosted website online (http://react-uber-official.s3-website-ap-southeast-2.amazonaws.com). If you want to find more, you can see my source code and run "npm start" in VS code terminal. 
+You can see my video which gives a brief operation video or plays with it on my hosted website online (http://react-culture-display.s3-website-ap-southeast-2.amazonaws.com). If you want to find more, you can see my source code and run "npm start" in the VS Code terminal. 
+
 
 ## Source Code
 You can see more details when you run my code. My Source code is on my Github - https://github.com/StevenWang9102, simply run "npm start" in your VS code terminal.

@@ -1,33 +1,33 @@
 // --------------- Test the position --------------
 const getElementViewPosition4 = (element) => {
-  var actualLeft = element.offsetLeft;
-  var current = element.offsetParent;
+  let actualLeft = element.offsetLeft;
+  let current = element.offsetParent;
   while (current !== null) {
     actualLeft += current.offsetLeft + current.clientLeft;
     current = current.offsetParent;
   }
-  var elementScrollLeft = 0;
+  let elementScrollLeft = 0;
   if (document.compatMode === "BackCompat") {
     elementScrollLeft = document.body.scrollLeft;
   } else {
     elementScrollLeft = document.documentElement.scrollLeft;
   }
-  var left = actualLeft - elementScrollLeft;
+  let left = actualLeft - elementScrollLeft;
 
-  var actualTop = element.offsetTop;
+  let actualTop = element.offsetTop;
 
   current = element.offsetParent;
   while (current !== null) {
     actualTop += current.offsetTop + current.clientTop;
     current = current.offsetParent;
   }
-  var elementScrollTop = 0;
+  let elementScrollTop = 0;
   if (document.compatMode === "BackCompat") {
     elementScrollTop = document.body.scrollTop;
   } else {
     elementScrollTop = document.documentElement.scrollTop;
   }
-  var right = actualTop - elementScrollTop;
+  let right = actualTop - elementScrollTop;
   return { x: left, y: right };
 };
 

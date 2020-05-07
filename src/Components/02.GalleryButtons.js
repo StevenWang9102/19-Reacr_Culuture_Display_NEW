@@ -1,14 +1,16 @@
 import React from "react";
 
-export const GalleryButtons = ({ image, pageNum, setPageNum, setImageSrc }) => {
+export const GalleryButtons = ({ image, pageNum, setPageNum, setImageSrc1, setImageSrc2 }) => {
   return (
     <section id='galleryButtons'>
       <div
         id='galleryButtonsPreview'
         className='PreviewButton'
         onClick={() => {
-          setPageNum(pageNum === 1 ? 4 : pageNum + 1);
-          setTimeout(() => setImageSrc(image[pageNum === 1? 4: pageNum]), 700);
+          const temp = pageNum
+          setPageNum(temp === 1 ? 4 : temp - 1);
+          setTimeout(() => setImageSrc1(image[temp === 1? 3: temp-2]), 800);
+          setTimeout(() => setImageSrc2(image[temp === 1? 3: temp-2]), 0);
         }}>
         PREVIEW
       </div>
@@ -20,7 +22,8 @@ export const GalleryButtons = ({ image, pageNum, setPageNum, setImageSrc }) => {
         className='NextButton'
         onClick={() => {
           setPageNum(pageNum === 4 ? 1 : pageNum + 1);
-          setTimeout(() => setImageSrc(image[pageNum === 4?1: pageNum]), 650);
+          setTimeout(() => setImageSrc1(image[pageNum === 4? 0: pageNum]), 800);
+          setTimeout(() => setImageSrc2(image[pageNum === 4? 0: pageNum]), 0);
         }}>
         NEXT
       </div>

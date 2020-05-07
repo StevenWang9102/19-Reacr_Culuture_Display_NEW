@@ -24,12 +24,16 @@ const title = document.getElementsByClassName("titlewrapper")[0];
 const gallery2 = document.getElementById("gallery");
 
 previewButton.addEventListener("click", (event) => {
-  setAnimation(slogan, "fadeOut2 1s ease", 1000, "");
-  setAnimation(pageButton, "fadeOut .5s ease", 500, "");
-  setAnimation(paragraph, "fadeOut .5s ease", 500, "");
-  setAnimation(title, "FirstLine .3s ease, SecondLine .3s .2s ease", 500, "");
-  setAnimation(image1, "FirstLineRight 1s ease", 1000, "");
-  setAnimation(image2, "SecondLineRight 1s ease", 1000, "");
+  let currentSize = document.documentElement.clientWidth;
+
+  if (currentSize >= 768) {
+    setAnimation(slogan, "fadeOut2 1s ease", 1000, "");
+    setAnimation(pageButton, "fadeOut .5s ease", 500, "");
+    setAnimation(paragraph, "fadeOut .5s ease", 500, "");
+    setAnimation(title, "FirstLine .3s ease, SecondLine .3s .2s ease", 500, "");
+    setAnimation(image1, "FirstLineRight 1s ease", 1000, "");
+    setAnimation(image2, "SecondLineRight 1s ease", 1000, "");  
+  }
 
   // BackGround Flash
   gallery2.style.animation = "flashOnce 8s";
@@ -53,12 +57,16 @@ const NextButton = document.getElementById("galleryButtonsNext");
 const slogan = document.getElementsByName("slogan")[0];
 
 NextButton.addEventListener("click", (event) => {
-  setAnimation(slogan, "fadeOut2 1s ease", 1000, "");
-  setAnimation(pageButton, "fadeOut .5s ease", 500, "");
-  setAnimation(paragraph, "fadeOut .5s ease", 500, "");
-  setAnimation(title, "FirstLine .3s ease, SecondLine .3s .2s ease", 500, "");
-  setAnimation(image1, "FirstLineRight 1s ease", 1000, "");
-  setAnimation(image2, "SecondLineRight 1s ease", 1000, "");
+  let currentSize = document.documentElement.clientWidth;
+
+  if (currentSize >= 768) {
+    setAnimation(slogan, "fadeOut2 1s ease", 1000, "");
+    setAnimation(pageButton, "fadeOut .5s ease", 500, "");
+    setAnimation(paragraph, "fadeOut .5s ease", 500, "");
+    setAnimation(title, "FirstLine .3s ease, SecondLine .3s .2s ease", 500, "");  
+    setAnimation(image1, "FirstLineRight 1s ease", 1000, "");
+    setAnimation(image2, "SecondLineRight 1s ease", 1000, "");  
+  }
 
   // BackGround Flash
   gallery2.style.animation = "flashOnce 3s";

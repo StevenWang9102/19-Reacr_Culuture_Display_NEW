@@ -12,7 +12,7 @@ export const database = [
   {
     id: 2,
     title: "Industrial Robots",
-    paragraph: "Our engineers integrate a variety of automation systems each year, that go on to form vital links in the OEM manufacturing chain. Through the specialist nature of dispensing applications..",
+    paragraph: "Our engineers integrate a variety of automation systems each year, that go on to form vital links in the OEM manufacturing chain..",
   },
   {
     id: 3,

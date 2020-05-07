@@ -6,36 +6,36 @@ const mySetTimer = (target, value, delay) => {
 };
 
 const getElementViewPosition = (element) => {
-  var actualLeft = element.offsetLeft;
-  var current = element.offsetParent;
+  let actualLeft = element.offsetLeft;
+  let current = element.offsetParent;
 
   while (current !== null) {
     actualLeft += current.offsetLeft + current.clientLeft;
     current = current.offsetParent;
   }
 
-  var elementScrollLeft = 0;
+  let elementScrollLeft = 0;
   if (document.compatMode === "BackCompat") {
     elementScrollLeft = document.body.scrollLeft;
   } else {
     elementScrollLeft = document.documentElement.scrollLeft;
   }
-  var left = actualLeft - elementScrollLeft;
+  let left = actualLeft - elementScrollLeft;
 
-  var actualTop = element.offsetTop;
+  let actualTop = element.offsetTop;
 
   current = element.offsetParent;
   while (current !== null) {
     actualTop += current.offsetTop + current.clientTop;
     current = current.offsetParent;
   }
-  var elementScrollTop = 0;
+  let elementScrollTop = 0;
   if (document.compatMode === "BackCompat") {
     elementScrollTop = document.body.scrollTop;
   } else {
     elementScrollTop = document.documentElement.scrollTop;
   }
-  var right = actualTop - elementScrollTop;
+  let right = actualTop - elementScrollTop;
   return { x: left, y: right };
 };
 
@@ -45,10 +45,12 @@ const titleH2 = document.getElementById("movingTitle");
 
 window.addEventListener("scroll", function (e) {
   let currentSize = document.documentElement.clientWidth;
-  var imageWallTop = getElementViewPosition(imageWall).y;
+  let imageWallTop = getElementViewPosition(imageWall).y;
+// console.log(imageWallTop);
+
   if (currentSize >= 992) {
-    if (imageWallTop > -2100 && imageWallTop < -1800) {
-      titleH2.style.marginLeft = imageWallTop + 1900 + 300 + "px";
+    if (imageWallTop > -2200 && imageWallTop < -1800) {
+      titleH2.style.marginLeft = imageWallTop + 1900 + 400 + "px";
     } else {
       titleH2.style.marginLeft = 80 + "px";
     }

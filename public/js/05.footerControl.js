@@ -4,18 +4,15 @@ const footer = document.getElementById("footer");
 
 footer.addEventListener("mouseenter", function (e) {
   let currentSize = document.documentElement.clientWidth;
+
   if (currentSize >= 992) {
-    footer.style.backgroundColor = "white";
-    titleOfLet.style.animation = "blink-caret 0.5s step-end infinite";
+    titleOfLet.style.animation = "none";
 
     setTimeout(function () {
       titleOfLet.style.animation =
         "typing 4s steps(30, end), blink-caret 0.5s step-end infinite";
     }, 300);
 
-    setTimeout(function () {
-      footer.style.backgroundColor = "black";
-    }, 700);
   }
 });
 

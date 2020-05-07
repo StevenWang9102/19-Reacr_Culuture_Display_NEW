@@ -23,7 +23,7 @@
     transition: 1.8s;
 
     & h1 {
-      font-size: 45px;
+      font-size: 50px;
       white-space: nowrap;
     }
 
@@ -33,7 +33,7 @@
       margin-top: -60px;
       white-space: nowrap;
       color: rgba(198, 219, 148, 0.932);
-      font-size: 80px;
+      font-size: 70px;
       transition: 1s;
       z-index: -10;
     }
@@ -197,13 +197,18 @@
       & h1 {
         position: absolute;
         margin-left: -55px;
+        font-size: 45px;
         left: 50%;
         transform: translateX(-50%);
         white-space: nowrap;
       }
+
       & h2 {
-        font-size: 35px;
-        margin-top: 20px;
+        font-size: 45px;
+        margin-top: 21px;
+        margin-left: -45px;
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
 

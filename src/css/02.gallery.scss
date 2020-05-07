@@ -14,7 +14,6 @@
   }
 }
 
-// ------------------- Column One -----------------
 #gallery .column-one {
   transition: 1s;
 
@@ -39,7 +38,7 @@
     right: 5px;
     height: 450px;
     width: 350px;
-    background-color: rgba(0, 0, 0, 0.101);
+    background-color: rgba(128, 128, 128, 0.250);
     overflow: hidden;
   }
 
@@ -53,11 +52,11 @@
     position: absolute;
     top: 0;
     left: 0;
+    object-fit: cover;
     z-index: -10;
   }
 }
 
-// ------------------- Column Two ------------------
 #gallery .column-two {
   position: relative;
   top: 200px;
@@ -82,7 +81,6 @@
   }
 }
 
-// --------------- Column Three ---------------
 #gallery .column-three {
   position: absolute;
   top: 600px;
@@ -104,6 +102,7 @@
   }
 }
 
+// ----------------- Media Query ----------------
 @media only screen and (max-width: $small-screen) {
   #gallery {
     position: absolute;
@@ -115,7 +114,74 @@
     }
   }
   
-  // ------------------- Column One -----------------
+  #gallery .column-one {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+
+    & h1 {
+      display: none;
+    }
+
+    & .gallery-img-container {
+      width: 370px;
+      height: 300px;
+      background-color: none;
+     }
+
+    & .gallery-img,
+    div {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 380px;
+      height: 320px;
+    }
+  }
+
+  #gallery .column-two {
+    position: relative;
+    top: 70px;
+    margin: 0 auto;
+    width: 400px;
+    left: 0;
+
+    & h2 {
+      display: none;
+    }
+
+    & .paragraph {
+      position: absolute;
+      top: 410px;
+      left: -30px;
+      margin-left: 5px;
+      // color: grey;
+      // background-color: rgba(128, 128, 128, 0.11);
+      // mix-blend-mode: difference;
+      word-wrap: normal;
+      width: 300px;
+    }
+  }
+
+  #gallery .column-three {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+// ----------------- Media Query ----------------
+@media only screen and (max-width: $extra-small-screen) {
+  #gallery {
+    position: absolute;
+    top: 0;
+    margin-top: -50px;
+  
+    & #page {
+      display: none;
+    }
+  }
+  
   #gallery .column-one {
     margin: 0 auto;
 
@@ -133,7 +199,6 @@
     }
   }
 
-  // ------------------- Column Two ------------------
   #gallery .column-two {
     position: relative;
     top: 70px;
@@ -141,23 +206,16 @@
     width: 400px;
     left: 0;
 
-    & h2 {
-      position: absolute;
-      top: -25px;
-      left: 0;
-    }
-
     & .paragraph {
       position: absolute;
-      top: 283px;
-      left: 1%;
+      top: 405px;
+      left: 5%;
       margin-left: 5px;
       word-wrap: normal;
       width: 280px;
     }
   }
 
-  // --------------- Column Three ---------------
   #gallery .column-three {
     position: absolute;
     bottom: 0;

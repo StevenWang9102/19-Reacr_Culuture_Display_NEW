@@ -1,34 +1,34 @@
 // ---------------- Test the Position ----------------
 const getElementViewPosition3 = (element) => {
-  var actualLeft = element.offsetLeft;
-  var current = element.offsetParent;
+  let actualLeft = element.offsetLeft;
+  let current = element.offsetParent;
 
   while (current !== null) {
     actualLeft += current.offsetLeft + current.clientLeft;
     current = current.offsetParent;
   }
-  var elementScrollLeft = 0;
+  let elementScrollLeft = 0;
   if (document.compatMode === "BackCompat") {
     elementScrollLeft = document.body.scrollLeft;
   } else {
     elementScrollLeft = document.documentElement.scrollLeft;
   }
-  var left = actualLeft - elementScrollLeft;
+  let left = actualLeft - elementScrollLeft;
 
-  var actualTop = element.offsetTop;
+  let actualTop = element.offsetTop;
 
   current = element.offsetParent;
   while (current !== null) {
     actualTop += current.offsetTop + current.clientTop;
     current = current.offsetParent;
   }
-  var elementScrollTop = 0;
+  let elementScrollTop = 0;
   if (document.compatMode === "BackCompat") {
     elementScrollTop = document.body.scrollTop;
   } else {
     elementScrollTop = document.documentElement.scrollTop;
   }
-  var right = actualTop - elementScrollTop;
+  let right = actualTop - elementScrollTop;
   return { x: left, y: right };
 };
 // --------------------- Gallery Floating ------------------
@@ -56,7 +56,7 @@ const whatwedoColumnTwo = document.getElementsByClassName("second-column")[0];
 const whatwedoLocal5 = document.getElementById("what-we-do");
 
 window.addEventListener("scroll", function (e) {
-  var whatwedoLocalTop = getElementViewPosition3(whatwedoLocal5).y;
+  let whatwedoLocalTop = getElementViewPosition3(whatwedoLocal5).y;
   let currentSize = document.documentElement.clientWidth;
   if (currentSize >= 992) {
     if (whatwedoLocalTop < -960) {
@@ -75,7 +75,7 @@ const columnRight = document.getElementsByClassName("container-up")[1];
 const imageWallLocal2 = document.getElementById("image-wall");
 
 window.addEventListener("scroll", function (e) {
-  var imageWallTop = getElementViewPosition3(imageWallLocal2).y;
+  let imageWallTop = getElementViewPosition3(imageWallLocal2).y;
   let currentSize = document.documentElement.clientWidth;
   if (currentSize >= 992) {
     if (imageWallTop < -1810) {

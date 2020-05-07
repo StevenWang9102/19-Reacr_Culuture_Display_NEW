@@ -46,7 +46,8 @@ const image = [
 
 export const Gallery = (props) => {
   const [pageNum, setPageNum] = useState(1);
-  const [imageSrc, setImageSrc] = useState(image[pageNum - 1]);
+  const [imageSrc1, setImageSrc1] = useState(image[pageNum - 1]);
+  const [imageSrc2, setImageSrc2] = useState(image[pageNum - 1]);
 
   return (
     <GalleryLayout backgrounds={backgroundImage[pageNum - 1]}>
@@ -56,8 +57,8 @@ export const Gallery = (props) => {
           <div className='column-one col-sm-6 col-md-6 col-lg-6'>
             <h1 name='slogan'>{slogans[pageNum - 1]}</h1>
             <div className='gallery-img-container'>
-              <img src={imageSrc} className='gallery-img' alt='' />
-              <img src={imageSrc} className='gallery-img gallery-img2' alt='' />
+              <img src={imageSrc1} className='gallery-img' alt='' />
+              <img src={imageSrc2} className='gallery-img gallery-img2' alt='' />
             </div>
           </div>
 
@@ -77,7 +78,8 @@ export const Gallery = (props) => {
             image={image}
             pageNum={pageNum}
             setPageNum={(pageNum)=>setPageNum(pageNum)}
-            setImageSrc={(pageNum)=>setImageSrc(pageNum)}
+            setImageSrc1={(pageNum)=>setImageSrc1(pageNum)}
+            setImageSrc2={(pageNum)=>setImageSrc2(pageNum)}
           />
         </div>
       </div>

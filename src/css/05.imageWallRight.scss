@@ -1,8 +1,8 @@
 // -------------------- Right Column ------------------
 #image-wall .second-column {
-  height: 1000px;
   display: flex;
   flex-direction: column;
+  height: 1000px;
   margin-top: 1080px;
 
   & .container-up,
@@ -13,7 +13,6 @@
     padding: 20px;
     transition: 3s;
 
-
     & img {
       object-fit: cover;
       width: 360px;
@@ -21,10 +20,10 @@
     }
 
     & h1 {
-      width: 300px;
       position: absolute;
       top: 80px;
       left: 60px;
+      width: 300px;
       color: white;
       text-shadow: 0.05em 0.05em #333;
       z-index: 30;
@@ -32,8 +31,8 @@
 
     & p {
       position: absolute;
-      bottom: 30px;
       left: 60px;
+      bottom: 30px;
       color: white;
       font-weight: 600;
       z-index: 20;
@@ -41,16 +40,15 @@
   }
 
   & .container-up .img-wrapper {
+    overflow: hidden;
     width: 360px;
     height: 420px;
-    overflow: hidden;
   }
 
   & .container-up .img-hover {
     position: relative;
-    left: -400px;
     top: -430px;
-    height: 100%;
+    left: -400px;
     width: 400px;
     height: 460px;
     transition: 1s;
@@ -94,15 +92,13 @@
       }
 
       & h1 {
-        width: 300px;
         position: absolute;
-        font-size: 33px;
-        width: 297px;
         top: 60px;
         left: 40px;
+        font-size: 33px;
+        width: 297px;
         color: white;
       }
-
 
       & p {
         position: absolute;
@@ -122,19 +118,19 @@
 
     & .container-up,
     & .container-low {
+      left: 50%;
       margin: 20px 0;
       padding: 0;
-      left: 50%;
       width: 430px;
       height: 330px;
       transform: translateX(-50%);
 
       & img {
         position: relative;
-        height: 300px;
-        width: 430px;
         left: 50%;
         transform: translateX(-50%);
+        height: 300px;
+        width: 430px;
       }  
     }
 

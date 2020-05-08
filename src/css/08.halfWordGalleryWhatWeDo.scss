@@ -30,10 +30,10 @@
 #what-we-do .titlewrapper h1:nth-child(2) {
   position: absolute;
   top: 0;
+  left: 0;
   right: 0;
   color: white;
   text-shadow: 3px 3px #0fabf3b6;
-  left: 0;
   width: 330px;
   height: 100%;
   white-space: nowrap;
@@ -42,8 +42,8 @@
   & p {
     position: absolute;
     top: 0;
-    font-size: 40px;
     left: -113px;
+    font-size: 40px;
     font-weight: 500;
   }
 }

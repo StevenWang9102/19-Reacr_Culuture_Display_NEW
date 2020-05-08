@@ -22,24 +22,24 @@
     top: 360px;
     width: 400px;
     right: 220px;
+    text-align: center;
     transform: rotate(-90deg);
     font-size: 100px;
     font-weight: 900;
-    text-align: center;
-    opacity: 0.5;
     letter-spacing: 10px;
-    text-shadow: 0.05em 0.05em rgba(153, 153, 153, 0.555);
+    opacity: 0.5;
     color: rgba(255, 255, 255, 0.925);
+    text-shadow: 0.05em 0.05em rgba(153, 153, 153, 0.555);
   }
 
   & .gallery-img-container {
     position: absolute;
     top: 200px;
     right: 5px;
+    overflow: hidden;
     height: 450px;
     width: 350px;
     background-color: rgba(128, 128, 128, 0.250);
-    overflow: hidden;
   }
 
   & .gallery-img{
@@ -116,9 +116,9 @@
   
   #gallery .column-one {
     position: absolute;
+    margin: 0 auto;
     left: 50%;
     transform: translateX(-50%);
-    margin: 0 auto;
 
     & h1 {
       display: none;
@@ -143,9 +143,9 @@
   #gallery .column-two {
     position: relative;
     top: 70px;
+    left: 0;
     margin: 0 auto;
     width: 400px;
-    left: 0;
 
     & h2 {
       display: none;
@@ -156,8 +156,8 @@
       top: 410px;
       left: -30px;
       margin-left: 5px;
-      word-wrap: normal;
       width: 300px;
+      word-wrap: normal;
     }
   }
 
@@ -199,17 +199,17 @@
   #gallery .column-two {
     position: relative;
     top: 70px;
+    left: 0;
     margin: 0 auto;
     width: 400px;
-    left: 0;
 
     & .paragraph {
       position: absolute;
       top: 405px;
       left: 5%;
       margin-left: 5px;
-      word-wrap: normal;
       width: 280px;
+      word-wrap: normal;
     }
   }
 

@@ -32,9 +32,9 @@ const getElementViewPosition2 = (element) => {
 };
 
 // Reset Visibility Function
-const Reset = (element) => {
-  element.style.opacity = 1;
-  element.style.visibility = "visible";
+const Reset = (element, opacity, visibility) => {
+  element.style.opacity = opacity;
+  element.style.visibility = visibility;
 };
 
 const SetAttributes = (element, opacity, visibility, transition) => {
@@ -54,15 +54,26 @@ const whatwedocontainer = document.getElementsByClassName(
 // ---------- Reset Visibility on Medium Screen Size ------------
 window.addEventListener("resize", (event) => {
   let currentSize = document.documentElement.clientWidth;
+  let galleryTop = getElementViewPosition2(gallery).y;
 
   if (currentSize < 992) {
-    Reset(navbar);
-    Reset(gallery);
-    Reset(whatwedo);
-    Reset(whatwedocontainer);
-    Reset(imageWallLocal);
-    imageWallLocal.style.backgroundImage = "none"
-  } 
+    Reset(navbar, 1, "visible");
+    Reset(gallery, 1, "visible");
+    Reset(whatwedo, 1, "visible");
+    Reset(whatwedocontainer, 1, "visible");
+    Reset(imageWallLocal, 1, "visible");
+    imageWallLocal.style.backgroundImage = "none";
+  } else {
+    Reset(navbar, 1, "visible");
+    if ( -1000 <= galleryTop && galleryTop<= -50) {
+      Reset(gallery, 1, "visible");
+    } else {
+      Reset(gallery, 0, "hidden");
+    }
+    Reset(whatwedo, 1, "visible");
+    Reset(whatwedocontainer, 1, "visible");
+    Reset(imageWallLocal, 1, "visible");
+  }
 });
 
 // ------------------ Gallery Visibility ----------------
@@ -71,9 +82,8 @@ window.addEventListener("scroll", function (e) {
   let currentSize = document.documentElement.clientWidth;
   let galleryTop = getElementViewPosition2(gallery).y;
 
-  
   if (currentSize >= 992) {
-    if ( -500 <= galleryTop <= -100) {
+    if (-500 <= galleryTop <= -100) {
       SetAttributes(navbar, 0, "hidden", "1s");
       SetAttributes(gallery, 1, "visible", "2s");
     } else {

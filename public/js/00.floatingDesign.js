@@ -1,14 +1,26 @@
 // ---------------- Test the Position ----------------
-const getElementViewPosition3 = (element) => {
+const getElementViewPosition0 = (element) => {
+  let explorer = window.navigator.userAgent;
+  let explorerName;
+
+  if (explorer.includes("Safari")) {
+    explorerName = "Safari";
+  } else if (explorer.includes("Chrome")) {
+    explorerName = "Chrome";
+  } else if (explorer.includes("Firefox")) {
+    explorerName = "Firefox";
+  } else if (explorer.includes("ie")) {
+    explorerName = "Firefox";
+  }
+  
   let actualLeft = element.offsetLeft;
   let current = element.offsetParent;
-
   while (current !== null) {
     actualLeft += current.offsetLeft + current.clientLeft;
     current = current.offsetParent;
   }
   let elementScrollLeft = 0;
-  if (document.compatMode === "BackCompat") {
+  if (document.compatMode === "BackCompat" || explorerName === "Safari" ) {
     elementScrollLeft = document.body.scrollLeft;
   } else {
     elementScrollLeft = document.documentElement.scrollLeft;
@@ -23,21 +35,22 @@ const getElementViewPosition3 = (element) => {
     current = current.offsetParent;
   }
   let elementScrollTop = 0;
-  if (document.compatMode === "BackCompat") {
+  if (document.compatMode === "BackCompat" || explorerName === "Safari") {
     elementScrollTop = document.body.scrollTop;
   } else {
     elementScrollTop = document.documentElement.scrollTop;
   }
-  let right = actualTop - elementScrollTop;
-  return { x: left, y: right };
+  let top = actualTop - elementScrollTop;
+  return { x: left, y: top };
 };
+
 // --------------------- Gallery Floating ------------------
 const columnL = document.getElementsByClassName("column-one")[0];
 const columnR = document.getElementsByClassName("column-two")[0];
 const galleryLocal = document.getElementById("gallery");
 
 window.addEventListener("scroll", function (e) {
-  let galleryTop = getElementViewPosition3(galleryLocal).y;
+  let galleryTop = getElementViewPosition0(galleryLocal).y;  
   let currentSize = document.documentElement.clientWidth;
   if (currentSize >= 992) {
     if (galleryTop < -100) {
@@ -48,7 +61,7 @@ window.addEventListener("scroll", function (e) {
       columnR.style.marginTop = "50px";
     }
   }
-});
+}, {passive: true});
 
 // --------------- What We Do Floating -----------------
 const whatwedoColumnOne = document.getElementsByClassName("first-column")[0];
@@ -56,7 +69,7 @@ const whatwedoColumnTwo = document.getElementsByClassName("second-column")[0];
 const whatwedoLocal5 = document.getElementById("what-we-do");
 
 window.addEventListener("scroll", function (e) {
-  let whatwedoLocalTop = getElementViewPosition3(whatwedoLocal5).y;
+  let whatwedoLocalTop = getElementViewPosition0(whatwedoLocal5).y;
   let currentSize = document.documentElement.clientWidth;
   if (currentSize >= 992) {
     if (whatwedoLocalTop < -960) {
@@ -67,7 +80,7 @@ window.addEventListener("scroll", function (e) {
       whatwedoColumnTwo.style.marginTop = "50px";
     }
   }
-});
+}, {passive: true});
 
 // --------------- Image Wall Floating ---------------------
 const columnLeft = document.getElementsByClassName("container-up")[0];
@@ -75,7 +88,7 @@ const columnRight = document.getElementsByClassName("container-up")[1];
 const imageWallLocal2 = document.getElementById("image-wall");
 
 window.addEventListener("scroll", function (e) {
-  let imageWallTop = getElementViewPosition3(imageWallLocal2).y;
+  let imageWallTop = getElementViewPosition0(imageWallLocal2).y;
   let currentSize = document.documentElement.clientWidth;
   if (currentSize >= 992) {
     if (imageWallTop < -1810) {
@@ -86,4 +99,4 @@ window.addEventListener("scroll", function (e) {
       columnRight.style.marginTop = "50px";
     }
   }
-});
+}, {passive: true});

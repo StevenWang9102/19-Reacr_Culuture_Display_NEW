@@ -1,5 +1,18 @@
 // ---------------- Test the Position ----------------
-const getElementViewPosition2 = (element) => {
+const getElementViewPosition1 = (element) => {
+  let explorer = window.navigator.userAgent;
+  let explorerName;
+
+  if (explorer.includes("Safari")) {
+    explorerName = "Safari";
+  } else if (explorer.includes("Chrome")) {
+    explorerName = "Chrome";
+  } else if (explorer.includes("Firefox")) {
+    explorerName = "Firefox";
+  } else if (explorer.includes("ie")) {
+    explorerName = "Firefox";
+  }
+  
   let actualLeft = element.offsetLeft;
   let current = element.offsetParent;
   while (current !== null) {
@@ -7,7 +20,7 @@ const getElementViewPosition2 = (element) => {
     current = current.offsetParent;
   }
   let elementScrollLeft = 0;
-  if (document.compatMode === "BackCompat") {
+  if (document.compatMode === "BackCompat" || explorerName === "Safari" ) {
     elementScrollLeft = document.body.scrollLeft;
   } else {
     elementScrollLeft = document.documentElement.scrollLeft;
@@ -22,13 +35,13 @@ const getElementViewPosition2 = (element) => {
     current = current.offsetParent;
   }
   let elementScrollTop = 0;
-  if (document.compatMode === "BackCompat") {
+  if (document.compatMode === "BackCompat" || explorerName === "Safari") {
     elementScrollTop = document.body.scrollTop;
   } else {
     elementScrollTop = document.documentElement.scrollTop;
   }
-  let right = actualTop - elementScrollTop;
-  return { x: left, y: right };
+  let top = actualTop - elementScrollTop;
+  return { x: left, y: top };
 };
 
 // Reset Visibility Function
@@ -52,78 +65,94 @@ const whatwedocontainer = document.getElementsByClassName(
 )[0];
 
 // ---------- Reset Visibility on Medium Screen Size ------------
-window.addEventListener("resize", (event) => {
-  let currentSize = document.documentElement.clientWidth;
-  let galleryTop = getElementViewPosition2(gallery).y;
+window.addEventListener(
+  "resize",
+  (event) => {
+    let currentSize = document.documentElement.clientWidth;
+    let galleryTop = getElementViewPosition1(gallery).y;
 
-  if (currentSize < 992) {
-    Reset(navbar, 1, "visible");
-    Reset(gallery, 1, "visible");
-    Reset(whatwedo, 1, "visible");
-    Reset(whatwedocontainer, 1, "visible");
-    Reset(imageWallLocal, 1, "visible");
-    imageWallLocal.style.backgroundImage = "none";
-  } else {
-    Reset(navbar, 1, "visible");
-    if ( -1000 <= galleryTop && galleryTop<= -50) {
+    if (currentSize < 992) {
+      Reset(navbar, 1, "visible");
       Reset(gallery, 1, "visible");
+      Reset(whatwedo, 1, "visible");
+      Reset(whatwedocontainer, 1, "visible");
+      Reset(imageWallLocal, 1, "visible");
+      imageWallLocal.style.backgroundImage = "none";
     } else {
-      Reset(gallery, 0, "hidden");
+      Reset(navbar, 1, "visible");
+      if (-1000 <= galleryTop && galleryTop <= -50) {
+        Reset(gallery, 1, "visible");
+      } else {
+        Reset(gallery, 0, "hidden");
+      }
+      Reset(whatwedo, 1, "visible");
+      Reset(whatwedocontainer, 1, "visible");
+      Reset(imageWallLocal, 1, "visible");
     }
-    Reset(whatwedo, 1, "visible");
-    Reset(whatwedocontainer, 1, "visible");
-    Reset(imageWallLocal, 1, "visible");
-  }
-});
+  },
+  { passive: false }
+);
 
 // ------------------ Gallery Visibility ----------------
 
-window.addEventListener("scroll", function (e) {
-  let currentSize = document.documentElement.clientWidth;
-  let galleryTop = getElementViewPosition2(gallery).y;
+window.addEventListener(
+  "scroll",
+  function (e) {
+    let currentSize = document.documentElement.clientWidth;
+    let galleryTop = getElementViewPosition1(gallery).y;
 
-  if (currentSize >= 992) {
-    if (-500 <= galleryTop <= -100) {
-      SetAttributes(navbar, 0, "hidden", "1s");
-      SetAttributes(gallery, 1, "visible", "2s");
-    } else {
-      SetAttributes(gallery, 0, "hidden", "1s");
-      SetAttributes(navbar, 1, "visible", "2s");
+    if (currentSize >= 992) {
+      if (-500 <= galleryTop <= -100) {
+        SetAttributes(navbar, 0, "hidden", "1s");
+        SetAttributes(gallery, 1, "visible", "2s");
+      } else {
+        SetAttributes(gallery, 0, "hidden", "1s");
+        SetAttributes(navbar, 1, "visible", "2s");
+      }
     }
-  }
-});
+  },
+  { passive: false }
+);
 
 // ------------------ What We Do Visibility ----------------
-window.addEventListener("scroll", function (e) {
-  let whatwedoTop = getElementViewPosition2(whatwedo).y;
-  let currentSize = document.documentElement.clientWidth;
+window.addEventListener(
+  "scroll",
+  function (e) {
+    let whatwedoTop = getElementViewPosition1(whatwedo).y;
+    let currentSize = document.documentElement.clientWidth;
 
-  if (currentSize >= 992) {
-    if (whatwedoTop < -800) {
-      SetAttributes(gallery, 0, "hidden", "1s");
-      SetAttributes(whatwedo, 1, "visible", "2s");
-    } else {
-      SetAttributes(whatwedo, 0, "hidden", "1s");
-      SetAttributes(gallery, 1, "visible", "2s");
+    if (currentSize >= 992) {
+      if (whatwedoTop < -800) {
+        SetAttributes(gallery, 0, "hidden", "1s");
+        SetAttributes(whatwedo, 1, "visible", "2s");
+      } else {
+        SetAttributes(whatwedo, 0, "hidden", "1s");
+        SetAttributes(gallery, 1, "visible", "2s");
+      }
     }
-  }
-});
+  },
+  { passive: false }
+);
 
 //  ------------------ Image Wall Visibility ----------------
-window.addEventListener("scroll", function (e) {
-  let imageWallLocalTop = getElementViewPosition2(imageWallLocal).y;
-  let currentSize = document.documentElement.clientWidth;
+window.addEventListener(
+  "scroll",
+  function (e) {
+    let imageWallLocalTop = getElementViewPosition1(imageWallLocal).y;
+    let currentSize = document.documentElement.clientWidth;
 
-  if (currentSize >= 992) {
-    if (imageWallLocalTop < -1880) {
-      SetAttributes(whatwedo, 0, "hidden", "1s");
-      SetAttributes(imageWallLocal, 1, "visible", "2s");
-      imageWallLocal.style.backgroundImage =
-        "linear-gradient(to bottom right, #e4f5b5b2, #0aaafa79)";
-    } else {
-      SetAttributes(imageWallLocal, 0, "hidden", "1s");
-      SetAttributes(whatwedo, 1, "visible", "2s");
-      imageWallLocal.style.backgroundImage = "none";
+    if (currentSize >= 992) {
+      if (imageWallLocalTop < -1880) {
+        SetAttributes(whatwedo, 0, "hidden", "1s");
+        SetAttributes(imageWallLocal, 1, "visible", "2s");
+        imageWallLocal.style.backgroundImage =
+          "linear-gradient(to bottom right, #e4f5b5b2, #0aaafa79)";
+      } else {
+        SetAttributes(imageWallLocal, 0, "hidden", "1s");
+        SetAttributes(whatwedo, 1, "visible", "2s");
+        imageWallLocal.style.backgroundImage = "none";
+      }
     }
-  }
-});
+  },
+  { passive: false }
+);

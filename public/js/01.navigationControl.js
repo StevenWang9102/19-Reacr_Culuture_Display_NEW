@@ -26,7 +26,7 @@ ChangeLogo();
 
 window.addEventListener("resize", (event) => {
   ChangeLogo();
-});
+}, {passive: false});
 
 
 

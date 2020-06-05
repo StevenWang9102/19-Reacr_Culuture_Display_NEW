@@ -1,5 +1,18 @@
 // --------------- Test the position --------------
 const getElementViewPosition4 = (element) => {
+  let explorer = window.navigator.userAgent;
+  let explorerName;
+
+  if (explorer.includes("Safari")) {
+    explorerName = "Safari";
+  } else if (explorer.includes("Chrome")) {
+    explorerName = "Chrome";
+  } else if (explorer.includes("Firefox")) {
+    explorerName = "Firefox";
+  } else if (explorer.includes("ie")) {
+    explorerName = "Firefox";
+  }
+  
   let actualLeft = element.offsetLeft;
   let current = element.offsetParent;
   while (current !== null) {
@@ -7,7 +20,7 @@ const getElementViewPosition4 = (element) => {
     current = current.offsetParent;
   }
   let elementScrollLeft = 0;
-  if (document.compatMode === "BackCompat") {
+  if (document.compatMode === "BackCompat" || explorerName === "Safari" ) {
     elementScrollLeft = document.body.scrollLeft;
   } else {
     elementScrollLeft = document.documentElement.scrollLeft;
@@ -22,13 +35,13 @@ const getElementViewPosition4 = (element) => {
     current = current.offsetParent;
   }
   let elementScrollTop = 0;
-  if (document.compatMode === "BackCompat") {
+  if (document.compatMode === "BackCompat" || explorerName === "Safari") {
     elementScrollTop = document.body.scrollTop;
   } else {
     elementScrollTop = document.documentElement.scrollTop;
   }
-  let right = actualTop - elementScrollTop;
-  return { x: left, y: right };
+  let top = actualTop - elementScrollTop;
+  return { x: left, y: top };
 };
 
 // --------------- Set Animation ---------------
@@ -46,10 +59,10 @@ const bigFloatBall = document.getElementById("bigFloatBall");
 const titleWhatWeDo = document.getElementsByName("whatwe")[1];
 
 window.addEventListener("scroll", function (e) {
-
+  
   let currentSize = document.documentElement.clientWidth;;
   let whatWeDoTop = getElementViewPosition4(whatwedo2).y;
-
+  
   if (currentSize >= 992) {
 
     if (whatWeDoTop > -1350 && whatWeDoTop < -1050) {

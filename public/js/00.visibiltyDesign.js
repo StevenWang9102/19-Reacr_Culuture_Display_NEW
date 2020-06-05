@@ -3,45 +3,42 @@ const getElementViewPosition1 = (element) => {
   let explorer = window.navigator.userAgent;
   let explorerName;
 
-  if (explorer.includes("Safari")) {
+  if (!explorer.includes("Chrome") && explorer.includes("Safari")) {
     explorerName = "Safari";
   } else if (explorer.includes("Chrome")) {
     explorerName = "Chrome";
   } else if (explorer.includes("Firefox")) {
     explorerName = "Firefox";
   } else if (explorer.includes("ie")) {
-    explorerName = "Firefox";
+    explorerName = "ie";
   }
-  
-  let actualLeft = element.offsetLeft;
+
+  console.log(explorerName);
+
   let current = element.offsetParent;
+  let actualTop = element.offsetTop;
+  let actualLeft = element.offsetLeft;
+  let elementScrollTop = 0;
+  let elementScrollLeft = 0;
+
   while (current !== null) {
+    actualTop += current.offsetTop + current.clientTop;
     actualLeft += current.offsetLeft + current.clientLeft;
     current = current.offsetParent;
   }
-  let elementScrollLeft = 0;
-  if (document.compatMode === "BackCompat" || explorerName === "Safari" ) {
+
+  if (document.compatMode === "BackCompat") {
+    elementScrollTop = document.body.scrollTop;
+    elementScrollLeft = document.body.scrollLeft;
+  } else if (explorerName === "Safari") {
+    elementScrollTop = document.body.scrollTop;
     elementScrollLeft = document.body.scrollLeft;
   } else {
+    elementScrollTop = document.documentElement.scrollTop;
     elementScrollLeft = document.documentElement.scrollLeft;
   }
-  let left = actualLeft - elementScrollLeft;
 
-  let actualTop = element.offsetTop;
-
-  current = element.offsetParent;
-  while (current !== null) {
-    actualTop += current.offsetTop + current.clientTop;
-    current = current.offsetParent;
-  }
-  let elementScrollTop = 0;
-  if (document.compatMode === "BackCompat" || explorerName === "Safari") {
-    elementScrollTop = document.body.scrollTop;
-  } else {
-    elementScrollTop = document.documentElement.scrollTop;
-  }
-  let top = actualTop - elementScrollTop;
-  return { x: left, y: top };
+  return { x: actualLeft - elementScrollLeft, y: actualTop - elementScrollTop };
 };
 
 // Reset Visibility Function
